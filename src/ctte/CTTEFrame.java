@@ -34,6 +34,10 @@ import java.awt.GridBagConstraints;
 import java.awt.Image;
 import java.awt.Insets;
 import javax.swing.JLabel;
+import javax.swing.JTextPane;
+import java.awt.Font;
+import java.awt.Color;
+import java.awt.SystemColor;
 
 public class CTTEFrame extends JFrame {
 
@@ -432,7 +436,8 @@ public class CTTEFrame extends JFrame {
 		
 		JPanel panel_1 = new JPanel();
 		contentPane.add(panel_1, BorderLayout.WEST);
-		panel_1.setLayout(new GridLayout(3, 1, 0, 0));
+		panel_1.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 5));
+		panel_1.setPreferredSize(new Dimension(90,200));
 		
 		JPanel panel_4 = new JPanel();
 		panel_1.add(panel_4);
@@ -466,6 +471,15 @@ public class CTTEFrame extends JFrame {
 		btnNewButton_3.setPreferredSize(new Dimension(35,35));
 		panel_4.add(btnNewButton_3);
 		
+		JTextPane txtpnHighPriority = new JTextPane();
+		txtpnHighPriority.setBackground(SystemColor.control);
+		txtpnHighPriority.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		txtpnHighPriority.setEditable(false);
+		txtpnHighPriority.setText("High Priority");
+		txtpnHighPriority.setToolTipText("");
+		txtpnHighPriority.setPreferredSize(new Dimension(90,20));
+		panel_1.add(txtpnHighPriority);
+		
 		JPanel panel_5 = new JPanel();
 		panel_1.add(panel_5);
 		panel_5.setLayout(new GridLayout(4, 2, 0, 0));
@@ -473,83 +487,92 @@ public class CTTEFrame extends JFrame {
 		JButton button_3 = new JButton("");
 		button_3.setToolTipText("Choice");
 		button_3.setIcon(new ImageIcon("./res/images/choice.gif"));
-		button_3.setSize(25, 20);
-		button_3.setPreferredSize(new Dimension(25,20));
+		button_3.setSize(35, 35);
+		button_3.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_3);
 		
 		JButton button_4 = new JButton("");
 		button_4.setToolTipText("OrderIndependence");
 		button_4.setIcon(new ImageIcon("./res/images/order.gif"));
-		button_4.setSize(25, 20);
-		button_4.setPreferredSize(new Dimension(25,20));
+		button_4.setSize(35, 35);
+		button_4.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_4);
 		
 		JButton button_5 = new JButton("");
 		button_5.setToolTipText("InterLeaving");
 		button_5.setIcon(new ImageIcon("./res/images/interleave.gif"));
-		button_5.setSize(25, 20);
-		button_5.setPreferredSize(new Dimension(25,20));
+		button_5.setSize(35, 35);
+		button_5.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_5);
 		
 		JButton button_6 = new JButton("");
 		button_6.setToolTipText("Synchronization");
 		button_6.setIcon(new ImageIcon("./res/images/sincro.gif"));
-		button_6.setSize(25, 20);
-		button_6.setPreferredSize(new Dimension(25,20));
+		button_6.setSize(35, 35);
+		button_6.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_6);
 		
 		JButton button_7 = new JButton("");
 		button_7.setToolTipText("Disabling");
 		button_7.setIcon(new ImageIcon("./res/images/disabling.gif"));
-		button_7.setSize(25, 20);
-		button_7.setPreferredSize(new Dimension(25,20));
+		button_7.setSize(35, 35);
+		button_7.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_7);
 		
 		JButton button_8 = new JButton("");
 		button_8.setToolTipText("SuspendResume");
 		button_8.setIcon(new ImageIcon("./res/images/suspend.gif"));
-		button_8.setSize(25, 20);
-		button_8.setPreferredSize(new Dimension(25,20));
+		button_8.setSize(35, 35);
+		button_8.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_8);
 		
 		JButton button_9 = new JButton("");
 		button_9.setToolTipText("SequentialEnabling");
 		button_9.setIcon(new ImageIcon("./res/images/enabling.gif"));
-		button_9.setSize(25, 20);
-		button_9.setPreferredSize(new Dimension(25,20));
+		button_9.setSize(35, 35);
+		button_9.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_9);
 		
 		JButton button_10 = new JButton("");
 		button_10.setToolTipText("SequentialEnablingInfo");
 		button_10.setIcon(new ImageIcon("./res/images/enablinginfo.gif"));
-		button_10.setSize(25, 20);
-		button_10.setPreferredSize(new Dimension(25,20));
+		button_10.setSize(35, 35);
+		button_10.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_10);
+		
+		JTextPane txtpnLowPriority = new JTextPane();
+		txtpnLowPriority.setBackground(SystemColor.control);
+		txtpnLowPriority.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		txtpnLowPriority.setEnabled(true);
+		txtpnLowPriority.setEditable(false);
+		txtpnLowPriority.setText("Low Priority");
+		txtpnLowPriority.setPreferredSize(new Dimension(90,20));
+		panel_1.add(txtpnLowPriority);
 		
 		JPanel panel_6 = new JPanel();
 		panel_1.add(panel_6);
-		panel_6.setLayout(new GridLayout(0, 3, 0, 0));
 		panel_6.setSize(new Dimension(25*3,20));
+		panel_6.setLayout(new GridLayout(0, 2, 0, 0));
 		
 		JButton button_11 = new JButton("");
 		button_11.setToolTipText("Set/Unset  Iterative Task");
 		button_11.setIcon(new ImageIcon("./res/images/iterative.gif"));
-		button_11.setSize(25, 20);
-		button_11.setPreferredSize(new Dimension(25,20));
+		button_11.setSize(35, 35);
+		button_11.setPreferredSize(new Dimension(35, 35));
 		panel_6.add(button_11);
 		
 		JButton button_12 = new JButton("");
 		button_12.setToolTipText("Set/Unset Optional Task");
 		button_12.setIcon(new ImageIcon("./res/images/optional.gif"));
-		button_12.setSize(25, 20);
-		button_12.setPreferredSize(new Dimension(25,20));
+		button_12.setSize(35, 35);
+		button_12.setPreferredSize(new Dimension(35, 35));
 		panel_6.add(button_12);
 		
 		JButton button_13 = new JButton("");
 		button_13.setToolTipText("Set/Unset Connection Task");
 		button_13.setIcon(new ImageIcon("./res/images/arrow.gif"));
-		button_13.setSize(25, 20);
-		button_13.setPreferredSize(new Dimension(25,20));
+		button_13.setSize(35, 35);
+		button_13.setPreferredSize(new Dimension(35, 35));
 		panel_6.add(button_13);
 		
 		JPanel panel_2 = new JPanel();
