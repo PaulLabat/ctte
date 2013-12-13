@@ -6,14 +6,12 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
-import javax.swing.border.EmptyBorder;
 import javax.swing.BorderFactory;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
-import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 
 import java.awt.FlowLayout;
@@ -26,10 +24,8 @@ import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import javax.swing.KeyStroke;
 
-import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.InputEvent;
-import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -38,16 +34,10 @@ import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JCheckBoxMenuItem;
 
 import java.awt.Dimension;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
 import java.awt.Image;
-import java.awt.Insets;
-
-import javax.swing.JLabel;
 import javax.swing.JTextPane;
 
 import java.awt.Font;
-import java.awt.Color;
 import java.awt.SystemColor;
 
 import javax.swing.JTextField;
@@ -94,11 +84,12 @@ public class CTTEFrame extends JFrame {
 		contentPane.setBorder(null);
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
-		contentPane.addKeyListener(new ClavierListener());
+		//contentPane.addKeyListener(new ClavierListener());
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(null);
 		contentPane.add(panel, BorderLayout.NORTH);
+                //this.addKeyListener(new ClavierListener());
 		panel.setLayout(new BorderLayout(0, 0));
 
 		
@@ -715,23 +706,4 @@ public class CTTEFrame extends JFrame {
 
 	}
 
-}
-
-class ClavierListener implements KeyListener{
-
-	public void keyPressed(KeyEvent event) {
-		System.out.println("Code touche pressée : " + event.getKeyCode() + " - caractère touche pressée : " + event.getKeyChar());
-	}
-
-	@Override
-	public void keyReleased(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void keyTyped(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-
-	}
 }
