@@ -68,7 +68,7 @@ public class CTTEFrame extends JFrame {
 		Image image = toolkit.getImage("./res/images/cnr.gif");
 		setIconImage(image);
 		
-		this.setMinimumSize(new Dimension(400, 400));
+		this.setMinimumSize(new Dimension(400, 500));
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 615, 475);
@@ -551,8 +551,9 @@ public class CTTEFrame extends JFrame {
 		
 		JPanel panel_6 = new JPanel();
 		panel_1.add(panel_6);
-		panel_6.setSize(new Dimension(25*3,20));
-		panel_6.setLayout(new GridLayout(0, 2, 0, 0));
+		panel_6.setSize(new Dimension(70, 70));
+		panel_6.setPreferredSize(new Dimension(70,70));
+		panel_6.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 0));
 		
 		JButton button_11 = new JButton("");
 		button_11.setToolTipText("Set/Unset  Iterative Task");
