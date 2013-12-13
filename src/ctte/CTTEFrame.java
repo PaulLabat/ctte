@@ -696,7 +696,6 @@ public class CTTEFrame extends JFrame {
 		txtRecherche.setColumns(10);
 		txtRecherche.setSize(10, 30);
 		txtRecherche.setPreferredSize(new Dimension(30, 25));
-		txtRecherche.setColumns(10);
 		txtRecherche.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
