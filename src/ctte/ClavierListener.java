@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,26 +13,20 @@ import java.awt.event.KeyListener;
  *
  * @author augustin
  */
+
 public class ClavierListener implements KeyListener{
-
-    ClavierListener() {
-        
-    }
-    
-    @Override
+	
 	public void keyPressed(KeyEvent event) {
-        System.out.println("Code touche pressée : " + event.getKeyCode() + " - caractère touche pressée : " + event.getKeyChar());
-    }
+		System.out.println("Code touche pressée : " + event.getKeyCode() + " - caractère touche pressée : " + event.getKeyChar());
+	}
 
-    @Override
-        public void keyReleased(KeyEvent arg0) {
-        // TODO Auto-generated method stub
+	public void keyReleased(KeyEvent event) {
+		System.out.println("Code touche relâchée : " + event.getKeyCode() + " - caractère touche relâchée : " + event.getKeyChar());         
 
-    }
+	}
+	public void keyTyped(KeyEvent event) {
+		System.out.println("Code touche tapée : " + event.getKeyCode() + " - caractère touche tapée : " + event.getKeyChar());
+	}
 
-    @Override
-        public void keyTyped(KeyEvent arg0) {
-        // TODO Auto-generated method stub
 
-    }
 }

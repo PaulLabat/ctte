@@ -84,15 +84,14 @@ public class CTTEFrame extends JFrame {
 		contentPane.setBorder(null);
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
+
 		//contentPane.addKeyListener(new ClavierListener());
-		
 		JPanel panel = new JPanel();
 		panel.setBorder(null);
 		contentPane.add(panel, BorderLayout.NORTH);
-                //this.addKeyListener(new ClavierListener());
 		panel.setLayout(new BorderLayout(0, 0));
 
-		
+
 
 		JMenuBar menuBar = new JMenuBar();
 		panel.add(menuBar, BorderLayout.NORTH);
@@ -687,7 +686,6 @@ public class CTTEFrame extends JFrame {
 		txtRecherche.setColumns(10);
 		txtRecherche.setSize(10, 30);
 		txtRecherche.setPreferredSize(new Dimension(30, 25));
-		txtRecherche.setColumns(10);
 		txtRecherche.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
