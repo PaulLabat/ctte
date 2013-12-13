@@ -23,6 +23,8 @@ import javax.swing.KeyStroke;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.InputEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.JSeparator;
 import javax.swing.JRadioButtonMenuItem;
@@ -33,15 +35,20 @@ import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Image;
 import java.awt.Insets;
+
 import javax.swing.JLabel;
 import javax.swing.JTextPane;
+
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.SystemColor;
 
+import javax.swing.JTextField;
+
 public class CTTEFrame extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField txtZoom;
 
 	/**
 	 * Launch the application.
@@ -578,6 +585,34 @@ public class CTTEFrame extends JFrame {
 		
 		JPanel panel_2 = new JPanel();
 		contentPane.add(panel_2, BorderLayout.SOUTH);
+		panel_2.setLayout(new BorderLayout(0, 0));
+		
+		JPanel panel_10 = new JPanel();
+		panel_2.add(panel_10, BorderLayout.EAST);
+		panel_10.setLayout(new FlowLayout(FlowLayout.CENTER, 2, 0));
+
+		
+		JButton btnNewButton_12 = new JButton("New button");
+		btnNewButton_12.setPreferredSize(new Dimension(25, 25));
+		panel_10.add(btnNewButton_12);
+		
+		JButton btnNewButton_13 = new JButton("New button");
+		btnNewButton_13.setPreferredSize(new Dimension(25, 25));
+		panel_10.add(btnNewButton_13);
+		
+		txtZoom = new JTextField();
+		txtZoom.setBackground(SystemColor.text);
+		txtZoom.setText("Zoom");
+		panel_10.add(txtZoom);
+		txtZoom.setSize(10, 30);
+		txtZoom.setPreferredSize(new Dimension(30, 25));
+		txtZoom.setColumns(10);
+		txtZoom.addMouseListener(new MouseAdapter(){
+            @Override
+            public void mouseClicked(MouseEvent e){
+                txtZoom.setText("");
+            }
+        });
 		
 		JScrollPane scrollPane = new JScrollPane();
 		contentPane.add(scrollPane, BorderLayout.CENTER);
