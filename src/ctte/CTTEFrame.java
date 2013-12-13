@@ -354,12 +354,15 @@ public class CTTEFrame extends JFrame {
 		panel_8.add(btnNewButton_10);
 		
 		JButton button = new JButton("New button");
+		button.setToolTipText("Delete");
 		panel_8.add(button);
 		
 		JButton button_1 = new JButton("New button");
+		button_1.setToolTipText("Undo");
 		panel_8.add(button_1);
 		
 		JButton button_2 = new JButton("New button");
+		button_2.setToolTipText("Redo");
 		panel_8.add(button_2);
 		
 		JPanel panel_9 = new JPanel();
@@ -367,6 +370,7 @@ public class CTTEFrame extends JFrame {
 		panel_9.setLayout(new GridLayout(0, 1, 0, 0));
 		
 		JButton btnNewButton_11 = new JButton("New button");
+		btnNewButton_11.setToolTipText("Properties");
 		panel_9.add(btnNewButton_11);
 		
 		JPanel panel_1 = new JPanel();
@@ -378,15 +382,19 @@ public class CTTEFrame extends JFrame {
 		panel_4.setLayout(new GridLayout(2, 2, 0, 0));
 		
 		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setToolTipText("Add User Task to SubTree");
 		panel_4.add(btnNewButton);
 		
 		JButton btnNewButton_2 = new JButton("New button");
+		btnNewButton_2.setToolTipText("Add Abstraction Task to SubTree");
 		panel_4.add(btnNewButton_2);
 		
 		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.setToolTipText("Add Application Task to SubTree");
 		panel_4.add(btnNewButton_1);
 		
 		JButton btnNewButton_3 = new JButton("New button");
+		btnNewButton_3.setToolTipText("Add Interaction Task to SubTree");
 		panel_4.add(btnNewButton_3);
 		
 		JPanel panel_5 = new JPanel();
