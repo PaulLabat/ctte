@@ -592,12 +592,14 @@ public class CTTEFrame extends JFrame {
 		panel_10.setLayout(new FlowLayout(FlowLayout.CENTER, 2, 0));
 
 		
-		JButton btnNewButton_12 = new JButton("New button");
+		JButton btnNewButton_12 = new JButton("");
 		btnNewButton_12.setPreferredSize(new Dimension(25, 25));
+		btnNewButton_12.setIcon(new ImageIcon("./res/images/zoomin.gif"));
 		panel_10.add(btnNewButton_12);
 		
-		JButton btnNewButton_13 = new JButton("New button");
+		JButton btnNewButton_13 = new JButton("");
 		btnNewButton_13.setPreferredSize(new Dimension(25, 25));
+		btnNewButton_13.setIcon(new ImageIcon("./res/images/zoomout.gif"));
 		panel_10.add(btnNewButton_13);
 		
 		txtZoom = new JTextField();
