@@ -13,6 +13,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 
 import java.awt.FlowLayout;
@@ -25,6 +26,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import javax.swing.KeyStroke;
 
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.InputEvent;
 import java.awt.event.MouseAdapter;
@@ -81,7 +83,7 @@ public class CTTEFrame extends JFrame {
 		Image image = toolkit.getImage("./res/images/cnr.gif");
 		setIconImage(image);
 		
-		this.setMinimumSize(new Dimension(400, 500));
+		this.setMinimumSize(new Dimension(600, 550));
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 615, 475);
@@ -94,6 +96,15 @@ public class CTTEFrame extends JFrame {
 		panel.setBorder(null);
 		contentPane.add(panel, BorderLayout.NORTH);
 		panel.setLayout(new BorderLayout(0, 0));
+		
+		
+		this.addKeyListener(new KeyAdapter() {
+			public void keyPressed(KeyEvent ke){
+				if ((ke.getModifiers()==KeyEvent.CTRL_MASK) /*&& (ke.getKeyCode()==KeyEvent.VK_X)*/) {
+					String name = JOptionPane.showInputDialog("What is your name?",null);
+	            }
+			}
+		});
 		
 		JMenuBar menuBar = new JMenuBar();
 		panel.add(menuBar, BorderLayout.NORTH);
@@ -446,24 +457,30 @@ public class CTTEFrame extends JFrame {
 		btnNewButton_11.setSize(25, 25);
 		btnNewButton_11.setPreferredSize(new Dimension(25,25));
 		panel_9.add(btnNewButton_11);
+		Border cadre = BorderFactory.createTitledBorder("Current Task" );
+		
+		JSeparator separator_19 = new JSeparator();
+		separator_19.setOrientation(SwingConstants.VERTICAL);
+		panel_3.add(separator_19);
 		
 		
 		JPanel panel_11 = new JPanel();
-		panel_3.add(panel_11);
-		Border cadre = BorderFactory.createTitledBorder("Current Task" );
+		panel.add(panel_11, BorderLayout.SOUTH);
 		panel_11.setBorder(cadre);
+		panel_11.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 5));
 		
 		JTextPane txtpnIdentifier = new JTextPane();
 		txtpnIdentifier.setToolTipText("");
 		txtpnIdentifier.setText("Identifier : ");
 		txtpnIdentifier.setFont(new Font("Dialog", Font.PLAIN, 11));
 		txtpnIdentifier.setEditable(false);
-		txtpnIdentifier.setBackground(SystemColor.window);
+		txtpnIdentifier.setBackground(SystemColor.control);
 		panel_11.add(txtpnIdentifier); 
 		
 		
 		
 		txtTask = new JTextField();
+		txtTask.setBackground(SystemColor.window);
 		txtTask.setText("Task_0");
 		panel_11.add(txtTask);
 		txtTask.setColumns(10);
@@ -473,7 +490,7 @@ public class CTTEFrame extends JFrame {
 		txtpnCategori.setText("Category : ");
 		txtpnCategori.setFont(new Font("Dialog", Font.PLAIN, 11));
 		txtpnCategori.setEditable(false);
-		txtpnCategori.setBackground(SystemColor.window);
+		txtpnCategori.setBackground(SystemColor.control);
 		panel_11.add(txtpnCategori);
 		
 		JComboBox comboBox = new JComboBox();
@@ -485,7 +502,7 @@ public class CTTEFrame extends JFrame {
 		txtpnType.setText("Type: ");
 		txtpnType.setFont(new Font("Dialog", Font.PLAIN, 11));
 		txtpnType.setEditable(false);
-		txtpnType.setBackground(SystemColor.window);
+		txtpnType.setBackground(SystemColor.control);
 		panel_11.add(txtpnType);
 		
 		JComboBox comboBox_1 = new JComboBox();
@@ -497,16 +514,12 @@ public class CTTEFrame extends JFrame {
 		txtpnFrequency.setText("Frequency : ");
 		txtpnFrequency.setFont(new Font("Dialog", Font.PLAIN, 11));
 		txtpnFrequency.setEditable(false);
-		txtpnFrequency.setBackground(SystemColor.window);
+		txtpnFrequency.setBackground(SystemColor.control);
 		panel_11.add(txtpnFrequency);
 		
 		JComboBox comboBox_2 = new JComboBox();
 		comboBox_2.setModel(new DefaultComboBoxModel(new String[] {"Low", "Medium", "Hight"}));
 		panel_11.add(comboBox_2);
-		
-		JSeparator separator_19 = new JSeparator();
-		separator_19.setOrientation(SwingConstants.VERTICAL);
-		panel_3.add(separator_19);
 
 		
 		
@@ -660,20 +673,6 @@ public class CTTEFrame extends JFrame {
 		JPanel panel_10 = new JPanel();
 		panel_2.add(panel_10, BorderLayout.EAST);
 		panel_10.setLayout(new FlowLayout(FlowLayout.CENTER, 2, 0));
-
-		txtRecherche = new JTextField();
-		txtRecherche.setText("Recherche...");
-		panel_10.add(txtRecherche);
-		txtRecherche.setColumns(10);
-		panel_10.add(txtRecherche);
-		txtRecherche.setSize(10, 30);
-		txtRecherche.setPreferredSize(new Dimension(30, 25));
-		txtRecherche.setColumns(10);
-		txtRecherche.addMouseListener(new MouseAdapter(){
-			@Override
-			public void mouseClicked(MouseEvent e){
-				txtRecherche.setText("");
-			}});
 		
 		
 		JButton btnNewButton_12 = new JButton("");
@@ -693,6 +692,19 @@ public class CTTEFrame extends JFrame {
 		txtZoom.setSize(10, 30);
 		txtZoom.setPreferredSize(new Dimension(30, 25));
 		txtZoom.setColumns(10);
+		
+				txtRecherche = new JTextField();
+				panel_2.add(txtRecherche, BorderLayout.WEST);
+				txtRecherche.setText("Find...");
+				txtRecherche.setColumns(10);
+				txtRecherche.setSize(10, 30);
+				txtRecherche.setPreferredSize(new Dimension(30, 25));
+				txtRecherche.setColumns(10);
+				txtRecherche.addMouseListener(new MouseAdapter(){
+					@Override
+					public void mouseClicked(MouseEvent e){
+						txtRecherche.setText("");
+					}});
 		txtZoom.addMouseListener(new MouseAdapter(){
             @Override
             public void mouseClicked(MouseEvent e){
@@ -702,6 +714,9 @@ public class CTTEFrame extends JFrame {
 		
 		JScrollPane scrollPane = new JScrollPane();
 		contentPane.add(scrollPane, BorderLayout.CENTER);
+		
+	
+		
 	}
 
 }
