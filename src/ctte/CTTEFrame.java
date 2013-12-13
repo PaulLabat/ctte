@@ -28,10 +28,13 @@ import javax.swing.JSeparator;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JCheckBoxMenuItem;
 
+import java.awt.Dimension;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Image;
 import java.awt.Insets;
+import javax.swing.JLabel;
+import com.jgoodies.forms.factories.DefaultComponentFactory;
 
 public class CTTEFrame extends JFrame {
 
@@ -62,7 +65,7 @@ public class CTTEFrame extends JFrame {
 		Image image = toolkit.getImage("./res/images/cnr.gif");
 		setIconImage(image);
 		
-		
+		this.setMinimumSize(new Dimension(200, 400));
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 615, 475);
@@ -340,21 +343,29 @@ public class CTTEFrame extends JFrame {
 		JButton btnNewButton_4 = new JButton("");
 		btnNewButton_4.setToolTipText("New");
 		btnNewButton_4.setIcon(new ImageIcon("./res/images/new.gif"));
+		btnNewButton_4.setSize(25, 20);
+		btnNewButton_4.setPreferredSize(new Dimension(25,20));
 		panel_7.add(btnNewButton_4);
 		
 		JButton btnNewButton_5 = new JButton("");
 		btnNewButton_5.setToolTipText("Open");
 		btnNewButton_5.setIcon(new ImageIcon("./res/images/open.gif"));
+		btnNewButton_5.setSize(25, 20);
+		btnNewButton_5.setPreferredSize(new Dimension(25,20));
 		panel_7.add(btnNewButton_5);
 		
 		JButton btnNewButton_8 = new JButton("");
 		btnNewButton_8.setToolTipText("Save");
 		btnNewButton_8.setIcon(new ImageIcon("./res/images/save.gif"));
+		btnNewButton_8.setSize(25, 20);
+		btnNewButton_8.setPreferredSize(new Dimension(25,20));
 		panel_7.add(btnNewButton_8);
 		
 		JButton btnNewButton_6 = new JButton("");
 		btnNewButton_6.setToolTipText("Print");
 		btnNewButton_6.setIcon(new ImageIcon("./res/images/print.gif"));
+		btnNewButton_6.setSize(25, 20);
+		btnNewButton_6.setPreferredSize(new Dimension(25,20));
 		panel_7.add(btnNewButton_6);
 		
 		JPanel panel_8 = new JPanel();
@@ -364,31 +375,43 @@ public class CTTEFrame extends JFrame {
 		JButton btnNewButton_7 = new JButton("");
 		btnNewButton_7.setToolTipText("Cut SubTree");
 		btnNewButton_7.setIcon(new ImageIcon("./res/images/cutall.gif"));
+		btnNewButton_7.setSize(25, 20);
+		btnNewButton_7.setPreferredSize(new Dimension(25,20));
 		panel_8.add(btnNewButton_7);
 		
 		JButton btnNewButton_9 = new JButton("");
 		btnNewButton_9.setToolTipText("Copy SubTree");
 		btnNewButton_9.setIcon(new ImageIcon("./res/images/copy.gif"));
+		btnNewButton_9.setSize(25, 20);
+		btnNewButton_9.setPreferredSize(new Dimension(25,20));
 		panel_8.add(btnNewButton_9);
 		
 		JButton btnNewButton_10 = new JButton("");
 		btnNewButton_10.setToolTipText("Paste");
 		btnNewButton_10.setIcon(new ImageIcon("./res/images/paste.gif"));
+		btnNewButton_10.setSize(25, 20);
+		btnNewButton_10.setPreferredSize(new Dimension(25,20));
 		panel_8.add(btnNewButton_10);
 		
 		JButton button = new JButton("");
 		button.setToolTipText("Delete");
 		button.setIcon(new ImageIcon("./res/images/delete.png"));
+		button.setSize(25, 20);
+		button.setPreferredSize(new Dimension(25,20));
 		panel_8.add(button);
 		
 		JButton button_1 = new JButton("");
 		button_1.setToolTipText("Undo");
 		button_1.setIcon(new ImageIcon("./res/images/undo.gif"));
+		button_1.setSize(25, 20);
+		button_1.setPreferredSize(new Dimension(25,20));
 		panel_8.add(button_1);
 		
 		JButton button_2 = new JButton("");
 		button_2.setToolTipText("Redo");
 		button_2.setIcon(new ImageIcon("./res/images/redo.gif"));
+		button_2.setSize(25, 20);
+		button_2.setPreferredSize(new Dimension(25,20));
 		panel_8.add(button_2);
 		
 		JPanel panel_9 = new JPanel();
@@ -398,6 +421,8 @@ public class CTTEFrame extends JFrame {
 		JButton btnNewButton_11 = new JButton("");
 		btnNewButton_11.setToolTipText("Properties");
 		btnNewButton_11.setIcon(new ImageIcon("./res/images/properties.gif"));
+		btnNewButton_11.setSize(25, 20);
+		btnNewButton_11.setPreferredSize(new Dimension(40,20));
 		panel_9.add(btnNewButton_11);
 		
 		JPanel panel_1 = new JPanel();
@@ -435,60 +460,83 @@ public class CTTEFrame extends JFrame {
 		JButton button_3 = new JButton("");
 		button_3.setToolTipText("Choice");
 		button_3.setIcon(new ImageIcon("./res/images/choice.gif"));
+		button_3.setSize(25, 20);
+		button_3.setPreferredSize(new Dimension(25,20));
 		panel_5.add(button_3);
 		
 		JButton button_4 = new JButton("");
 		button_4.setToolTipText("OrderIndependence");
 		button_4.setIcon(new ImageIcon("./res/images/order.gif"));
+		button_4.setSize(25, 20);
+		button_4.setPreferredSize(new Dimension(25,20));
 		panel_5.add(button_4);
 		
 		JButton button_5 = new JButton("");
 		button_5.setToolTipText("InterLeaving");
 		button_5.setIcon(new ImageIcon("./res/images/interleave.gif"));
+		button_5.setSize(25, 20);
+		button_5.setPreferredSize(new Dimension(25,20));
 		panel_5.add(button_5);
 		
 		JButton button_6 = new JButton("");
 		button_6.setToolTipText("Synchronization");
 		button_6.setIcon(new ImageIcon("./res/images/sincro.gif"));
+		button_6.setSize(25, 20);
+		button_6.setPreferredSize(new Dimension(25,20));
 		panel_5.add(button_6);
 		
 		JButton button_7 = new JButton("");
 		button_7.setToolTipText("Disabling");
 		button_7.setIcon(new ImageIcon("./res/images/disabling.gif"));
+		button_7.setSize(25, 20);
+		button_7.setPreferredSize(new Dimension(25,20));
 		panel_5.add(button_7);
 		
 		JButton button_8 = new JButton("");
 		button_8.setToolTipText("SuspendResume");
 		button_8.setIcon(new ImageIcon("./res/images/suspend.gif"));
+		button_8.setSize(25, 20);
+		button_8.setPreferredSize(new Dimension(25,20));
 		panel_5.add(button_8);
 		
 		JButton button_9 = new JButton("");
 		button_9.setToolTipText("SequentialEnabling");
 		button_9.setIcon(new ImageIcon("./res/images/enabling.gif"));
+		button_9.setSize(25, 20);
+		button_9.setPreferredSize(new Dimension(25,20));
 		panel_5.add(button_9);
 		
 		JButton button_10 = new JButton("");
 		button_10.setToolTipText("SequentialEnablingInfo");
 		button_10.setIcon(new ImageIcon("./res/images/enablinginfo.gif"));
+		button_10.setSize(25, 20);
+		button_10.setPreferredSize(new Dimension(25,20));
 		panel_5.add(button_10);
 		
 		JPanel panel_6 = new JPanel();
 		panel_1.add(panel_6);
 		panel_6.setLayout(new GridLayout(0, 3, 0, 0));
+		panel_6.setSize(new Dimension(25*3,20));
 		
 		JButton button_11 = new JButton("");
 		button_11.setToolTipText("Set/Unset  Iterative Task");
 		button_11.setIcon(new ImageIcon("./res/images/iterative.gif"));
+		button_11.setSize(25, 20);
+		button_11.setPreferredSize(new Dimension(25,20));
 		panel_6.add(button_11);
 		
 		JButton button_12 = new JButton("");
 		button_12.setToolTipText("Set/Unset Optional Task");
 		button_12.setIcon(new ImageIcon("./res/images/optional.gif"));
+		button_12.setSize(25, 20);
+		button_12.setPreferredSize(new Dimension(25,20));
 		panel_6.add(button_12);
 		
 		JButton button_13 = new JButton("");
 		button_13.setToolTipText("Set/Unset Connection Task");
 		button_13.setIcon(new ImageIcon("./res/images/arrow.gif"));
+		button_13.setSize(25, 20);
+		button_13.setPreferredSize(new Dimension(25,20));
 		panel_6.add(button_13);
 		
 		JPanel panel_2 = new JPanel();
