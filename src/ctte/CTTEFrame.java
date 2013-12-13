@@ -100,9 +100,9 @@ public class CTTEFrame extends JFrame {
 		
 		this.addKeyListener(new KeyAdapter() {
 			public void keyPressed(KeyEvent ke){
-				if ((ke.getModifiers()==KeyEvent.CTRL_MASK) /*&& (ke.getKeyCode()==KeyEvent.VK_X)*/) {
-					String name = JOptionPane.showInputDialog("What is your name?",null);
-	            }
+				if ((ke.getModifiers()==KeyEvent.CTRL_MASK) && (ke.getKeyCode()==KeyEvent.VK_PAGE_UP)) {
+                    System.out.println("Ctrl-PageUp pressé !");
+                }
 			}
 		});
 		
