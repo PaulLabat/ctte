@@ -5,8 +5,12 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
+import javax.swing.BorderFactory;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
+import javax.swing.JComboBox;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JScrollPane;
@@ -49,6 +53,8 @@ public class CTTEFrame extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtZoom;
+	private JTextField txtRecherche;
+	private JTextField txtTask;
 
 	/**
 	 * Launch the application.
@@ -441,6 +447,70 @@ public class CTTEFrame extends JFrame {
 		btnNewButton_11.setPreferredSize(new Dimension(25,25));
 		panel_9.add(btnNewButton_11);
 		
+		
+		JPanel panel_11 = new JPanel();
+		panel_3.add(panel_11);
+		Border cadre = BorderFactory.createTitledBorder("Current Task" );
+		panel_11.setBorder(cadre);
+		
+		JTextPane txtpnIdentifier = new JTextPane();
+		txtpnIdentifier.setToolTipText("");
+		txtpnIdentifier.setText("Identifier : ");
+		txtpnIdentifier.setFont(new Font("Dialog", Font.PLAIN, 11));
+		txtpnIdentifier.setEditable(false);
+		txtpnIdentifier.setBackground(SystemColor.window);
+		panel_11.add(txtpnIdentifier); 
+		
+		
+		
+		txtTask = new JTextField();
+		txtTask.setText("Task_0");
+		panel_11.add(txtTask);
+		txtTask.setColumns(10);
+		
+		JTextPane txtpnCategori = new JTextPane();
+		txtpnCategori.setToolTipText("");
+		txtpnCategori.setText("Category : ");
+		txtpnCategori.setFont(new Font("Dialog", Font.PLAIN, 11));
+		txtpnCategori.setEditable(false);
+		txtpnCategori.setBackground(SystemColor.window);
+		panel_11.add(txtpnCategori);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"abstraction", "application", "interaction", "user"}));
+		panel_11.add(comboBox);
+		
+		JTextPane txtpnType = new JTextPane();
+		txtpnType.setToolTipText("");
+		txtpnType.setText("Type: ");
+		txtpnType.setFont(new Font("Dialog", Font.PLAIN, 11));
+		txtpnType.setEditable(false);
+		txtpnType.setBackground(SystemColor.window);
+		panel_11.add(txtpnType);
+		
+		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+		panel_11.add(comboBox_1);
+		
+		JTextPane txtpnFrequency = new JTextPane();
+		txtpnFrequency.setToolTipText("");
+		txtpnFrequency.setText("Frequency : ");
+		txtpnFrequency.setFont(new Font("Dialog", Font.PLAIN, 11));
+		txtpnFrequency.setEditable(false);
+		txtpnFrequency.setBackground(SystemColor.window);
+		panel_11.add(txtpnFrequency);
+		
+		JComboBox comboBox_2 = new JComboBox();
+		comboBox_2.setModel(new DefaultComboBoxModel(new String[] {"Low", "Medium", "Hight"}));
+		panel_11.add(comboBox_2);
+		
+		JSeparator separator_19 = new JSeparator();
+		separator_19.setOrientation(SwingConstants.VERTICAL);
+		panel_3.add(separator_19);
+
+		
+		
+		
 		JPanel panel_1 = new JPanel();
 		contentPane.add(panel_1, BorderLayout.WEST);
 		panel_1.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 5));
@@ -591,6 +661,20 @@ public class CTTEFrame extends JFrame {
 		panel_2.add(panel_10, BorderLayout.EAST);
 		panel_10.setLayout(new FlowLayout(FlowLayout.CENTER, 2, 0));
 
+		txtRecherche = new JTextField();
+		txtRecherche.setText("Recherche...");
+		panel_10.add(txtRecherche);
+		txtRecherche.setColumns(10);
+		panel_10.add(txtRecherche);
+		txtRecherche.setSize(10, 30);
+		txtRecherche.setPreferredSize(new Dimension(30, 25));
+		txtRecherche.setColumns(10);
+		txtRecherche.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				txtRecherche.setText("");
+			}});
+		
 		
 		JButton btnNewButton_12 = new JButton("");
 		btnNewButton_12.setPreferredSize(new Dimension(25, 25));
