@@ -6,22 +6,31 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.ImageIcon;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JScrollPane;
+
 import java.awt.FlowLayout;
+
 import javax.swing.JMenuItem;
+
 import java.awt.GridLayout;
+
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import javax.swing.KeyStroke;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.InputEvent;
+
 import javax.swing.JSeparator;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JCheckBoxMenuItem;
+
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
+import java.awt.Image;
 import java.awt.Insets;
 
 public class CTTEFrame extends JFrame {
@@ -48,6 +57,13 @@ public class CTTEFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public CTTEFrame() {
+		//change l'icon de l'appli
+		java.awt.Toolkit toolkit = java.awt.Toolkit.getDefaultToolkit();
+		Image image = toolkit.getImage("./res/images/cnr.gif");
+		setIconImage(image);
+		
+		
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 615, 475);
 		contentPane = new JPanel();
@@ -321,56 +337,67 @@ public class CTTEFrame extends JFrame {
 		panel_3.add(panel_7);
 		panel_7.setLayout(new GridLayout(0, 4, 0, 0));
 		
-		JButton btnNewButton_4 = new JButton("New button");
+		JButton btnNewButton_4 = new JButton("");
 		btnNewButton_4.setToolTipText("New");
+		btnNewButton_4.setIcon(new ImageIcon("./res/images/new.gif"));
 		panel_7.add(btnNewButton_4);
 		
-		JButton btnNewButton_5 = new JButton("New button");
+		JButton btnNewButton_5 = new JButton("");
 		btnNewButton_5.setToolTipText("Open");
+		btnNewButton_5.setIcon(new ImageIcon("./res/images/open.gif"));
 		panel_7.add(btnNewButton_5);
 		
-		JButton btnNewButton_8 = new JButton("New button");
+		JButton btnNewButton_8 = new JButton("");
 		btnNewButton_8.setToolTipText("Save");
+		btnNewButton_8.setIcon(new ImageIcon("./res/images/save.gif"));
 		panel_7.add(btnNewButton_8);
 		
-		JButton btnNewButton_6 = new JButton("New button");
+		JButton btnNewButton_6 = new JButton("");
 		btnNewButton_6.setToolTipText("Print");
+		btnNewButton_6.setIcon(new ImageIcon("./res/images/print.gif"));
 		panel_7.add(btnNewButton_6);
 		
 		JPanel panel_8 = new JPanel();
 		panel_3.add(panel_8);
 		panel_8.setLayout(new GridLayout(0, 6, 0, 0));
 		
-		JButton btnNewButton_7 = new JButton("New button");
+		JButton btnNewButton_7 = new JButton("");
 		btnNewButton_7.setToolTipText("Cut SubTree");
+		btnNewButton_7.setIcon(new ImageIcon("./res/images/cutall.gif"));
 		panel_8.add(btnNewButton_7);
 		
-		JButton btnNewButton_9 = new JButton("New button");
+		JButton btnNewButton_9 = new JButton("");
 		btnNewButton_9.setToolTipText("Copy SubTree");
+		btnNewButton_9.setIcon(new ImageIcon("./res/images/copy.gif"));
 		panel_8.add(btnNewButton_9);
 		
-		JButton btnNewButton_10 = new JButton("New button");
+		JButton btnNewButton_10 = new JButton("");
 		btnNewButton_10.setToolTipText("Paste");
+		btnNewButton_10.setIcon(new ImageIcon("./res/images/paste.gif"));
 		panel_8.add(btnNewButton_10);
 		
-		JButton button = new JButton("New button");
+		JButton button = new JButton("");
 		button.setToolTipText("Delete");
+		button.setIcon(new ImageIcon("./res/images/delete.png"));
 		panel_8.add(button);
 		
-		JButton button_1 = new JButton("New button");
+		JButton button_1 = new JButton("");
 		button_1.setToolTipText("Undo");
+		button_1.setIcon(new ImageIcon("./res/images/undo.gif"));
 		panel_8.add(button_1);
 		
-		JButton button_2 = new JButton("New button");
+		JButton button_2 = new JButton("");
 		button_2.setToolTipText("Redo");
+		button_2.setIcon(new ImageIcon("./res/images/redo.gif"));
 		panel_8.add(button_2);
 		
 		JPanel panel_9 = new JPanel();
 		panel_3.add(panel_9);
 		panel_9.setLayout(new GridLayout(0, 1, 0, 0));
 		
-		JButton btnNewButton_11 = new JButton("New button");
+		JButton btnNewButton_11 = new JButton("");
 		btnNewButton_11.setToolTipText("Properties");
+		btnNewButton_11.setIcon(new ImageIcon("./res/images/properties.gif"));
 		panel_9.add(btnNewButton_11);
 		
 		JPanel panel_1 = new JPanel();
@@ -381,61 +408,87 @@ public class CTTEFrame extends JFrame {
 		panel_1.add(panel_4);
 		panel_4.setLayout(new GridLayout(2, 2, 0, 0));
 		
-		JButton btnNewButton = new JButton("New button");
+		JButton btnNewButton = new JButton("");
 		btnNewButton.setToolTipText("Add User Task to SubTree");
+		btnNewButton.setIcon(new ImageIcon("./res/images/userico.gif"));
 		panel_4.add(btnNewButton);
 		
-		JButton btnNewButton_2 = new JButton("New button");
+		JButton btnNewButton_2 = new JButton("");
 		btnNewButton_2.setToolTipText("Add Abstraction Task to SubTree");
+		btnNewButton_2.setIcon(new ImageIcon("./res/images/abstractionico.gif"));
 		panel_4.add(btnNewButton_2);
 		
-		JButton btnNewButton_1 = new JButton("New button");
+		JButton btnNewButton_1 = new JButton("");
 		btnNewButton_1.setToolTipText("Add Application Task to SubTree");
+		btnNewButton_1.setIcon(new ImageIcon("./res/images/applicationico.gif"));
 		panel_4.add(btnNewButton_1);
 		
-		JButton btnNewButton_3 = new JButton("New button");
+		JButton btnNewButton_3 = new JButton("");
 		btnNewButton_3.setToolTipText("Add Interaction Task to SubTree");
+		btnNewButton_3.setIcon(new ImageIcon("./res/images/interactionico.gif"));
 		panel_4.add(btnNewButton_3);
 		
 		JPanel panel_5 = new JPanel();
 		panel_1.add(panel_5);
 		panel_5.setLayout(new GridLayout(4, 2, 0, 0));
 		
-		JButton button_3 = new JButton("New button");
+		JButton button_3 = new JButton("");
+		button_3.setToolTipText("Choice");
+		button_3.setIcon(new ImageIcon("./res/images/choice.gif"));
 		panel_5.add(button_3);
 		
-		JButton button_4 = new JButton("New button");
+		JButton button_4 = new JButton("");
+		button_4.setToolTipText("OrderIndependence");
+		button_4.setIcon(new ImageIcon("./res/images/order.gif"));
 		panel_5.add(button_4);
 		
-		JButton button_5 = new JButton("New button");
+		JButton button_5 = new JButton("");
+		button_5.setToolTipText("InterLeaving");
+		button_5.setIcon(new ImageIcon("./res/images/interleave.gif"));
 		panel_5.add(button_5);
 		
-		JButton button_6 = new JButton("New button");
+		JButton button_6 = new JButton("");
+		button_6.setToolTipText("Synchronization");
+		button_6.setIcon(new ImageIcon("./res/images/sincro.gif"));
 		panel_5.add(button_6);
 		
-		JButton button_7 = new JButton("New button");
+		JButton button_7 = new JButton("");
+		button_7.setToolTipText("Disabling");
+		button_7.setIcon(new ImageIcon("./res/images/disabling.gif"));
 		panel_5.add(button_7);
 		
-		JButton button_8 = new JButton("New button");
+		JButton button_8 = new JButton("");
+		button_8.setToolTipText("SuspendResume");
+		button_8.setIcon(new ImageIcon("./res/images/suspend.gif"));
 		panel_5.add(button_8);
 		
-		JButton button_9 = new JButton("New button");
+		JButton button_9 = new JButton("");
+		button_9.setToolTipText("SequentialEnabling");
+		button_9.setIcon(new ImageIcon("./res/images/enabling.gif"));
 		panel_5.add(button_9);
 		
-		JButton button_10 = new JButton("New button");
+		JButton button_10 = new JButton("");
+		button_10.setToolTipText("SequentialEnablingInfo");
+		button_10.setIcon(new ImageIcon("./res/images/enablinginfo.gif"));
 		panel_5.add(button_10);
 		
 		JPanel panel_6 = new JPanel();
 		panel_1.add(panel_6);
 		panel_6.setLayout(new GridLayout(0, 3, 0, 0));
 		
-		JButton button_11 = new JButton("New button");
+		JButton button_11 = new JButton("");
+		button_11.setToolTipText("Set/Unset  Iterative Task");
+		button_11.setIcon(new ImageIcon("./res/images/iterative.gif"));
 		panel_6.add(button_11);
 		
-		JButton button_12 = new JButton("New button");
+		JButton button_12 = new JButton("");
+		button_12.setToolTipText("Set/Unset Optional Task");
+		button_12.setIcon(new ImageIcon("./res/images/optional.gif"));
 		panel_6.add(button_12);
 		
-		JButton button_13 = new JButton("New button");
+		JButton button_13 = new JButton("");
+		button_13.setToolTipText("Set/Unset Connection Task");
+		button_13.setIcon(new ImageIcon("./res/images/arrow.gif"));
 		panel_6.add(button_13);
 		
 		JPanel panel_2 = new JPanel();
