@@ -64,7 +64,7 @@ public class CTTEFrame extends JFrame {
 		Image image = toolkit.getImage("./res/images/cnr.gif");
 		setIconImage(image);
 		
-		this.setMinimumSize(new Dimension(200, 400));
+		this.setMinimumSize(new Dimension(400, 400));
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 615, 475);
@@ -332,8 +332,8 @@ public class CTTEFrame extends JFrame {
 		mnHelp.add(mntmSearch);
 		
 		JPanel panel_3 = new JPanel();
-		panel.add(panel_3, BorderLayout.CENTER);
-		panel_3.setLayout(new GridLayout(0, 3, 0, 0));
+		panel.add(panel_3, BorderLayout.WEST);
+		panel_3.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
 		JPanel panel_7 = new JPanel();
 		panel_3.add(panel_7);
@@ -342,30 +342,33 @@ public class CTTEFrame extends JFrame {
 		JButton btnNewButton_4 = new JButton("");
 		btnNewButton_4.setToolTipText("New");
 		btnNewButton_4.setIcon(new ImageIcon("./res/images/new.gif"));
-		btnNewButton_4.setSize(25, 20);
-		btnNewButton_4.setPreferredSize(new Dimension(25,20));
+		btnNewButton_4.setSize(25, 25);
+		btnNewButton_4.setPreferredSize(new Dimension(25,25));
 		panel_7.add(btnNewButton_4);
 		
 		JButton btnNewButton_5 = new JButton("");
 		btnNewButton_5.setToolTipText("Open");
 		btnNewButton_5.setIcon(new ImageIcon("./res/images/open.gif"));
-		btnNewButton_5.setSize(25, 20);
-		btnNewButton_5.setPreferredSize(new Dimension(25,20));
+		btnNewButton_5.setSize(25, 25);
+		btnNewButton_5.setPreferredSize(new Dimension(25,25));
 		panel_7.add(btnNewButton_5);
 		
 		JButton btnNewButton_8 = new JButton("");
 		btnNewButton_8.setToolTipText("Save");
 		btnNewButton_8.setIcon(new ImageIcon("./res/images/save.gif"));
-		btnNewButton_8.setSize(25, 20);
-		btnNewButton_8.setPreferredSize(new Dimension(25,20));
+		btnNewButton_8.setSize(25, 25);
+		btnNewButton_8.setPreferredSize(new Dimension(25,25));
 		panel_7.add(btnNewButton_8);
 		
 		JButton btnNewButton_6 = new JButton("");
 		btnNewButton_6.setToolTipText("Print");
 		btnNewButton_6.setIcon(new ImageIcon("./res/images/print.gif"));
-		btnNewButton_6.setSize(25, 20);
-		btnNewButton_6.setPreferredSize(new Dimension(25,20));
+		btnNewButton_6.setSize(25, 25);
+		btnNewButton_6.setPreferredSize(new Dimension(25,25));
 		panel_7.add(btnNewButton_6);
+		
+		JSeparator separator_17 = new JSeparator();
+		panel_3.add(separator_17);
 		
 		JPanel panel_8 = new JPanel();
 		panel_3.add(panel_8);
@@ -374,44 +377,47 @@ public class CTTEFrame extends JFrame {
 		JButton btnNewButton_7 = new JButton("");
 		btnNewButton_7.setToolTipText("Cut SubTree");
 		btnNewButton_7.setIcon(new ImageIcon("./res/images/cutall.gif"));
-		btnNewButton_7.setSize(25, 20);
-		btnNewButton_7.setPreferredSize(new Dimension(25,20));
+		btnNewButton_7.setSize(25, 25);
+		btnNewButton_7.setPreferredSize(new Dimension(25,25));
 		panel_8.add(btnNewButton_7);
 		
 		JButton btnNewButton_9 = new JButton("");
 		btnNewButton_9.setToolTipText("Copy SubTree");
 		btnNewButton_9.setIcon(new ImageIcon("./res/images/copy.gif"));
-		btnNewButton_9.setSize(25, 20);
-		btnNewButton_9.setPreferredSize(new Dimension(25,20));
+		btnNewButton_9.setSize(25, 25);
+		btnNewButton_9.setPreferredSize(new Dimension(25,25));
 		panel_8.add(btnNewButton_9);
 		
 		JButton btnNewButton_10 = new JButton("");
 		btnNewButton_10.setToolTipText("Paste");
 		btnNewButton_10.setIcon(new ImageIcon("./res/images/paste.gif"));
-		btnNewButton_10.setSize(25, 20);
-		btnNewButton_10.setPreferredSize(new Dimension(25,20));
+		btnNewButton_10.setSize(25, 25);
+		btnNewButton_10.setPreferredSize(new Dimension(25,25));
 		panel_8.add(btnNewButton_10);
 		
 		JButton button = new JButton("");
 		button.setToolTipText("Delete");
 		button.setIcon(new ImageIcon("./res/images/delete.png"));
-		button.setSize(25, 20);
-		button.setPreferredSize(new Dimension(25,20));
+		button.setSize(25, 25);
+		button.setPreferredSize(new Dimension(25,25));
 		panel_8.add(button);
 		
 		JButton button_1 = new JButton("");
 		button_1.setToolTipText("Undo");
 		button_1.setIcon(new ImageIcon("./res/images/undo.gif"));
-		button_1.setSize(25, 20);
-		button_1.setPreferredSize(new Dimension(25,20));
+		button_1.setSize(25, 25);
+		button_1.setPreferredSize(new Dimension(25,25));
 		panel_8.add(button_1);
 		
 		JButton button_2 = new JButton("");
 		button_2.setToolTipText("Redo");
 		button_2.setIcon(new ImageIcon("./res/images/redo.gif"));
-		button_2.setSize(25, 20);
-		button_2.setPreferredSize(new Dimension(25,20));
+		button_2.setSize(25, 25);
+		button_2.setPreferredSize(new Dimension(25,25));
 		panel_8.add(button_2);
+		
+		JSeparator separator_18 = new JSeparator();
+		panel_3.add(separator_18);
 		
 		JPanel panel_9 = new JPanel();
 		panel_3.add(panel_9);
@@ -420,8 +426,8 @@ public class CTTEFrame extends JFrame {
 		JButton btnNewButton_11 = new JButton("");
 		btnNewButton_11.setToolTipText("Properties");
 		btnNewButton_11.setIcon(new ImageIcon("./res/images/properties.gif"));
-		btnNewButton_11.setSize(25, 20);
-		btnNewButton_11.setPreferredSize(new Dimension(40,20));
+		btnNewButton_11.setSize(25, 25);
+		btnNewButton_11.setPreferredSize(new Dimension(25,25));
 		panel_9.add(btnNewButton_11);
 		
 		JPanel panel_1 = new JPanel();
@@ -435,21 +441,29 @@ public class CTTEFrame extends JFrame {
 		JButton btnNewButton = new JButton("");
 		btnNewButton.setToolTipText("Add User Task to SubTree");
 		btnNewButton.setIcon(new ImageIcon("./res/images/userico.gif"));
+		btnNewButton.setSize(35,35);
+		btnNewButton.setPreferredSize(new Dimension(35,35));
 		panel_4.add(btnNewButton);
 		
 		JButton btnNewButton_2 = new JButton("");
 		btnNewButton_2.setToolTipText("Add Abstraction Task to SubTree");
 		btnNewButton_2.setIcon(new ImageIcon("./res/images/abstractionico.gif"));
+		btnNewButton_2.setSize(35,35);
+		btnNewButton_2.setPreferredSize(new Dimension(35,35));
 		panel_4.add(btnNewButton_2);
 		
 		JButton btnNewButton_1 = new JButton("");
 		btnNewButton_1.setToolTipText("Add Application Task to SubTree");
 		btnNewButton_1.setIcon(new ImageIcon("./res/images/applicationico.gif"));
+		btnNewButton_1.setSize(35,35);
+		btnNewButton_1.setPreferredSize(new Dimension(35,35));
 		panel_4.add(btnNewButton_1);
 		
 		JButton btnNewButton_3 = new JButton("");
 		btnNewButton_3.setToolTipText("Add Interaction Task to SubTree");
 		btnNewButton_3.setIcon(new ImageIcon("./res/images/interactionico.gif"));
+		btnNewButton_3.setSize(35,35);
+		btnNewButton_3.setPreferredSize(new Dimension(35,35));
 		panel_4.add(btnNewButton_3);
 		
 		JPanel panel_5 = new JPanel();
