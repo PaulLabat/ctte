@@ -95,13 +95,13 @@ public class CTTEFrame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
 		contentPane.addKeyListener(new ClavierListener());
-		
+
 		JPanel panel = new JPanel();
 		panel.setBorder(null);
 		contentPane.add(panel, BorderLayout.NORTH);
 		panel.setLayout(new BorderLayout(0, 0));
 
-		
+
 
 		JMenuBar menuBar = new JMenuBar();
 		panel.add(menuBar, BorderLayout.NORTH);
@@ -715,23 +715,4 @@ public class CTTEFrame extends JFrame {
 
 	}
 
-}
-
-class ClavierListener implements KeyListener{
-
-	public void keyPressed(KeyEvent event) {
-		System.out.println("Code touche pressée : " + event.getKeyCode() + " - caractère touche pressée : " + event.getKeyChar());
-	}
-
-	@Override
-	public void keyReleased(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void keyTyped(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-
-	}
 }
