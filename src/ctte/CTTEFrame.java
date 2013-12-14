@@ -409,7 +409,7 @@ public class CTTEFrame extends JFrame {
 		btnNewButton_7.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité Cut SubTree");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Cut SubTree");
 			}});
 		btnNewButton_7.setPreferredSize(new Dimension(25,25));
 		panel_8.add(btnNewButton_7);
@@ -420,7 +420,7 @@ public class CTTEFrame extends JFrame {
 		btnNewButton_9.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité Copy");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Copy");
 			}});
 		btnNewButton_9.setSize(25, 25);
 		btnNewButton_9.setPreferredSize(new Dimension(25,25));
@@ -433,7 +433,7 @@ public class CTTEFrame extends JFrame {
 		btnNewButton_10.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité Paste");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Paste");
 			}});
 		btnNewButton_10.setPreferredSize(new Dimension(25,25));
 		panel_8.add(btnNewButton_10);
@@ -445,7 +445,7 @@ public class CTTEFrame extends JFrame {
 		button.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité Delete");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Delete");
 			}});
 		button.setPreferredSize(new Dimension(25,25));
 		panel_8.add(button);
@@ -456,7 +456,7 @@ public class CTTEFrame extends JFrame {
 		button_1.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité Undo");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Undo");
 			}});
 		button_1.setSize(25, 25);
 		button_1.setPreferredSize(new Dimension(25,25));
@@ -469,7 +469,7 @@ public class CTTEFrame extends JFrame {
 		button_2.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité Redo");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Redo");
 			}});
 		button_2.setPreferredSize(new Dimension(25,25));
 		panel_8.add(button_2);
@@ -631,7 +631,7 @@ public class CTTEFrame extends JFrame {
 		button_3.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Ã  venir");
 			}});
 		button_3.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_3);
@@ -643,7 +643,7 @@ public class CTTEFrame extends JFrame {
 		button_4.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Ã  venir");
 			}});
 		button_4.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_4);
@@ -655,7 +655,7 @@ public class CTTEFrame extends JFrame {
 		button_5.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Ã  venir");
 			}});
 		button_5.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_5);
@@ -667,7 +667,7 @@ public class CTTEFrame extends JFrame {
 		button_6.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Ã  venir");
 			}});
 		button_6.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_6);
@@ -679,7 +679,7 @@ public class CTTEFrame extends JFrame {
 		button_7.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Ã  venir");
 			}});
 		button_7.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_7);
@@ -691,7 +691,7 @@ public class CTTEFrame extends JFrame {
 		button_8.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Ã  venir");
 			}});
 		button_8.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_8);
@@ -703,7 +703,7 @@ public class CTTEFrame extends JFrame {
 		button_9.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Ã  venir");
 			}});
 		button_9.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_9);
@@ -715,7 +715,7 @@ public class CTTEFrame extends JFrame {
 		button_10.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Ã  venir");
 			}});
 		button_10.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_10);
@@ -742,7 +742,7 @@ public class CTTEFrame extends JFrame {
 		button_11.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Ã  venir");
 			}});
 		button_11.setPreferredSize(new Dimension(35, 35));
 		panel_6.add(button_11);
@@ -755,7 +755,7 @@ public class CTTEFrame extends JFrame {
 		button_12.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Ã  venir");
 			}});
 		panel_6.add(button_12);
 
@@ -766,7 +766,7 @@ public class CTTEFrame extends JFrame {
 		button_13.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
-				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				JOptionPane.showMessageDialog(null, "FonctionnalitÃ© Ã  venir");
 			}});
 		button_13.setPreferredSize(new Dimension(35, 35));
 		panel_6.add(button_13);
