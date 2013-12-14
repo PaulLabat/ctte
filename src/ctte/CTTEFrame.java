@@ -75,7 +75,7 @@ public class CTTEFrame extends JFrame {
 		setIconImage(image);
 
 
-		this.setMinimumSize(new Dimension(600, 550));
+		this.setMinimumSize(new Dimension(650, 550));
 
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
