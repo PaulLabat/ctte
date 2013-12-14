@@ -24,10 +24,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import javax.swing.KeyStroke;
 
-import java.awt.event.KeyEvent;
-import java.awt.event.InputEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 
 import javax.swing.JSeparator;
 import javax.swing.JRadioButtonMenuItem;
@@ -35,6 +32,7 @@ import javax.swing.JCheckBoxMenuItem;
 
 import java.awt.Dimension;
 import java.awt.Image;
+
 import javax.swing.JTextPane;
 
 import java.awt.Font;
@@ -54,6 +52,7 @@ public class CTTEFrame extends JFrame {
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
+                        @Override
 			public void run() {
 				try {
 					CTTEFrame frame = new CTTEFrame();
@@ -84,8 +83,11 @@ public class CTTEFrame extends JFrame {
 		contentPane.setBorder(null);
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
+		contentPane.setFocusable(true);
+		contentPane.requestFocus();
+		contentPane.addKeyListener(new ClavierListener());
+		
 
-		//contentPane.addKeyListener(new ClavierListener());
 		JPanel panel = new JPanel();
 		panel.setBorder(null);
 		contentPane.add(panel, BorderLayout.NORTH);
@@ -326,7 +328,7 @@ public class CTTEFrame extends JFrame {
 		mnTools.add(separator_15);
 
 		JMenuItem mntmReachablelityAnalysis = new JMenuItem("Reachablelity Analysis");
-		mntmReachablelityAnalysis.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, 0));
+		mntmReachablelityAnalysis.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, InputEvent.CTRL_MASK));
 		mnTools.add(mntmReachablelityAnalysis);
 
 		JMenu mnHelp = new JMenu("Help");
