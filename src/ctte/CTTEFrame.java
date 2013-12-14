@@ -74,11 +74,11 @@ public class CTTEFrame extends JFrame {
 		setIconImage(image);
 
 
-		this.setMinimumSize(new Dimension(600, 550));
+		this.setMinimumSize(new Dimension(650, 550));
 
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1005, 500);
+		setBounds(100, 100, 650, 550);
 		contentPane = new JPanel();
 		contentPane.setBorder(null);
 		setContentPane(contentPane);
@@ -361,6 +361,11 @@ public class CTTEFrame extends JFrame {
 		btnNewButton_4.setIcon(new ImageIcon("./res/images/new.gif"));
 		btnNewButton_4.setSize(25, 25);
 		btnNewButton_4.setPreferredSize(new Dimension(25,25));
+		btnNewButton_4.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Ouverture d'un nouveau document");
+			}});
 		panel_7.add(btnNewButton_4);
 
 		JButton btnNewButton_5 = new JButton("");
@@ -368,6 +373,7 @@ public class CTTEFrame extends JFrame {
 		btnNewButton_5.setIcon(new ImageIcon("./res/images/open.gif"));
 		btnNewButton_5.setSize(25, 25);
 		btnNewButton_5.setPreferredSize(new Dimension(25,25));
+		
 		panel_7.add(btnNewButton_5);
 
 		JButton btnNewButton_8 = new JButton("");
@@ -380,6 +386,11 @@ public class CTTEFrame extends JFrame {
 		JButton btnNewButton_6 = new JButton("");
 		btnNewButton_6.setToolTipText("Print");
 		btnNewButton_6.setIcon(new ImageIcon("./res/images/print.gif"));
+		btnNewButton_6.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Ouverture du menu d'impression");
+			}});
 		btnNewButton_6.setSize(25, 25);
 		btnNewButton_6.setPreferredSize(new Dimension(25,25));
 		panel_7.add(btnNewButton_6);
@@ -395,12 +406,22 @@ public class CTTEFrame extends JFrame {
 		btnNewButton_7.setToolTipText("Cut SubTree");
 		btnNewButton_7.setIcon(new ImageIcon("./res/images/cutall.gif"));
 		btnNewButton_7.setSize(25, 25);
+		btnNewButton_7.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité Cut SubTree");
+			}});
 		btnNewButton_7.setPreferredSize(new Dimension(25,25));
 		panel_8.add(btnNewButton_7);
 
 		JButton btnNewButton_9 = new JButton("");
 		btnNewButton_9.setToolTipText("Copy SubTree");
 		btnNewButton_9.setIcon(new ImageIcon("./res/images/copy.gif"));
+		btnNewButton_9.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité Copy");
+			}});
 		btnNewButton_9.setSize(25, 25);
 		btnNewButton_9.setPreferredSize(new Dimension(25,25));
 		panel_8.add(btnNewButton_9);
@@ -409,6 +430,11 @@ public class CTTEFrame extends JFrame {
 		btnNewButton_10.setToolTipText("Paste");
 		btnNewButton_10.setIcon(new ImageIcon("./res/images/paste.gif"));
 		btnNewButton_10.setSize(25, 25);
+		btnNewButton_10.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité Paste");
+			}});
 		btnNewButton_10.setPreferredSize(new Dimension(25,25));
 		panel_8.add(btnNewButton_10);
 
@@ -416,12 +442,22 @@ public class CTTEFrame extends JFrame {
 		button.setToolTipText("Delete");
 		button.setIcon(new ImageIcon("./res/images/delete.png"));
 		button.setSize(25, 25);
+		button.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité Delete");
+			}});
 		button.setPreferredSize(new Dimension(25,25));
 		panel_8.add(button);
 
 		JButton button_1 = new JButton("");
 		button_1.setToolTipText("Undo");
 		button_1.setIcon(new ImageIcon("./res/images/undo.gif"));
+		button_1.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité Undo");
+			}});
 		button_1.setSize(25, 25);
 		button_1.setPreferredSize(new Dimension(25,25));
 		panel_8.add(button_1);
@@ -430,6 +466,11 @@ public class CTTEFrame extends JFrame {
 		button_2.setToolTipText("Redo");
 		button_2.setIcon(new ImageIcon("./res/images/redo.gif"));
 		button_2.setSize(25, 25);
+		button_2.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité Redo");
+			}});
 		button_2.setPreferredSize(new Dimension(25,25));
 		panel_8.add(button_2);
 
@@ -526,6 +567,11 @@ public class CTTEFrame extends JFrame {
 		btnNewButton.setToolTipText("Add User Task to SubTree");
 		btnNewButton.setIcon(new ImageIcon("./res/images/userico.gif"));
 		btnNewButton.setSize(35,35);
+		btnNewButton.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Ajout d'une User Task");
+			}});
 		btnNewButton.setPreferredSize(new Dimension(35,35));
 		panel_4.add(btnNewButton);
 
@@ -533,6 +579,11 @@ public class CTTEFrame extends JFrame {
 		btnNewButton_2.setToolTipText("Add Abstraction Task to SubTree");
 		btnNewButton_2.setIcon(new ImageIcon("./res/images/abstractionico.gif"));
 		btnNewButton_2.setSize(35,35);
+		btnNewButton_2.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Ajout d'une Abstraction Task");
+			}});
 		btnNewButton_2.setPreferredSize(new Dimension(35,35));
 		panel_4.add(btnNewButton_2);
 
@@ -540,6 +591,11 @@ public class CTTEFrame extends JFrame {
 		btnNewButton_1.setToolTipText("Add Application Task to SubTree");
 		btnNewButton_1.setIcon(new ImageIcon("./res/images/applicationico.gif"));
 		btnNewButton_1.setSize(35,35);
+		btnNewButton_1.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Ajout d'une Applciation Task");
+			}});
 		btnNewButton_1.setPreferredSize(new Dimension(35,35));
 		panel_4.add(btnNewButton_1);
 
@@ -547,6 +603,11 @@ public class CTTEFrame extends JFrame {
 		btnNewButton_3.setToolTipText("Add Interaction Task to SubTree");
 		btnNewButton_3.setIcon(new ImageIcon("./res/images/interactionico.gif"));
 		btnNewButton_3.setSize(35,35);
+		btnNewButton_3.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Ajout d'une Interaction Task");
+			}});
 		btnNewButton_3.setPreferredSize(new Dimension(35,35));
 		panel_4.add(btnNewButton_3);
 
@@ -564,58 +625,98 @@ public class CTTEFrame extends JFrame {
 		panel_5.setLayout(new GridLayout(4, 2, 0, 0));
 
 		JButton button_3 = new JButton("");
-		button_3.setToolTipText("Choice");
+		button_3.setToolTipText("Choice + Explications");
 		button_3.setIcon(new ImageIcon("./res/images/choice.gif"));
 		button_3.setSize(35, 35);
+		button_3.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+			}});
 		button_3.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_3);
 
 		JButton button_4 = new JButton("");
-		button_4.setToolTipText("OrderIndependence");
+		button_4.setToolTipText("OrderIndependence + Explications");
 		button_4.setIcon(new ImageIcon("./res/images/order.gif"));
 		button_4.setSize(35, 35);
+		button_4.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+			}});
 		button_4.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_4);
 
 		JButton button_5 = new JButton("");
-		button_5.setToolTipText("InterLeaving");
+		button_5.setToolTipText("InterLeaving + Explications");
 		button_5.setIcon(new ImageIcon("./res/images/interleave.gif"));
 		button_5.setSize(35, 35);
+		button_5.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+			}});
 		button_5.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_5);
 
 		JButton button_6 = new JButton("");
-		button_6.setToolTipText("Synchronization");
+		button_6.setToolTipText("Synchronization + Explications");
 		button_6.setIcon(new ImageIcon("./res/images/sincro.gif"));
 		button_6.setSize(35, 35);
+		button_6.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+			}});
 		button_6.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_6);
 
 		JButton button_7 = new JButton("");
-		button_7.setToolTipText("Disabling");
+		button_7.setToolTipText("Disabling + Explications");
 		button_7.setIcon(new ImageIcon("./res/images/disabling.gif"));
 		button_7.setSize(35, 35);
+		button_7.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+			}});
 		button_7.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_7);
 
 		JButton button_8 = new JButton("");
-		button_8.setToolTipText("SuspendResume");
+		button_8.setToolTipText("SuspendResume + Explications");
 		button_8.setIcon(new ImageIcon("./res/images/suspend.gif"));
 		button_8.setSize(35, 35);
+		button_8.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+			}});
 		button_8.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_8);
 
 		JButton button_9 = new JButton("");
-		button_9.setToolTipText("SequentialEnabling");
+		button_9.setToolTipText("SequentialEnabling + Explications");
 		button_9.setIcon(new ImageIcon("./res/images/enabling.gif"));
 		button_9.setSize(35, 35);
+		button_9.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+			}});
 		button_9.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_9);
 
 		JButton button_10 = new JButton("");
-		button_10.setToolTipText("SequentialEnablingInfo");
+		button_10.setToolTipText("SequentialEnablingInfo + Explications");
 		button_10.setIcon(new ImageIcon("./res/images/enablinginfo.gif"));
 		button_10.setSize(35, 35);
+		button_10.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+			}});
 		button_10.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_10);
 
@@ -635,23 +736,38 @@ public class CTTEFrame extends JFrame {
 		panel_6.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 0));
 
 		JButton button_11 = new JButton("");
-		button_11.setToolTipText("Set/Unset  Iterative Task");
+		button_11.setToolTipText("Set/Unset  Iterative Task + Explications");
 		button_11.setIcon(new ImageIcon("./res/images/iterative.gif"));
 		button_11.setSize(35, 35);
+		button_11.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+			}});
 		button_11.setPreferredSize(new Dimension(35, 35));
 		panel_6.add(button_11);
 
 		JButton button_12 = new JButton("");
-		button_12.setToolTipText("Set/Unset Optional Task");
+		button_12.setToolTipText("Set/Unset Optional Task + Explications");
 		button_12.setIcon(new ImageIcon("./res/images/optional.gif"));
 		button_12.setSize(35, 35);
 		button_12.setPreferredSize(new Dimension(35, 35));
+		button_12.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+			}});
 		panel_6.add(button_12);
 
 		JButton button_13 = new JButton("");
-		button_13.setToolTipText("Set/Unset Connection Task");
+		button_13.setToolTipText("Set/Unset Connection Task + Explications");
 		button_13.setIcon(new ImageIcon("./res/images/arrow.gif"));
 		button_13.setSize(35, 35);
+		button_13.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+			}});
 		button_13.setPreferredSize(new Dimension(35, 35));
 		panel_6.add(button_13);
 
