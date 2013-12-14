@@ -84,8 +84,9 @@ public class CTTEFrame extends JFrame {
 		contentPane.setBorder(null);
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
-
-		//contentPane.addKeyListener(new ClavierListener());
+		contentPane.setFocusable(true);
+		contentPane.requestFocus();
+		contentPane.addKeyListener(new ClavierListener());
 		JPanel panel = new JPanel();
 		panel.setBorder(null);
 		contentPane.add(panel, BorderLayout.NORTH);
