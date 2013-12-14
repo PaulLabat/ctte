@@ -19,24 +19,34 @@ import javax.swing.JOptionPane;
 public class ClavierListener implements KeyListener{
 	
 	public void keyPressed(KeyEvent ke) {
-		if ((ke.getModifiers()==KeyEvent.CTRL_MASK) && (ke.getKeyCode()==KeyEvent.VK_X)) {
-			JOptionPane.showMessageDialog(null,"CTRL + X presse");
+		if (/*(ke.getModifiers()==KeyEvent.CTRL_MASK) && */(ke.getKeyCode()==KeyEvent.VK_C) && (ke.getKeyCode()==KeyEvent.VK_SHIFT)) {
+			JOptionPane.showMessageDialog(null,"CTRL + O presse : Fonction Copy SubTree");
 		}
-		else if ((ke.getModifiers()==KeyEvent.CTRL_MASK) && (ke.getKeyCode()==KeyEvent.VK_V)) {
-			JOptionPane.showMessageDialog(null,"CTRL + V presse");
-		}
-		else if ((ke.getModifiers()==KeyEvent.CTRL_MASK) && (ke.getKeyCode()==KeyEvent.VK_C)) {
-			JOptionPane.showMessageDialog(null,"CTRL + C presse");
-		}
-		else if ((ke.getModifiers()==KeyEvent.CTRL_MASK) && (ke.getKeyCode()==KeyEvent.VK_Z)) {
-			JOptionPane.showMessageDialog(null,"CTRL + Z presse");
-		}
-		else if ((ke.getModifiers()==KeyEvent.CTRL_MASK) && (ke.getKeyCode()==KeyEvent.VK_I)) {
-			JOptionPane.showMessageDialog(null,"CTRL + I presse");
+		else if ((ke.getModifiers()==KeyEvent.CTRL_MASK) && (ke.getKeyCode()==KeyEvent.VK_X) && (ke.getKeyCode()==KeyEvent.VK_SHIFT)) {
+			JOptionPane.showMessageDialog(null,"CTRL + O presse : Fonction Cut SubTree");
 		}
 		else if ((ke.getModifiers()==KeyEvent.CTRL_MASK) && (ke.getKeyCode()==KeyEvent.VK_O)) {
-			JOptionPane.showMessageDialog(null,"CTRL + O presse");
+			JOptionPane.showMessageDialog(null,"CTRL + O presse : Fonction Open");
 		}
+		else if ((ke.getModifiers()==KeyEvent.CTRL_MASK) && (ke.getKeyCode()==KeyEvent.VK_X)) {
+			JOptionPane.showMessageDialog(null,"CTRL + X presse : Fonction Cut Selection");
+		}
+		else if ((ke.getModifiers()==KeyEvent.CTRL_MASK) && (ke.getKeyCode()==KeyEvent.VK_V)) {
+			JOptionPane.showMessageDialog(null,"CTRL + V presse : Fonction Paste Selection");
+		}
+		else if ((ke.getModifiers()==KeyEvent.CTRL_MASK) && (ke.getKeyCode()==KeyEvent.VK_C)) {
+			JOptionPane.showMessageDialog(null,"CTRL + C presse : Fonction Copy Selection");
+		}
+		else if ((ke.getModifiers()==KeyEvent.CTRL_MASK) && (ke.getKeyCode()==KeyEvent.VK_Z)) {
+			JOptionPane.showMessageDialog(null,"CTRL + Z presse : Fonction Undo");
+		}
+		else if ((ke.getModifiers()==KeyEvent.CTRL_MASK) && (ke.getKeyCode()==KeyEvent.VK_I)) {
+			JOptionPane.showMessageDialog(null,"CTRL + I presse : Fonction ");
+		}
+		else if ((ke.getModifiers()==KeyEvent.CTRL_MASK) && (ke.getKeyCode()==KeyEvent.VK_O)) {
+			JOptionPane.showMessageDialog(null,"CTRL + O presse : Fonction Open");
+		}
+		
 	}
 
 	public void keyReleased(KeyEvent event) {
