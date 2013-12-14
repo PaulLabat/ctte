@@ -61,12 +61,16 @@ public class CTTEFrame extends JFrame implements ActionListener{
 	private JMenuItem mntmSaveSubtreeAs_1;
 	private JMenuItem mntmQuit;
 
+	private JRadioButtonMenuItem rdbtnmntmAllLevels;
+	private JRadioButtonMenuItem radioButtonMenuItem;
+	private JRadioButtonMenuItem rdbtnmntmBelowchild;
+	private JRadioButtonMenuItem rdbtnmntmToTheLeft;
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
-                        @Override
+			@Override
 			public void run() {
 				try {
 					CTTEFrame frame = new CTTEFrame();
@@ -263,11 +267,13 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		JMenu mnTaskModelBy = new JMenu("Task Model by levels");
 		mnView.add(mnTaskModelBy);
 
-		JRadioButtonMenuItem rdbtnmntmAllLevels = new JRadioButtonMenuItem("All levels");
+		rdbtnmntmAllLevels = new JRadioButtonMenuItem("All levels");
+		rdbtnmntmAllLevels.addActionListener(this);
 		rdbtnmntmAllLevels.setSelected(true);
 		mnTaskModelBy.add(rdbtnmntmAllLevels);
 
-		JRadioButtonMenuItem radioButtonMenuItem = new JRadioButtonMenuItem("0");
+		radioButtonMenuItem = new JRadioButtonMenuItem("0");
+		radioButtonMenuItem.addActionListener(this);
 		mnTaskModelBy.add(radioButtonMenuItem);
 
 		JSeparator separator_10 = new JSeparator();
@@ -300,11 +306,13 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		mnInsert.setHorizontalAlignment(SwingConstants.LEFT);
 		menuBar.add(mnInsert);
 
-		JRadioButtonMenuItem rdbtnmntmBelowchild = new JRadioButtonMenuItem("Below (child)");
+		rdbtnmntmBelowchild = new JRadioButtonMenuItem("Below (child)");
 		rdbtnmntmBelowchild.setSelected(true);
+		rdbtnmntmBelowchild.addActionListener(this);
 		mnInsert.add(rdbtnmntmBelowchild);
 
-		JRadioButtonMenuItem rdbtnmntmToTheLeft = new JRadioButtonMenuItem("To the left (sibling)");
+		rdbtnmntmToTheLeft = new JRadioButtonMenuItem("To the left (sibling)");
+		rdbtnmntmToTheLeft.addActionListener(this);
 		mnInsert.add(rdbtnmntmToTheLeft);
 
 		JSeparator separator_11 = new JSeparator();
@@ -879,6 +887,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+
 		if(e.getSource()==mntmNewMenuItem){
 			JFileChooser jfc = new JFileChooser();
 			int returnValue = jfc.showDialog(null,"Ouvrir");
@@ -888,27 +897,27 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			JFileChooser jfc = new JFileChooser();
 			int returnValue = jfc.showDialog(null,"Ouvrir XML");
 		}
-		
+
 		if(e.getSource()==mntmSave){
 			JFileChooser jfc = new JFileChooser();
 			int returnValue = jfc.showDialog(null,"Sauvegarde");
 		}
-		
+
 		if(e.getSource()==mntmSaveAs){
 			JFileChooser jfc = new JFileChooser();
 			int returnValue = jfc.showDialog(null,"Sauvegarde As...");
 		}
-		
+
 		if(e.getSource()==mntmSaveSubtreeAs){
 			JFileChooser jfc = new JFileChooser();
 			int returnValue = jfc.showDialog(null,"Sauvegarde du sous arbre");
 		}
-		
+
 		if(e.getSource()==mntmSaveCttAs){
 			JFileChooser jfc = new JFileChooser();
 			int returnValue = jfc.showDialog(null,"Sauvegarde XML");
 		}
-		
+
 		if(e.getSource()==mntmSaveTreeAs){
 			JFileChooser jfc = new JFileChooser();
 			int returnValue = jfc.showDialog(null,"Sauvegarde JPG");
@@ -918,11 +927,30 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			JFileChooser jfc = new JFileChooser();
 			int returnValue = jfc.showDialog(null,"Sauvegarde du sous arbre JPG");
 		}
-		
+
 		if(e.getSource()==mntmQuit ){
 			JOptionPane.showMessageDialog(null, "Attention la fenetre va s'éteindre");
 			System.exit(0);
 		}
+
+		if(e.getSource() == rdbtnmntmAllLevels){
+			rdbtnmntmAllLevels.setSelected(true);
+			radioButtonMenuItem.setSelected(false); 
+		}
+		else{
+			radioButtonMenuItem.setSelected(true);
+			rdbtnmntmAllLevels.setSelected(false);
+		}
+
+		if(e.getSource() == rdbtnmntmBelowchild){
+			rdbtnmntmBelowchild.setSelected(true);
+			rdbtnmntmToTheLeft.setSelected(false); 
+		}
+		else{
+			rdbtnmntmToTheLeft.setSelected(true);
+			rdbtnmntmBelowchild.setSelected(false);
+		}
+
 	}
 
 }
