@@ -51,7 +51,7 @@ public class ClavierListener implements KeyListener {
                         JOptionPane.showMessageDialog(null, "CTRL+ shift + S presse : Fonction save as");
                         break;
                     case KeyEvent.VK_X:
-                        JOptionPane.showMessageDialog(null, "CTRL + X presse : Fonction Cut SubTree");
+                        JOptionPane.showMessageDialog(null, "CTRL+ shift + X presse : Fonction Cut SubTree");
                         break;
                 }
             } else {
