@@ -53,6 +53,7 @@ public class CTTEFrame extends JFrame {
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
+                        @Override
 			public void run() {
 				try {
 					CTTEFrame frame = new CTTEFrame();
@@ -328,7 +329,7 @@ public class CTTEFrame extends JFrame {
 		mnTools.add(separator_15);
 
 		JMenuItem mntmReachablelityAnalysis = new JMenuItem("Reachablelity Analysis");
-		mntmReachablelityAnalysis.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, 0));
+		mntmReachablelityAnalysis.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, InputEvent.CTRL_MASK));
 		mnTools.add(mntmReachablelityAnalysis);
 
 		JMenu mnHelp = new JMenu("Help");
