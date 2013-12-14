@@ -10,6 +10,7 @@ import javax.swing.BorderFactory;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JOptionPane;
@@ -38,15 +39,27 @@ import javax.swing.JTextPane;
 
 import java.awt.Font;
 import java.awt.SystemColor;
+import java.io.IOException;
 
 import javax.swing.JTextField;
 
-public class CTTEFrame extends JFrame {
+
+
+public class CTTEFrame extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
 	private JTextField txtZoom;
 	private JTextField txtRecherche;
 	private JTextField txtTask;
+	private JMenuItem mntmNewMenuItem;
+	private JMenuItem mntmOpenCttAs;
+	private JMenuItem mntmSave;
+	private JMenuItem mntmSaveAs;
+	private JMenuItem mntmSaveSubtreeAs;
+	private JMenuItem mntmSaveCttAs;
+	private JMenuItem mntmSaveTreeAs;
+	private JMenuItem mntmSaveSubtreeAs_1;
+	private JMenuItem mntmQuit;
 
 	/**
 	 * Launch the application.
@@ -69,6 +82,9 @@ public class CTTEFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public CTTEFrame() {
+
+
+		this.setTitle("IHM");
 		//change l'icon de l'appli
 		java.awt.Toolkit toolkit = java.awt.Toolkit.getDefaultToolkit();
 		Image image = toolkit.getImage("./res/images/cnr.gif");
@@ -87,14 +103,11 @@ public class CTTEFrame extends JFrame {
 		contentPane.setFocusable(true);
 		contentPane.requestFocus();
 		contentPane.addKeyListener(new ClavierListener());
-		
 
 		JPanel panel = new JPanel();
 		panel.setBorder(null);
 		contentPane.add(panel, BorderLayout.NORTH);
 		panel.setLayout(new BorderLayout(0, 0));
-
-
 
 		JMenuBar menuBar = new JMenuBar();
 		panel.add(menuBar, BorderLayout.NORTH);
@@ -112,43 +125,52 @@ public class CTTEFrame extends JFrame {
 		JSeparator separator_1 = new JSeparator();
 		mnFile.add(separator_1);
 
-		JMenuItem mntmNewMenuItem = new JMenuItem("Open");
+		mntmNewMenuItem = new JMenuItem("Open");
+		mntmNewMenuItem.addActionListener(this);
+
 		mntmNewMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
 		mntmNewMenuItem.setHorizontalAlignment(SwingConstants.LEFT);
 		mnFile.add(mntmNewMenuItem);
 
-		JMenuItem mntmOpenCttAs = new JMenuItem("Open CTT As XML");
+		mntmOpenCttAs = new JMenuItem("Open CTT As XML");
+		mntmOpenCttAs.addActionListener(this);
 		mntmOpenCttAs.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK | InputEvent.SHIFT_MASK));
 		mnFile.add(mntmOpenCttAs);
 
 		JSeparator separator_2 = new JSeparator();
 		mnFile.add(separator_2);
 
-		JMenuItem mntmSave = new JMenuItem("Save");
+		mntmSave = new JMenuItem("Save");
+		mntmSave.addActionListener(this);
 		mntmSave.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_MASK));
 		mnFile.add(mntmSave);
 
 		JMenu mnSaveAs = new JMenu("Save As");
 		mnFile.add(mnSaveAs);
 
-		JMenuItem mntmSaveAs = new JMenuItem("Save as");
+		mntmSaveAs = new JMenuItem("Save as");
+		mntmSaveAs.addActionListener(this);
 		mnSaveAs.add(mntmSaveAs);
 		mntmSaveAs.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_MASK | InputEvent.SHIFT_MASK));
 
-		JMenuItem mntmSaveSubtreeAs = new JMenuItem("Save SubTree As");
+		mntmSaveSubtreeAs = new JMenuItem("Save SubTree As");
+		mntmSaveSubtreeAs.addActionListener(this);
 		mnSaveAs.add(mntmSaveSubtreeAs);
 
-		JMenuItem mntmSaveCttAs = new JMenuItem("Save CTT As XML");
+		mntmSaveCttAs = new JMenuItem("Save CTT As XML");
+		mntmSaveCttAs.addActionListener(this);
 		mnSaveAs.add(mntmSaveCttAs);
 
 		JSeparator separator_3 = new JSeparator();
 		mnSaveAs.add(separator_3);
 
-		JMenuItem mntmSaveTreeAs = new JMenuItem("Save Tree As JPG");
+		mntmSaveTreeAs = new JMenuItem("Save Tree As JPG");
+		mntmSaveTreeAs.addActionListener(this);
 		mntmSaveTreeAs.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_J, InputEvent.CTRL_MASK));
 		mnSaveAs.add(mntmSaveTreeAs);
 
-		JMenuItem mntmSaveSubtreeAs_1 = new JMenuItem("Save SubTree As JPG");
+		mntmSaveSubtreeAs_1 = new JMenuItem("Save SubTree As JPG");
+		mntmSaveSubtreeAs_1.addActionListener(this);
 		mnSaveAs.add(mntmSaveSubtreeAs_1);
 
 		JSeparator separator_4 = new JSeparator();
@@ -165,8 +187,9 @@ public class CTTEFrame extends JFrame {
 		JSeparator separator_5 = new JSeparator();
 		mnFile.add(separator_5);
 
-		JMenuItem mntmQuit = new JMenuItem("Quit");
+		mntmQuit = new JMenuItem("Quit"); 
 		mntmQuit.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, InputEvent.CTRL_MASK));
+		mntmQuit.addActionListener(this);
 		mnFile.add(mntmQuit);
 
 		JMenu mnEdit = new JMenu("Edit");
@@ -373,8 +396,14 @@ public class CTTEFrame extends JFrame {
 		btnNewButton_5.setToolTipText("Open");
 		btnNewButton_5.setIcon(new ImageIcon("./res/images/open.gif"));
 		btnNewButton_5.setSize(25, 25);
+		btnNewButton_5.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JFileChooser jfc = new JFileChooser();
+				int returnValue = jfc.showDialog(null,"Ouvrir");
+			}});
 		btnNewButton_5.setPreferredSize(new Dimension(25,25));
-		
+
 		panel_7.add(btnNewButton_5);
 
 		JButton btnNewButton_8 = new JButton("");
@@ -382,6 +411,13 @@ public class CTTEFrame extends JFrame {
 		btnNewButton_8.setIcon(new ImageIcon("./res/images/save.gif"));
 		btnNewButton_8.setSize(25, 25);
 		btnNewButton_8.setPreferredSize(new Dimension(25,25));
+		btnNewButton_8.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JFileChooser jfc = new JFileChooser();
+				int returnValue = jfc.showDialog(null,"Sauvegarder");
+
+			}});
 		panel_7.add(btnNewButton_8);
 
 		JButton btnNewButton_6 = new JButton("");
@@ -487,6 +523,11 @@ public class CTTEFrame extends JFrame {
 		btnNewButton_11.setIcon(new ImageIcon("./res/images/properties.gif"));
 		btnNewButton_11.setSize(25, 25);
 		btnNewButton_11.setPreferredSize(new Dimension(25,25));
+		btnNewButton_11.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "Affiche les propiétés");
+			}});
 		panel_9.add(btnNewButton_11);
 		Border cadre = BorderFactory.createTitledBorder("Current Task" );
 
@@ -784,11 +825,23 @@ public class CTTEFrame extends JFrame {
 		JButton btnNewButton_12 = new JButton("");
 		btnNewButton_12.setPreferredSize(new Dimension(25, 25));
 		btnNewButton_12.setIcon(new ImageIcon("./res/images/zoomin.gif"));
+		btnNewButton_12.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "On effectue un zoom avant");
+			}});
+		button_12.setPreferredSize(new Dimension(35, 35));
 		panel_10.add(btnNewButton_12);
 
 		JButton btnNewButton_13 = new JButton("");
 		btnNewButton_13.setPreferredSize(new Dimension(25, 25));
 		btnNewButton_13.setIcon(new ImageIcon("./res/images/zoomout.gif"));
+		btnNewButton_13.addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e){
+				JOptionPane.showMessageDialog(null, "On effectue un zoom arrière");
+			}});
+		button_13.setPreferredSize(new Dimension(35, 35));
 		panel_10.add(btnNewButton_13);
 
 		txtZoom = new JTextField();
@@ -821,6 +874,55 @@ public class CTTEFrame extends JFrame {
 		contentPane.add(scrollPane, BorderLayout.CENTER);
 
 
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource()==mntmNewMenuItem){
+			JFileChooser jfc = new JFileChooser();
+			int returnValue = jfc.showDialog(null,"Ouvrir");
+		}
+
+		if(e.getSource()==mntmOpenCttAs){
+			JFileChooser jfc = new JFileChooser();
+			int returnValue = jfc.showDialog(null,"Ouvrir XML");
+		}
+		
+		if(e.getSource()==mntmSave){
+			JFileChooser jfc = new JFileChooser();
+			int returnValue = jfc.showDialog(null,"Sauvegarde");
+		}
+		
+		if(e.getSource()==mntmSaveAs){
+			JFileChooser jfc = new JFileChooser();
+			int returnValue = jfc.showDialog(null,"Sauvegarde As...");
+		}
+		
+		if(e.getSource()==mntmSaveSubtreeAs){
+			JFileChooser jfc = new JFileChooser();
+			int returnValue = jfc.showDialog(null,"Sauvegarde du sous arbre");
+		}
+		
+		if(e.getSource()==mntmSaveCttAs){
+			JFileChooser jfc = new JFileChooser();
+			int returnValue = jfc.showDialog(null,"Sauvegarde XML");
+		}
+		
+		if(e.getSource()==mntmSaveTreeAs){
+			JFileChooser jfc = new JFileChooser();
+			int returnValue = jfc.showDialog(null,"Sauvegarde JPG");
+		}
+
+		if(e.getSource()==mntmSaveSubtreeAs_1){
+			JFileChooser jfc = new JFileChooser();
+			int returnValue = jfc.showDialog(null,"Sauvegarde du sous arbre JPG");
+		}
+		
+		if(e.getSource()==mntmQuit ){
+			JOptionPane.showMessageDialog(null, "Attention la fenetre va s'éteindre");
+			System.exit(0);
+		}
 	}
 
 }

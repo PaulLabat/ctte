@@ -37,21 +37,27 @@ public class ClavierListener implements KeyListener {
                 switch (ke.getKeyCode()) {
                     case KeyEvent.VK_C:
                         JOptionPane.showMessageDialog(null, "CTRL + shift + C presse : Fonction Copy SubTree");
+                        shift = false;
                         break;
                     case KeyEvent.VK_F:
                         JOptionPane.showMessageDialog(null, "CTRL+ shift + F presse : Function Model Filter");
+                        shift = false;
                         break;
                     case KeyEvent.VK_O:
                         JOptionPane.showMessageDialog(null, "CTRL+ shift + O presse : Fonction Open CTT As XML");
+                        shift = false;
                         break;
                     case KeyEvent.VK_P:
                         JOptionPane.showMessageDialog(null, "CTRL+ shift + P presse : Fonction print multiple pages");
+                        shift = false;
                         break;
                     case KeyEvent.VK_S:
                         JOptionPane.showMessageDialog(null, "CTRL+ shift + S presse : Fonction save as");
+                        shift = false;
                         break;
                     case KeyEvent.VK_X:
                         JOptionPane.showMessageDialog(null, "CTRL+ shift + X presse : Fonction Cut SubTree");
+                        shift = false;
                         break;
                 }
             } else {
