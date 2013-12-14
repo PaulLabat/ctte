@@ -9,24 +9,81 @@ package ctte;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author augustin
  */
+public class ClavierListener implements KeyListener {
 
-public class ClavierListener implements KeyListener{
-	
-	public void keyPressed(KeyEvent event) {
-		System.out.println("Code touche pressée : " + event.getKeyCode() + " - caractère touche pressée : " + event.getKeyChar());
-	}
+    @Override
+    public void keyPressed(KeyEvent ke) {
+        if (ke.getModifiers() == KeyEvent.CTRL_MASK) {
+            switch (ke.getKeyCode()) {
+                case KeyEvent.VK_C:
+                    if (ke.getKeyCode() == KeyEvent.VK_SHIFT) {
+                        JOptionPane.showMessageDialog(null, "CTRL + shift + C presse : Fonction Copy SubTree");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "CTRL + C presse : Fonction Copy Selection");
+                    }
+                    break;
+                case KeyEvent.VK_I:
+                    JOptionPane.showMessageDialog(null, "CTRL + I presse : Fonction ");
+                    break;
+                case KeyEvent.VK_O:
+                    JOptionPane.showMessageDialog(null, "CTRL + O presse : Fonction Open");
+                    break;
+                case KeyEvent.VK_V:
+                    JOptionPane.showMessageDialog(null, "CTRL + V presse : Fonction Paste Selection");
+                    break;
+                case KeyEvent.VK_X:
+                    if (ke.getKeyCode() == KeyEvent.VK_SHIFT) {
+                        JOptionPane.showMessageDialog(null, "CTRL + O presse : Fonction Cut SubTree");
+                    }
+                    break;
+                case KeyEvent.VK_Z:
+                    JOptionPane.showMessageDialog(null, "CTRL + Z presse : Fonction Undo");
+                    break;
+//                default :
+//                    JOptionPane.showMessageDialog(null, "ce raccourcie clavier n'existe pas");
+            }
+        }
+    }
 
-	public void keyReleased(KeyEvent event) {
-		System.out.println("Code touche relâchée : " + event.getKeyCode() + " - caractère touche relâchée : " + event.getKeyChar());         
+//    @Override
+//    public void keyPressed(KeyEvent ke) {
+//        if (/*(ke.getModifiers()==KeyEvent.CTRL_MASK) && */(ke.getKeyCode() == KeyEvent.VK_C) && (ke.getKeyCode() == KeyEvent.VK_SHIFT)) {
+//            JOptionPane.showMessageDialog(null, "CTRL + O presse : Fonction Copy SubTree");
+//        } else if ((ke.getModifiers() == KeyEvent.CTRL_MASK) && (ke.getKeyCode() == KeyEvent.VK_X) && (ke.getKeyCode() == KeyEvent.VK_SHIFT)) {
+//            JOptionPane.showMessageDialog(null, "CTRL + O presse : Fonction Cut SubTree");
+//        } else if ((ke.getModifiers() == KeyEvent.CTRL_MASK) && (ke.getKeyCode() == KeyEvent.VK_O)) {
+//            JOptionPane.showMessageDialog(null, "CTRL + O presse : Fonction Open");
+//        } else if ((ke.getModifiers() == KeyEvent.CTRL_MASK) && (ke.getKeyCode() == KeyEvent.VK_X)) {
+//            JOptionPane.showMessageDialog(null, "CTRL + X presse : Fonction Cut Selection");
+//        } else if ((ke.getModifiers() == KeyEvent.CTRL_MASK) && (ke.getKeyCode() == KeyEvent.VK_V)) {
+//            JOptionPane.showMessageDialog(null, "CTRL + V presse : Fonction Paste Selection");
+//        } else if ((ke.getModifiers() == KeyEvent.CTRL_MASK) && (ke.getKeyCode() == KeyEvent.VK_C)) {
+//            JOptionPane.showMessageDialog(null, "CTRL + C presse : Fonction Copy Selection");
+//        } else if ((ke.getModifiers() == KeyEvent.CTRL_MASK) && (ke.getKeyCode() == KeyEvent.VK_Z)) {
+//            JOptionPane.showMessageDialog(null, "CTRL + Z presse : Fonction Undo");
+//        } else if ((ke.getModifiers() == KeyEvent.CTRL_MASK) && (ke.getKeyCode() == KeyEvent.VK_I)) {
+//            JOptionPane.showMessageDialog(null, "CTRL + I presse : Fonction ");
+//        } else if ((ke.getModifiers() == KeyEvent.CTRL_MASK) && (ke.getKeyCode() == KeyEvent.VK_O)) {
+//            JOptionPane.showMessageDialog(null, "CTRL + O presse : Fonction Open");
+//        }
+//
+//    }
 
-	}
-	public void keyTyped(KeyEvent event) {
-		System.out.println("Code touche tapée : " + event.getKeyCode() + " - caractère touche tapée : " + event.getKeyChar());
-	}
+    @Override
+    public void keyReleased(KeyEvent event) {
+        System.out.println("Code touche relâchée : " + event.getKeyCode() + " - caractère touche relâchée : " + event.getKeyChar());
 
+    }
+
+    @Override
+    public void keyTyped(KeyEvent event) {
+        System.out.println("Code touche tapée : " + event.getKeyCode() + " - caractère touche tapée : " + event.getKeyChar());
+    }
 
 }
