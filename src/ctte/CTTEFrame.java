@@ -933,7 +933,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			System.exit(0);
 		}
 
-		if(e.getSource() == rdbtnmntmAllLevels){
+		/*if(e.getSource() == rdbtnmntmAllLevels){
 			rdbtnmntmAllLevels.setSelected(true);
 			radioButtonMenuItem.setSelected(false); 
 		}
@@ -949,7 +949,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		else{
 			rdbtnmntmToTheLeft.setSelected(true);
 			rdbtnmntmBelowchild.setSelected(false);
-		}
+		}*/
 
 	}
 
