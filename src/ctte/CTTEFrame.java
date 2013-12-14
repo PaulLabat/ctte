@@ -78,7 +78,7 @@ public class CTTEFrame extends JFrame {
 
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1005, 500);
+		setBounds(100, 100, 650, 550);
 		contentPane = new JPanel();
 		contentPane.setBorder(null);
 		setContentPane(contentPane);
