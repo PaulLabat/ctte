@@ -18,6 +18,7 @@ import javax.swing.JOptionPane;
 
 public class ClavierListener implements KeyListener{
 	
+        @Override
 	public void keyPressed(KeyEvent ke) {
 		if (/*(ke.getModifiers()==KeyEvent.CTRL_MASK) && */(ke.getKeyCode()==KeyEvent.VK_C) && (ke.getKeyCode()==KeyEvent.VK_SHIFT)) {
 			JOptionPane.showMessageDialog(null,"CTRL + O presse : Fonction Copy SubTree");
@@ -49,10 +50,12 @@ public class ClavierListener implements KeyListener{
 		
 	}
 
+        @Override
 	public void keyReleased(KeyEvent event) {
 		System.out.println("Code touche relâchée : " + event.getKeyCode() + " - caractère touche relâchée : " + event.getKeyChar());         
 
 	}
+        @Override
 	public void keyTyped(KeyEvent event) {
 		System.out.println("Code touche tapée : " + event.getKeyCode() + " - caractère touche tapée : " + event.getKeyChar());
 	}
