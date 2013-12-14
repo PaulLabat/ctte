@@ -87,15 +87,27 @@ Notre première remarque se porte sur la sauvegarde du document. En effet, au mo
 
 
 Cependant, pour la création d'arbre par exemple on remarque bien que la demande a été prise en compte, puisque celui-ci se construit à chaque clic. De plus, en passant simplement sa souris sur un bouton, l'utilisateur peut observer une modification de la couleur du fond, lui indiquant bien quel bouton il survol avec sa souris, en plus d'avoir un message donnant le nom de celui-ci.
-
+\newpage
 \subsection{Lisibilité}
 Le dernier point est la lisibilité. Cela correspond à l'idée que les informations données à l’utilisateur soient facilement compréhensibles et cohérentes pour lui, et qu'elle soient facilement visibles.
 
 
 Un premier problème se pose dans le logiciel CTTE par rapport au fait que l'interface est bien trop chargé de bouton. Un utilisateur novice aura rapidement du mal à s'y retrouver, se perdant dans la masse de fonctionnalités présentés par les différents boutons, souvent bien trop petit. Nous remarquons également que certains bouton représentent des actions très spécifiques, qu'un nouvel utilisateur n'arrivera pas à comprendre sans une aide extérieure.\\ 
-La police de caractère des différents nœuds et feuilles de l'arbre n'est également pas assez grande pour être lue correctement, et n'est pas forcément une police de caractère agréable (\emph{Agency FB}), et l'ajout continuel de branches entre les différents nœuds et feuilles se fait sur les noms des tâches, rendant difficile la lecture. 
-%ici image des noeuds s'empilants.
+La police de caractère des différents nœuds et feuilles de l'arbre n'est également pas assez grande pour être lue correctement, et n'est pas forcément une police de caractère agréable (\emph{Agency FB}), et l'ajout continuel de branches entre les différents nœuds et feuilles se fait sur les noms des tâches, rendant difficile la lecture. Un dernier problème provient du fait qu'après une copie, on se retrouve avec des noms en doubles, donc il peut être difficile en récupérant le document quelques jours après une séssion de travail de se souvenir de qu'elle tâche était la tâche originelle si le nom n'avait pas été changé. 
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[scale = 0.5]{empilement.jpg}
+	\caption{Il devient difficile de lire le nom de certaines tâches...}
+	\end{center}
+\end{figure}
 
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[scale = 0.5]{copierate.jpg}
+	\caption{Après une copie, on remarque bien que certaines tâches ont le même nom}
+	\end{center}
+\end{figure}
+\newpage
 \section{Charge de travail}
 Ce critère évalue la facilité de l'utilisateur à atteindre ses objectifs, de la manière la plus rapide et la plus facile possible. Celui-ci est divisé en 2 sous-critères : la brièveté et la densité informationnelle.
 
@@ -131,6 +143,12 @@ L'utilisateur doit toujours avoir la main, et pouvoir contrôler le déroulement
 
 Tout d'abord, le logiciel permet d'effectuer une action arrière aussi longtemps que cela est possible, permettant à l'utilisateur d'annuler une modification qu'il aurait effectué après le début, celle-ci étant conservées depuis le début de la session. Il peut également s'il le souhaite revenir en avant (avec un petit soucis de raccourcis clavier \emph{CNTRL + Z} doublement affecté pour le retour arrière/avant).
 
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[scale = 0.8]{ctrlz.jpg}
+	\caption{Un raccourcis clavier est affecté deux fois}
+	\end{center}
+\end{figure}
 
 Pour ce qui est de la possibilité de l'annulation d'un traitement en cours, nous n'avons pas réussi à trouver la possibilité de le faire, car nous n'avons pas vu d'action prenant un temps suffisamment considérable pour avoir la possibilité de l'annuler.
 
@@ -141,15 +159,25 @@ Ce critère concerne la capacité d'un système à réagir selon le contexte, et
 Pour cette section, nous avons chercher à vérifier si l'utilisateur pouvait personnaliser l'interface afin de prendre en compte ses habitudes de travail. \\
 
 
-Certaines barres d'outils sont déplaçables, mais comme exprimé précédemment, elles sont certe extratible, mais difficilement plaçable à la convenance de l'utilisateur. De plus, les boutons sont associés à leur barre, qui n'est pas en elle-même personnalisable. Il aurait été intéréssant de permettre à l'utilisateur d'ajouter ou d'enlever des boutons en fonction de ses habitudes de travail.
-%image du bordel quand on commence à se déplacer
+Certaines barres d'outils sont déplaçables, mais comme exprimé précédemment, elles sont certes extractible, mais difficilement déplaçable à la convenance de l'utilisateur. De plus, les boutons sont associés à leur barre, qui n'est pas en elle-même personnalisable. Il aurait été intéressant de permettre à l'utilisateur d'ajouter ou d'enlever des boutons en fonction de ses habitudes de travail.
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[scale = 0.5]{bazzare.jpg}
+	\caption{On remarque vite que le placement devient bizarre et mal organisé}
+	\end{center}
+\end{figure}
+\newpage
 \subsection{Prise en compte de l'expérience utilisateur}
 Nous allons maintenant analyser les différents moyens misent en oeuvre afin de prendre en compte le niveau d'expérience de l'utilisateur.\\
 
 
 En premier lieu, le logiciel ne fourni que très peut d'aide pour un utilisateur débutant. L'interface est la même que l'utilisateur débute ou soit un expert. Un novice n'est pas guidé afin de pouvoir facilement apprendre les différentes fonctionnalités. De plus, l'indication quand un utilisateur passe sa souris sur un bouton ne fait que donner le nom de celui-ci, ne l'aidant pas à comprendre forcément sont utilisation.
-%image du fait qu'un bouton n'affiche qu'un mot
-
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[scale = 1]{imagebtn.jpg}
+	\caption{Le mot \emph{Choice} seul n'aide pas à la compréhension}
+	\end{center}
+\end{figure}
 
 En revanche, on notera la présence de raccourcis claviers, qui sont un plus pour les utilisateurs confirmés, même si comme expliqué précédemment le raccourcis \emph{CNTRL + Z} est affecté à deux actions distinctes.
 %affichage du double cntrl + z
@@ -162,12 +190,19 @@ Nous allons dans un premier temps chercher les moyens mis en œuvre pour détect
 
 
 Nous remarquons d'abord qu'il n'est pas possible de sélectionner deux boutons en même temps, ce qui en soit est une bonne chose. Cependant les boutons qui ne devraient pas pouvoir être utilisés ne sont pas grisés. Un autre point est également à noter : lorsqu'un utilisateur modifie le champ type dans \emph{current task}, il peut rentrer n'importe quelle valeur, alors qu'il semblerait qu'une valeur spécifique soit attendue (visible en cherchant en particulier les propriétés du noeud / de la feuille). On ne sait pas si la modification est ou non prise en compte par le système, si celui-ci à traiter l'erreur, ce qui est déroutant pour l'utilisateur.
-
+\newpage
 \subsection{Qualité des messages d'erreur}
 L'importance d'un message d'erreur est d'être pertinent et de faciliter la lecture de l'information donnée a l'utilisateur quant à la nature de l'erreur commise.\\
 
 
 Pour cela, lors de l'apparition d'une fenêtre signalant une erreur (notamment lorsqu'on clic sur \emph{check model structure}, nous remarquons un message d'erreur clair nous indiquant la localisation de l'erreur avec la possibilité de mettre en surbrillance celle-ci. Nous avons également l'information de pourquoi l'erreur s'est produite. %image d'une erreur
+
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[scale = 0.7]{erreur.jpg}
+	\caption{L'erreur est bien explicitée}
+	\end{center}
+\end{figure}
 
 \subsection{Correction des erreurs}
 Enfin, nous allons analyser les moyens mis à la disposition de l'utilisateur pour lui permettre de corriger ses erreurs.\\

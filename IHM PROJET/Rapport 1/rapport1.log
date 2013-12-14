@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.12)  12 DEC 2013 17:40
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.12)  14 DEC 2013 20:17
 entering extended mode
 **rapport1.tex
-("C:\Users\Rodolphe\Documents\IHM PROJET\rapport1.tex"
+("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 1\rapport1.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, arabic, armenian, assamese, basque, bengali
 , bokmal, bulgarian, catalan, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, galic
@@ -364,7 +364,8 @@ File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
 Package: listings 2013/08/26 1.5b (Carsten Heinz)
- ("C:\Users\Rodolphe\Documents\IHM PROJET\rapport1.aux")
+
+("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 1\rapport1.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
@@ -380,6 +381,7 @@ LaTeX Font Info:    ... okay on input line 21.
 LaTeX Info: Redefining \degres on input line 21.
 LaTeX Info: Redefining \dots on input line 21.
 LaTeX Info: Redefining \up on input line 21.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -433,7 +435,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 22.
- ("C:\Users\Rodolphe\Documents\IHM PROJET\rapport1.toc"
+ ("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 1\rapport1.toc"
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -454,7 +456,7 @@ File: incitation.jpg Graphic file (type jpg)
  <use incitation.jpg>
 Package pdftex.def Info: incitation.jpg used on input line 40.
 (pdftex.def)             Requested size: 345.54008pt x 24.84274pt.
- [2 <C:/Users/Rodolphe/Documents/IHM PROJET/incitation.jpg>]
+ [2 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 1/incitation.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
@@ -470,8 +472,8 @@ File: menusderoulant.jpg Graphic file (type jpg)
  <use menusderoulant.jpg>
 Package pdftex.def Info: menusderoulant.jpg used on input line 64.
 (pdftex.def)             Requested size: 157.71382pt x 127.9778pt.
- [3 <C:/Users/Rodolphe/Documents/IHM PROJET/groupement.jpg> <C:/Users/Rodolphe/Documents/IHM PROJET/menusderoulant.jpg>]
-
+ [3 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 1/groupement.jpg> <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/
+Rapport 1/menusderoulant.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
@@ -486,91 +488,127 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
+[4 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 1/agencement.jpg>]
+<empilement.jpg, id=27, 413.29407pt x 128.73094pt>
+File: empilement.jpg Graphic file (type jpg)
+ <use empilement.jpg>
+Package pdftex.def Info: empilement.jpg used on input line 99.
+(pdftex.def)             Requested size: 206.64651pt x 64.3653pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
-
- []
-
-[4 <C:/Users/Rodolphe/Documents/IHM PROJET/agencement.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
-
- []
-
-
+<copierate.jpg, id=28, 506.6428pt x 271.76532pt>
+File: copierate.jpg Graphic file (type jpg)
+ <use copierate.jpg>
+Package pdftex.def Info: copierate.jpg used on input line 106.
+(pdftex.def)             Requested size: 253.32079pt x 135.88232pt.
+ [5 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 1/empilement.jpg> <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/
+Rapport 1/copierate.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
-[5]
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
+[6] <ctrlz.jpg, id=35, 124.21407pt x 49.68562pt>
+File: ctrlz.jpg Graphic file (type jpg)
+ <use ctrlz.jpg>
+Package pdftex.def Info: ctrlz.jpg used on input line 148.
+(pdftex.def)             Requested size: 99.37137pt x 39.74855pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+<bazzare.jpg, id=36, 764.8575pt x 49.68562pt>
+File: bazzare.jpg Graphic file (type jpg)
+ <use bazzare.jpg>
+Package pdftex.def Info: bazzare.jpg used on input line 165.
+(pdftex.def)             Requested size: 382.42781pt x 24.84274pt.
+ [7 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 1/ctrlz.jpg> <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rappo
+rt 1/bazzare.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
+
+ []
+
+<imagebtn.jpg, id=41, 74.52844pt x 69.25874pt>
+File: imagebtn.jpg Graphic file (type jpg)
+ <use imagebtn.jpg>
+Package pdftex.def Info: imagebtn.jpg used on input line 177.
+(pdftex.def)             Requested size: 74.52824pt x 69.25856pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
+
+ []
+
+[8 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 1/imagebtn.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
+
+ []
+
+<erreur.jpg, id=45, 641.39626pt x 217.5628pt>
+File: erreur.jpg Graphic file (type jpg)
+ <use erreur.jpg>
+Package pdftex.def Info: erreur.jpg used on input line 202.
+(pdftex.def)             Requested size: 448.97432pt x 152.29292pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
-
- []
-
-[7] <SoucisIHM.jpg, id=37, 1044.90375pt x 632.3625pt>
+[9 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 1/erreur.jpg>]
+<SoucisIHM.jpg, id=49, 1044.90375pt x 632.3625pt>
 File: SoucisIHM.jpg Graphic file (type jpg)
  <use SoucisIHM.jpg>
-Package pdftex.def Info: SoucisIHM.jpg used on input line 195.
+Package pdftex.def Info: SoucisIHM.jpg used on input line 230.
 (pdftex.def)             Requested size: 522.45059pt x 316.18048pt.
 
-Overfull \hbox (38.75372pt too wide) in paragraph at lines 195--196
+Overfull \hbox (38.75372pt too wide) in paragraph at lines 230--231
 [][] 
  []
 
-[8 <C:/Users/Rodolphe/Documents/IHM PROJET/SoucisIHM.jpg>] ("C:\Users\Rodolphe\Documents\IHM PROJET\rapport1.aux") ) 
+[10 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 1/SoucisIHM.jpg>]
+("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 1\rapport1.aux") ) 
 Here is how much of TeX's memory you used:
- 4128 strings out of 493921
- 55097 string characters out of 3147272
+ 4158 strings out of 493921
+ 55691 string characters out of 3147272
  120998 words of memory out of 3000000
- 7379 multiletter control sequences out of 15000+200000
+ 7403 multiletter control sequences out of 15000+200000
  14724 words of font info for 36 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,7n,32p,699b,262s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:
-\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Rodolphe\AppData\Loca
-l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
-\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200
-.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Rodolphe\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\p
-k\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-eccc1440.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk>
-Output written on rapport1.pdf (8 pages, 449032 bytes).
+ 27i,7n,32p,699b,264s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
+600\eccc1200.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\R
+odolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecbx1728.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:
+\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1440.pk> <C:\Users\Rodolphe\AppData\Loca
+l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk>
+Output written on rapport1.pdf (10 pages, 645823 bytes).
 PDF statistics:
- 364 PDF objects out of 1000 (max. 8388607)
+ 379 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
