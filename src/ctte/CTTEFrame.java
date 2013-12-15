@@ -1162,17 +1162,17 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		}
 		
 		if(e.getSource() ==mntmWelcome){
-			JOptionPane.showMessageDialog(null, "Ouvre le manuel d'aide");				
+			JOptionPane.showMessageDialog(null, "Ouvre un tutoriel");				
 			contentPane.requestFocus();
 		}
 		
 		if(e.getSource() ==mntmHelpContent){
-			JOptionPane.showMessageDialog(null, "HelpContent");				
+			JOptionPane.showMessageDialog(null, "Section aide");				
 			contentPane.requestFocus();
 		}
 		
 		if(e.getSource() ==mntmSearch){
-			JOptionPane.showMessageDialog(null, "recherche");				
+			JOptionPane.showMessageDialog(null, "Recherche dans l'aide");				
 			contentPane.requestFocus();
 		}
 		
