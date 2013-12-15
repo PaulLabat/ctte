@@ -36,37 +36,37 @@ public class ClavierListener implements KeyListener {
 			if (shift) {
 				switch (ke.getKeyCode()) {
 				case KeyEvent.VK_C:
-					JOptionPane.showMessageDialog(null, "CTRL + shift + C presse : Fonction Copy SubTree");
+					JOptionPane.showMessageDialog(null, "command + shift + C presse : Fonction Copy SubTree");
 					shift = false;
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_F:
-					JOptionPane.showMessageDialog(null, "CTRL+ shift + F presse : Function Model Filter");
+					JOptionPane.showMessageDialog(null, "command + shift + F presse : Function Model Filter");
 					shift = false;
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_O:
-					JOptionPane.showMessageDialog(null, "CTRL+ shift + O presse : Fonction Open CTT As XML");
+					JOptionPane.showMessageDialog(null, "command + shift + O presse : Fonction Open CTT As XML");
 					shift = false;
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_P:
-					JOptionPane.showMessageDialog(null, "CTRL+ shift + P presse : Fonction print multiple pages");
+					JOptionPane.showMessageDialog(null, "command + shift + P presse : Fonction print multiple pages");
 					shift = false;
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_S:
-					JOptionPane.showMessageDialog(null, "CTRL+ shift + S presse : Fonction save as");
+					JOptionPane.showMessageDialog(null, "command + shift + S presse : Fonction save as");
 					shift = false;
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_X:
-					JOptionPane.showMessageDialog(null, "CTRL+ shift + X presse : Fonction Cut SubTree");
+					JOptionPane.showMessageDialog(null, "command + shift + X presse : Fonction Cut SubTree");
 					shift = false;
 					alt = false;
 					ctrl = false;
@@ -75,81 +75,81 @@ public class ClavierListener implements KeyListener {
 			} else {
 				switch (ke.getKeyCode()) {
 				case KeyEvent.VK_A:
-					JOptionPane.showMessageDialog(null, "CTRL + A presse : Reachablety Analysis");
+					JOptionPane.showMessageDialog(null, "command + A presse : Reachablety Analysis");
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_C:
-					JOptionPane.showMessageDialog(null, "CTRL + C presse : Fonction Copy Selection");
+					JOptionPane.showMessageDialog(null, "command + C presse : Fonction Copy Selection");
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_D:
-					JOptionPane.showMessageDialog(null, "CTRL+ D presse : Fonction Informal to Formal description");
+					JOptionPane.showMessageDialog(null, "command + D presse : Fonction Informal to Formal description");
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_F:
-					JOptionPane.showMessageDialog(null, "CTRL+ F presse : Fonction Find");
+					JOptionPane.showMessageDialog(null, "command + F presse : Fonction Find");
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_H:
-					JOptionPane.showMessageDialog(null, "CTRL+ H presse : Fonction Fold/unfold");
+					JOptionPane.showMessageDialog(null, "command + H presse : Fonction Fold/unfold");
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_I:
-					JOptionPane.showMessageDialog(null, "CTRL + I presse : Fonction ");
+					JOptionPane.showMessageDialog(null, "commandL + I presse : Fonction ");
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_J:
-					JOptionPane.showMessageDialog(null, "CTRL+ J presse : Fonction save tree as jpg");
+					JOptionPane.showMessageDialog(null, "command + J presse : Fonction save tree as jpg");
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_L:
-					JOptionPane.showMessageDialog(null, "CTRL+ L presse : Fonction new Level");
+					JOptionPane.showMessageDialog(null, "command + L presse : Fonction new Level");
 					ctrl = false;
 					break;
 				case KeyEvent.VK_N:
-					JOptionPane.showMessageDialog(null, "CTRL+ N presse : Fonction new");
+					JOptionPane.showMessageDialog(null, "command + N presse : Fonction new");
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_O:
-					JOptionPane.showMessageDialog(null, "CTRL + O presse : Fonction Open");
+					JOptionPane.showMessageDialog(null, "command + O presse : Fonction Open");
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_P:
-					JOptionPane.showMessageDialog(null, "CTRL+ P presse : Fonction print");
+					JOptionPane.showMessageDialog(null, "command + P presse : Fonction print");
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_Q:
-					JOptionPane.showMessageDialog(null, "CTRL+ Q presse : Fonction quit");
+					JOptionPane.showMessageDialog(null, "command + Q presse : Fonction quit");
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_S:
-					JOptionPane.showMessageDialog(null, "CTRL+ S presse : Fonction save");
+					JOptionPane.showMessageDialog(null, "command + S presse : Fonction save");
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_T:
-					JOptionPane.showMessageDialog(null, "CTRL+ T presse : Fonction Priority Tree");
+					JOptionPane.showMessageDialog(null, "command + T presse : Fonction Priority Tree");
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_U:
-					JOptionPane.showMessageDialog(null, "CTRL+ U presse : Fonction Unfold All");
+					JOptionPane.showMessageDialog(null, "command + U presse : Fonction Unfold All");
 					ctrl = false;
 					alt = false;
 					break;
 				case KeyEvent.VK_V:
-					JOptionPane.showMessageDialog(null, "CTRL + V presse : Fonction Paste Selection");
+					JOptionPane.showMessageDialog(null, "command + V presse : Fonction Paste Selection");
 					ctrl = false;
 					alt = false;
 					break;
