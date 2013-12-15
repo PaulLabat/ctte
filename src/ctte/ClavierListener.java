@@ -30,7 +30,7 @@ public class ClavierListener implements KeyListener {
 		} else if (ke.getKeyCode() == KeyEvent.VK_ALT) {
 			alt = true;
 		}
-		System.out.println(ctrl + " " + shift);
+		//System.out.println(ctrl + " " + shift);
 
 		if (ctrl) {
 			if (shift) {
