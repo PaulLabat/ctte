@@ -72,7 +72,13 @@ public class CTTEFrame extends JFrame implements ActionListener{
 	private JMenuItem mntmPaste;
 	private JMenuItem mntmDelete;
 	private JMenuItem mntmFind;
-
+	private JMenuItem mntmTaskProperties;
+	private JMenuItem mntmIconRepresentation;
+	private JMenuItem mntmPriorityTree;
+	private JMenuItem chckbxmntmCooperativeMode;
+	private JMenuItem mntmFoldunfoldSubtree;
+	private JMenuItem mntmUnfoldAll;
+	
 	private JRadioButtonMenuItem rdbtnmntmAllLevels;
 	private JRadioButtonMenuItem radioButtonMenuItem;
 	private JRadioButtonMenuItem rdbtnmntmBelowchild;
@@ -272,19 +278,21 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		mnView.setHorizontalAlignment(SwingConstants.LEFT);
 		menuBar.add(mnView);
 
-		JMenuItem mntmTaskProperties = new JMenuItem("Task Properties...");
+		mntmTaskProperties = new JMenuItem("Task Properties...");
+		mntmTaskProperties.addActionListener(this);
 		mnView.add(mntmTaskProperties);
 
-		JMenuItem mntmIconRepresentation = new JMenuItem("Icon Representation");
+		mntmIconRepresentation = new JMenuItem("Icon Representation");
+		mntmIconRepresentation.addActionListener(this);
 		mnView.add(mntmIconRepresentation);
 
 		JSeparator separator_7 = new JSeparator();
 		mnView.add(separator_7);
 
-		JMenuItem mntmPriorityTree = new JMenuItem("Priority Tree");
+		mntmPriorityTree = new JMenuItem("Priority Tree");
+		mntmPriorityTree.addActionListener(this);
 		mntmPriorityTree.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_T, InputEvent.CTRL_MASK));
 		mnView.add(mntmPriorityTree);
-
 		JSeparator separator_8 = new JSeparator();
 		mnView.add(separator_8);
 
@@ -303,17 +311,19 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		JSeparator separator_10 = new JSeparator();
 		mnView.add(separator_10);
 
-		JCheckBoxMenuItem chckbxmntmCooperativeMode = new JCheckBoxMenuItem("Cooperative mode");
+		chckbxmntmCooperativeMode = new JCheckBoxMenuItem("Cooperative mode");
 		mnView.add(chckbxmntmCooperativeMode);
 
 		JSeparator separator_9 = new JSeparator();
 		mnView.add(separator_9);
 
-		JMenuItem mntmFoldunfoldSubtree = new JMenuItem("Fold/Unfold SubTree");
+		mntmFoldunfoldSubtree = new JMenuItem("Fold/Unfold SubTree");
+		mntmFoldunfoldSubtree.addActionListener(this);
 		mntmFoldunfoldSubtree.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_H, InputEvent.CTRL_MASK));
 		mnView.add(mntmFoldunfoldSubtree);
 
-		JMenuItem mntmUnfoldAll = new JMenuItem("Unfold All");
+		mntmUnfoldAll = new JMenuItem("Unfold All");
+		mntmUnfoldAll.addActionListener(this);
 		mntmUnfoldAll.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_U, InputEvent.CTRL_MASK));
 		mnView.add(mntmUnfoldAll);
 
@@ -1038,7 +1048,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		}
 		
 		if(e.getSource() == mntmCopySelection){
-			JOptionPane.showMessageDialog(null, "Fonction de copier de l'élement sélectionné");				
+			JOptionPane.showMessageDialog (null, "Fonction de copier de l'élement sélectionné");				
 			contentPane.requestFocus();
 		}
 		
@@ -1061,6 +1071,33 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			JOptionPane.showMessageDialog(null, "Fonction de recherche d'un élement de l'arbre");				
 			contentPane.requestFocus();
 		}
+		
+		if(e.getSource() ==mntmTaskProperties){
+			JOptionPane.showMessageDialog(null, "affiche les propriétés de la tache");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() ==mntmIconRepresentation){
+			JOptionPane.showMessageDialog(null, "affiche la représentation d'icon");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() ==mntmPriorityTree){
+			JOptionPane.showMessageDialog(null, "affiche la priorité de l'arbre");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() ==mntmFoldunfoldSubtree){
+			JOptionPane.showMessageDialog(null, "plie/deplie l'arbe courant");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() ==mntmUnfoldAll){
+			JOptionPane.showMessageDialog(null, "deplie tout l'arbre ");				
+			contentPane.requestFocus();
+		}
+
+		
 
 		
 		else{
