@@ -42,6 +42,7 @@ import java.awt.SystemColor;
 import java.io.IOException;
 
 import javax.swing.JTextField;
+import java.awt.Color;
 
 
 
@@ -78,6 +79,19 @@ public class CTTEFrame extends JFrame implements ActionListener{
 	private JMenuItem chckbxmntmCooperativeMode;
 	private JMenuItem mntmFoldunfoldSubtree;
 	private JMenuItem mntmUnfoldAll;
+	private JMenuItem mntmTaskModelStatistics;
+	private JMenuItem mntmSubtreeFromFile;
+	private JMenuItem mntmNewLevel;
+	
+	private JMenuItem mntmModelFilter; 
+	private JMenuItem mntmCheckModelStructure;
+	private JMenuItem mntmStartTaskModel;
+	private JMenuItem mntmReachablelityAnalysis;
+	private JMenuItem mntmInformalToFormal;
+	
+	private JMenuItem mntmWelcome;
+	private JMenuItem mntmHelpContent;
+	private JMenuItem mntmSearch;
 	
 	private JRadioButtonMenuItem rdbtnmntmAllLevels;
 	private JRadioButtonMenuItem radioButtonMenuItem;
@@ -119,6 +133,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 650, 550);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(null);
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -332,7 +347,8 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		mnInfo.setHorizontalAlignment(SwingConstants.LEFT);
 		menuBar.add(mnInfo);
 
-		JMenuItem mntmTaskModelStatistics = new JMenuItem("Task Model Statistics");
+		mntmTaskModelStatistics = new JMenuItem("Task Model Statistics");
+		mntmTaskModelStatistics.addActionListener(this);
 		mnInfo.add(mntmTaskModelStatistics);
 
 		JMenu mnInsert = new JMenu("Insert");
@@ -352,11 +368,13 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		JSeparator separator_11 = new JSeparator();
 		mnInsert.add(separator_11);
 
-		JMenuItem mntmSubtreeFromFile = new JMenuItem("SubTree From File");
+		mntmSubtreeFromFile = new JMenuItem("SubTree From File");
+		mntmSubtreeFromFile.addActionListener(this);
 		mntmSubtreeFromFile.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_INSERT, 0));
 		mnInsert.add(mntmSubtreeFromFile);
 
-		JMenuItem mntmNewLevel = new JMenuItem("New Level");
+		mntmNewLevel = new JMenuItem("New Level");
+		mntmNewLevel.addActionListener(this);
 		mntmNewLevel.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L, InputEvent.CTRL_MASK));
 		mnInsert.add(mntmNewLevel);
 
@@ -365,35 +383,40 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		mnTools.setHorizontalAlignment(SwingConstants.LEFT);
 		menuBar.add(mnTools);
 
-		JMenuItem mntmModelFilter = new JMenuItem("Model Filter");
+		mntmModelFilter = new JMenuItem("Model Filter");
+		mntmModelFilter.addActionListener(this);
 		mntmModelFilter.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F, InputEvent.CTRL_MASK | InputEvent.SHIFT_MASK));
 		mnTools.add(mntmModelFilter);
 
 		JSeparator separator_12 = new JSeparator();
 		mnTools.add(separator_12);
 
-		JMenuItem mntmInformalToFormal = new JMenuItem("Informal to formal description");
+		mntmInformalToFormal = new JMenuItem("Informal to formal description");
+		mntmInformalToFormal.addActionListener(this);
 		mntmInformalToFormal.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_D, InputEvent.CTRL_MASK));
 		mnTools.add(mntmInformalToFormal);
 
 		JSeparator separator_13 = new JSeparator();
 		mnTools.add(separator_13);
 
-		JMenuItem mntmCheckModelStructure = new JMenuItem("Check Model Structure");
+		mntmCheckModelStructure = new JMenuItem("Check Model Structure");
+		mntmCheckModelStructure.addActionListener(this);
 		mntmCheckModelStructure.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F7, 0));
 		mnTools.add(mntmCheckModelStructure);
 
 		JSeparator separator_14 = new JSeparator();
 		mnTools.add(separator_14);
 
-		JMenuItem mntmStartTaskModel = new JMenuItem("Start Task Model Simulator");
+		mntmStartTaskModel = new JMenuItem("Start Task Model Simulator");
+		mntmStartTaskModel.addActionListener(this);
 		mntmStartTaskModel.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F4, 0));
 		mnTools.add(mntmStartTaskModel);
 
 		JSeparator separator_15 = new JSeparator();
 		mnTools.add(separator_15);
 
-		JMenuItem mntmReachablelityAnalysis = new JMenuItem("Reachablelity Analysis");
+		mntmReachablelityAnalysis = new JMenuItem("Reachablelity Analysis");
+		mntmReachablelityAnalysis.addActionListener(this);
 		mntmReachablelityAnalysis.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, InputEvent.CTRL_MASK));
 		mnTools.add(mntmReachablelityAnalysis);
 
@@ -402,16 +425,19 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		mnHelp.setHorizontalAlignment(SwingConstants.LEFT);
 		menuBar.add(mnHelp);
 
-		JMenuItem mntmWelcome = new JMenuItem("Welcome");
+		mntmWelcome = new JMenuItem("Welcome");
+		mntmWelcome.addActionListener(this);
 		
 		mnHelp.add(mntmWelcome);
 		JSeparator separator_16 = new JSeparator();
 		mnHelp.add(separator_16);
 
-		JMenuItem mntmHelpContent = new JMenuItem("Help Content");
+		mntmHelpContent = new JMenuItem("Help Content");
+		mntmHelpContent.addActionListener(this);
 		mnHelp.add(mntmHelpContent);
 
-		JMenuItem mntmSearch = new JMenuItem("Search");
+		mntmSearch = new JMenuItem("Search");
+		mntmSearch.addActionListener(this);
 		mnHelp.add(mntmSearch);
 		
 
@@ -945,7 +971,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JScrollPane scrollPane = new JScrollPane();
 		contentPane.add(scrollPane, BorderLayout.CENTER);
-
+		scrollPane.getViewport().setBackground(Color.white);
 
 	}
 
@@ -1096,9 +1122,61 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			JOptionPane.showMessageDialog(null, "deplie tout l'arbre ");				
 			contentPane.requestFocus();
 		}
-
 		
+		if(e.getSource() ==mntmTaskModelStatistics){
+			JOptionPane.showMessageDialog(null, "Affiche les statistiques");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() ==mntmSubtreeFromFile){
+			JOptionPane.showMessageDialog(null, "Insere un arbre enregistré dans l'arbre courant");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() ==mntmNewLevel){
+			JOptionPane.showMessageDialog(null, "nouveau niveau");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() ==mntmModelFilter){
+			JOptionPane.showMessageDialog(null, "Model filter");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() ==mntmCheckModelStructure){
+			JOptionPane.showMessageDialog(null, "Vérification de la structure du model");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() ==mntmStartTaskModel){
+			JOptionPane.showMessageDialog(null, "démarre le simulateur");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() ==mntmReachablelityAnalysis){
+			JOptionPane.showMessageDialog(null, "analyse d'accessibilité");				
+			contentPane.requestFocus();
+		}
 
+		if(e.getSource() ==mntmInformalToFormal){
+			JOptionPane.showMessageDialog(null, "Informal --> Formal");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() ==mntmWelcome){
+			JOptionPane.showMessageDialog(null, "Ouvre un tutoriel");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() ==mntmHelpContent){
+			JOptionPane.showMessageDialog(null, "Section aide");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() ==mntmSearch){
+			JOptionPane.showMessageDialog(null, "Recherche dans l'aide");				
+			contentPane.requestFocus();
+		}
 		
 		else{
 			rdbtnmntmToTheLeft.setSelected(true);

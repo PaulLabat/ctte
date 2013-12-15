@@ -171,14 +171,14 @@ public class ClavierListener implements KeyListener {
 				}
 			}
 		} else if (ke.getKeyCode() == KeyEvent.VK_DELETE) {
-			JOptionPane.showMessageDialog(null, "Delete presse : Fonction Supprimer la selection");
+			//JOptionPane.showMessageDialog(null, "Delete presse : Fonction Supprimer la selection");
 		} else if (ke.getKeyCode() == KeyEvent.VK_INSERT) {
-			JOptionPane.showMessageDialog(null, "Insert presse : Fonction Inserer");
+		//	JOptionPane.showMessageDialog(null, "Insert presse : Fonction Inserer");
 		} else if (ke.getKeyCode() == KeyEvent.VK_F4) {
-			JOptionPane.showMessageDialog(null, "F4 presse : Fonction start task model simulator");
+			//JOptionPane.showMessageDialog(null, "F4 presse : Fonction start task model simulator");
 		} else if (ke.getKeyCode() == KeyEvent.VK_F7) {
-			JOptionPane.showMessageDialog(null, "F7 presse : Fonction check model structure");
-		}
+			//JOptionPane.showMessageDialog(null, "F7 presse : Fonction check model structure");
+		}//
 	}
 
 	@Override
