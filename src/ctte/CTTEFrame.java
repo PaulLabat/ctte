@@ -369,8 +369,8 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		menuBar.add(mnHelp);
 
 		JMenuItem mntmWelcome = new JMenuItem("Welcome");
+		
 		mnHelp.add(mntmWelcome);
-
 		JSeparator separator_16 = new JSeparator();
 		mnHelp.add(separator_16);
 
@@ -379,6 +379,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JMenuItem mntmSearch = new JMenuItem("Search");
 		mnHelp.add(mntmSearch);
+		
 
 		JPanel panel_3 = new JPanel();
 		panel.add(panel_3, BorderLayout.WEST);
