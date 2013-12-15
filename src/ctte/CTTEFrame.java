@@ -60,6 +60,18 @@ public class CTTEFrame extends JFrame implements ActionListener{
 	private JMenuItem mntmSaveTreeAs;
 	private JMenuItem mntmSaveSubtreeAs_1;
 	private JMenuItem mntmQuit;
+	private JMenuItem mntmNewMenuItem_1;
+	private JMenuItem mntmPrint;
+	private JMenuItem mntmPrintInMultiple;
+	private JMenuItem mntmUndo;
+	private JMenuItem mntmRedo;
+	private JMenuItem mntmCutSelection;
+	private JMenuItem mntmCutSubtree;
+	private JMenuItem mntmCopySelection;
+	private JMenuItem mntmCopySubtree;
+	private JMenuItem mntmPaste;
+	private JMenuItem mntmDelete;
+	private JMenuItem mntmFind;
 
 	private JRadioButtonMenuItem rdbtnmntmAllLevels;
 	private JRadioButtonMenuItem radioButtonMenuItem;
@@ -121,9 +133,10 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		mnFile.setHorizontalAlignment(SwingConstants.LEFT);
 		menuBar.add(mnFile);
 
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("New ");
+		mntmNewMenuItem_1 = new JMenuItem("New ");
 		mntmNewMenuItem_1.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
 		mntmNewMenuItem_1.setHorizontalAlignment(SwingConstants.LEFT);
+		mntmNewMenuItem_1.addActionListener(this);
 		mnFile.add(mntmNewMenuItem_1);
 
 		JSeparator separator_1 = new JSeparator();
@@ -180,11 +193,13 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		JSeparator separator_4 = new JSeparator();
 		mnFile.add(separator_4);
 
-		JMenuItem mntmPrint = new JMenuItem("Print");
+		mntmPrint = new JMenuItem("Print");
+		mntmPrint.addActionListener(this);
 		mntmPrint.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, InputEvent.CTRL_MASK));
 		mnFile.add(mntmPrint);
 
-		JMenuItem mntmPrintInMultiple = new JMenuItem("Print in Multiple Pages");
+		mntmPrintInMultiple = new JMenuItem("Print in Multiple Pages");
+		mntmPrintInMultiple.addActionListener(this);
 		mntmPrintInMultiple.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, InputEvent.CTRL_MASK | InputEvent.SHIFT_MASK));
 		mnFile.add(mntmPrintInMultiple);
 
@@ -201,45 +216,54 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		mnEdit.setHorizontalAlignment(SwingConstants.LEFT);
 		menuBar.add(mnEdit);
 
-		JMenuItem mntmUndo = new JMenuItem("Undo");
+		mntmUndo = new JMenuItem("Undo");
+		mntmUndo.addActionListener(this);
 		mntmUndo.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Z, InputEvent.CTRL_MASK));
 		mnEdit.add(mntmUndo);
 
-		JMenuItem mntmRedo = new JMenuItem("Redo");
+		mntmRedo = new JMenuItem("Redo");
+		mntmRedo.addActionListener(this);
 		mntmRedo.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Y, InputEvent.CTRL_MASK));
 		mnEdit.add(mntmRedo);
 
 		JSeparator separator = new JSeparator();
 		mnEdit.add(separator);
 
-		JMenuItem mntmCutSelection = new JMenuItem("Cut Selection");
+		mntmCutSelection = new JMenuItem("Cut Selection");
+		mntmCutSelection.addActionListener(this);
 		mntmCutSelection.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, InputEvent.CTRL_MASK));
 		mnEdit.add(mntmCutSelection);
 
-		JMenuItem mntmCutSubtree = new JMenuItem("Cut SubTree");
+		mntmCutSubtree = new JMenuItem("Cut SubTree");
+		mntmCutSubtree.addActionListener(this);
 		mntmCutSubtree.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, InputEvent.CTRL_MASK | InputEvent.SHIFT_MASK));
 		mnEdit.add(mntmCutSubtree);
 
-		JMenuItem mntmCopySelection = new JMenuItem("Copy Selection");
+		mntmCopySelection = new JMenuItem("Copy Selection");
+		mntmCopySelection.addActionListener(this);
 		mntmCopySelection.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C, InputEvent.CTRL_MASK));
 		mnEdit.add(mntmCopySelection);
 
-		JMenuItem mntmCopySubtree = new JMenuItem("Copy SubTree");
+		mntmCopySubtree = new JMenuItem("Copy SubTree");
+		mntmCopySubtree.addActionListener(this);
 		mntmCopySubtree.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C, InputEvent.CTRL_MASK | InputEvent.SHIFT_MASK));
 		mnEdit.add(mntmCopySubtree);
 
-		JMenuItem mntmPaste = new JMenuItem("Paste");
+		mntmPaste = new JMenuItem("Paste");
+		mntmPaste.addActionListener(this);
 		mntmPaste.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_V, InputEvent.CTRL_MASK));
 		mnEdit.add(mntmPaste);
 
-		JMenuItem mntmDelete = new JMenuItem("Delete");
+		mntmDelete = new JMenuItem("Delete");
+		mntmDelete.addActionListener(this);
 		mntmDelete.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_DELETE, 0));
 		mnEdit.add(mntmDelete);
 
 		JSeparator separator_6 = new JSeparator();
 		mnEdit.add(separator_6);
 
-		JMenuItem mntmFind = new JMenuItem("Find...");
+		mntmFind = new JMenuItem("Find...");
+		mntmFind.addActionListener(this);
 		mntmFind.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F, InputEvent.CTRL_MASK));
 		mnEdit.add(mntmFind);
 
@@ -976,6 +1000,68 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			rdbtnmntmBelowchild.setSelected(true);
 			rdbtnmntmToTheLeft.setSelected(false); 
 		}
+		
+		if(e.getSource() == mntmNewMenuItem_1){
+			JOptionPane.showMessageDialog(null, "Ouverture d'un nouveau document");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() == mntmPrint){
+			JOptionPane.showMessageDialog(null, "Ouverture de la fenetre d'impression");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() == mntmPrintInMultiple){
+			JOptionPane.showMessageDialog(null, "Ouverture de la fenetre d'impression multiple");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() == mntmUndo){
+			JOptionPane.showMessageDialog(null, "Fonction de retour en arrière");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() == mntmRedo){
+			JOptionPane.showMessageDialog(null, "Fonction de retour en avant");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() == mntmCutSelection){
+			JOptionPane.showMessageDialog(null, "Fonction de 'couper' de l'élement sélectionné");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() == mntmCutSubtree){
+			JOptionPane.showMessageDialog(null, "Fonction de 'couper' de l'élement sélectionné ainsi que son sous arbre");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() == mntmCopySelection){
+			JOptionPane.showMessageDialog(null, "Fonction de copier de l'élement sélectionné");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() == mntmCopySubtree){
+			JOptionPane.showMessageDialog(null, "Fonction de copier de l'élement sélectionné ainsi que son sous arbre");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() == mntmPaste){
+			JOptionPane.showMessageDialog(null, "Fonction de coller de l'élement sélectionné");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() == mntmDelete){
+			JOptionPane.showMessageDialog(null, "Fonction de suppression de l'élement sélectionné");				
+			contentPane.requestFocus();
+		}
+		
+		if(e.getSource() == mntmFind){
+			JOptionPane.showMessageDialog(null, "Fonction de recherche d'un élement de l'arbre");				
+			contentPane.requestFocus();
+		}
+
+		
 		else{
 			rdbtnmntmToTheLeft.setSelected(true);
 			rdbtnmntmBelowchild.setSelected(false);
