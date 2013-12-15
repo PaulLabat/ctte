@@ -23,7 +23,7 @@ public class ClavierListener implements KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent ke) {
-		if (ke.getKeyCode() == KeyEvent.VK_CONTROL) {
+		if (ke.getKeyCode() == KeyEvent.META_DOWN_MASK) {
 			ctrl = true;
 		} else if (ke.getKeyCode() == KeyEvent.VK_SHIFT) {
 			shift = true;
