@@ -118,7 +118,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		contentPane.setLayout(new BorderLayout(0, 0));
 		contentPane.setFocusable(true);
 		contentPane.requestFocus();
-		contentPane.addKeyListener(new ClavierListener());
+		//contentPane.addKeyListener(new ClavierListener());
 
 		JPanel panel = new JPanel();
 		panel.setBorder(null);
