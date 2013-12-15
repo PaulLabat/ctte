@@ -397,6 +397,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Ouverture d'un nouveau document");
+				contentPane.requestFocus();
 			}});
 		panel_7.add(btnNewButton_4);
 
@@ -409,7 +410,9 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			public void mouseClicked(MouseEvent e){
 				JFileChooser jfc = new JFileChooser();
 				int returnValue = jfc.showDialog(null,"Ouvrir");
-			}});
+				contentPane.requestFocus();
+			}
+			});
 		btnNewButton_5.setPreferredSize(new Dimension(25,25));
 
 		panel_7.add(btnNewButton_5);
@@ -424,7 +427,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			public void mouseClicked(MouseEvent e){
 				JFileChooser jfc = new JFileChooser();
 				int returnValue = jfc.showDialog(null,"Sauvegarder");
-
+				contentPane.requestFocus();
 			}});
 		panel_7.add(btnNewButton_8);
 
@@ -435,6 +438,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Ouverture du menu d'impression");
+				contentPane.requestFocus();
 			}});
 		btnNewButton_6.setSize(25, 25);
 		btnNewButton_6.setPreferredSize(new Dimension(25,25));
@@ -455,6 +459,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Cut SubTree");
+				contentPane.requestFocus();
 			}});
 		btnNewButton_7.setPreferredSize(new Dimension(25,25));
 		panel_8.add(btnNewButton_7);
@@ -466,6 +471,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Copy");
+				contentPane.requestFocus();
 			}});
 		btnNewButton_9.setSize(25, 25);
 		btnNewButton_9.setPreferredSize(new Dimension(25,25));
@@ -479,6 +485,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Paste");
+				contentPane.requestFocus();
 			}});
 		btnNewButton_10.setPreferredSize(new Dimension(25,25));
 		panel_8.add(btnNewButton_10);
@@ -491,6 +498,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Delete");
+				contentPane.requestFocus();
 			}});
 		button.setPreferredSize(new Dimension(25,25));
 		panel_8.add(button);
@@ -502,6 +510,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Undo");
+				contentPane.requestFocus();
 			}});
 		button_1.setSize(25, 25);
 		button_1.setPreferredSize(new Dimension(25,25));
@@ -515,6 +524,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Redo");
+				contentPane.requestFocus();
 			}});
 		button_2.setPreferredSize(new Dimension(25,25));
 		panel_8.add(button_2);
@@ -535,6 +545,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Affiche les propiétés");
+				contentPane.requestFocus();
 			}});
 		panel_9.add(btnNewButton_11);
 		Border cadre = BorderFactory.createTitledBorder("Current Task" );
@@ -621,6 +632,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Ajout d'une User Task");
+				contentPane.requestFocus();
 			}});
 		btnNewButton.setPreferredSize(new Dimension(35,35));
 		panel_4.add(btnNewButton);
@@ -633,6 +645,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Ajout d'une Abstraction Task");
+				contentPane.requestFocus();
 			}});
 		btnNewButton_2.setPreferredSize(new Dimension(35,35));
 		panel_4.add(btnNewButton_2);
@@ -645,6 +658,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Ajout d'une Applciation Task");
+				contentPane.requestFocus();
 			}});
 		btnNewButton_1.setPreferredSize(new Dimension(35,35));
 		panel_4.add(btnNewButton_1);
@@ -657,6 +671,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Ajout d'une Interaction Task");
+				contentPane.requestFocus();
 			}});
 		btnNewButton_3.setPreferredSize(new Dimension(35,35));
 		panel_4.add(btnNewButton_3);
@@ -682,6 +697,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				contentPane.requestFocus();
 			}});
 		button_3.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_3);
@@ -694,6 +710,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				contentPane.requestFocus();
 			}});
 		button_4.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_4);
@@ -706,6 +723,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				contentPane.requestFocus();
 			}});
 		button_5.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_5);
@@ -718,6 +736,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				contentPane.requestFocus();
 			}});
 		button_6.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_6);
@@ -730,6 +749,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				contentPane.requestFocus();
 			}});
 		button_7.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_7);
@@ -742,6 +762,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				contentPane.requestFocus();
 			}});
 		button_8.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_8);
@@ -754,6 +775,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				contentPane.requestFocus();
 			}});
 		button_9.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_9);
@@ -766,6 +788,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				contentPane.requestFocus();
 			}});
 		button_10.setPreferredSize(new Dimension(35, 35));
 		panel_5.add(button_10);
@@ -793,6 +816,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				contentPane.requestFocus();
 			}});
 		button_11.setPreferredSize(new Dimension(35, 35));
 		panel_6.add(button_11);
@@ -806,6 +830,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				contentPane.requestFocus();
 			}});
 		panel_6.add(button_12);
 
@@ -817,6 +842,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité à venir");
+				contentPane.requestFocus();
 			}});
 		button_13.setPreferredSize(new Dimension(35, 35));
 		panel_6.add(button_13);
@@ -837,6 +863,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "On effectue un zoom avant");
+				contentPane.requestFocus();
 			}});
 		button_12.setPreferredSize(new Dimension(35, 35));
 		panel_10.add(btnNewButton_12);
@@ -848,6 +875,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "On effectue un zoom arrière");
+				contentPane.requestFocus();
 			}});
 		button_13.setPreferredSize(new Dimension(35, 35));
 		panel_10.add(btnNewButton_13);
@@ -870,11 +898,13 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				txtRecherche.setText("");
+				contentPane.requestFocus();
 			}});
 		txtZoom.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
 				txtZoom.setText("");
+				contentPane.requestFocus();
 			}
 		});
 
