@@ -183,16 +183,16 @@ public class ClavierListener implements KeyListener {
 
 	@Override
 	public void keyReleased(KeyEvent event) {
-		System.out.println("Code touche relâchée : " + event.getKeyCode() + " - caractère touche relâchée : " + event.getKeyChar());
+		//System.out.println("Code touche relâchée : " + event.getKeyCode() + " - caractère touche relâchée : " + event.getKeyChar());
 		ctrl = false;
 		alt = false;
 		shift = false;
-		System.out.println(ctrl + " " + shift);
+		//System.out.println(ctrl + " " + shift);
 	}
 
 	@Override
 	public void keyTyped(KeyEvent event) {
-		System.out.println("Code touche tapée : " + event.getKeyCode() + " - caractère touche tapée : " + event.getKeyChar());
+		//System.out.println("Code touche tapée : " + event.getKeyCode() + " - caractère touche tapée : " + event.getKeyChar());
 	}
 
 }
