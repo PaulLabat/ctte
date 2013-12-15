@@ -42,6 +42,7 @@ import java.awt.SystemColor;
 import java.io.IOException;
 
 import javax.swing.JTextField;
+import java.awt.Color;
 
 
 
@@ -132,6 +133,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 650, 550);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(null);
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -969,7 +971,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JScrollPane scrollPane = new JScrollPane();
 		contentPane.add(scrollPane, BorderLayout.CENTER);
-
+		scrollPane.getViewport().setBackground(Color.white);
 
 	}
 
