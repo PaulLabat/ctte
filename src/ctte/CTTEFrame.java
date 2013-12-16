@@ -42,6 +42,7 @@ import java.awt.SystemColor;
 import java.io.IOException;
 
 import javax.swing.JTextField;
+import java.awt.Color;
 
 
 
@@ -72,6 +73,25 @@ public class CTTEFrame extends JFrame implements ActionListener{
 	private JMenuItem mntmPaste;
 	private JMenuItem mntmDelete;
 	private JMenuItem mntmFind;
+	private JMenuItem mntmTaskProperties;
+	private JMenuItem mntmIconRepresentation;
+	private JMenuItem mntmPriorityTree;
+	private JMenuItem chckbxmntmCooperativeMode;
+	private JMenuItem mntmFoldunfoldSubtree;
+	private JMenuItem mntmUnfoldAll;
+	private JMenuItem mntmTaskModelStatistics;
+	private JMenuItem mntmSubtreeFromFile;
+	private JMenuItem mntmNewLevel;
+
+	private JMenuItem mntmModelFilter;
+	private JMenuItem mntmCheckModelStructure;
+	private JMenuItem mntmStartTaskModel;
+	private JMenuItem mntmReachablelityAnalysis;
+	private JMenuItem mntmInformalToFormal;
+
+	private JMenuItem mntmWelcome;
+	private JMenuItem mntmHelpContent;
+	private JMenuItem mntmSearch;
 
 	private JRadioButtonMenuItem rdbtnmntmAllLevels;
 	private JRadioButtonMenuItem radioButtonMenuItem;
@@ -113,6 +133,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 650, 550);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(null);
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -206,7 +227,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		JSeparator separator_5 = new JSeparator();
 		mnFile.add(separator_5);
 
-		mntmQuit = new JMenuItem("Quit"); 
+		mntmQuit = new JMenuItem("Quit");
 		mntmQuit.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, InputEvent.CTRL_MASK));
 		mntmQuit.addActionListener(this);
 		mnFile.add(mntmQuit);
@@ -272,19 +293,21 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		mnView.setHorizontalAlignment(SwingConstants.LEFT);
 		menuBar.add(mnView);
 
-		JMenuItem mntmTaskProperties = new JMenuItem("Task Properties...");
+		mntmTaskProperties = new JMenuItem("Task Properties...");
+		mntmTaskProperties.addActionListener(this);
 		mnView.add(mntmTaskProperties);
 
-		JMenuItem mntmIconRepresentation = new JMenuItem("Icon Representation");
+		mntmIconRepresentation = new JMenuItem("Icon Representation");
+		mntmIconRepresentation.addActionListener(this);
 		mnView.add(mntmIconRepresentation);
 
 		JSeparator separator_7 = new JSeparator();
 		mnView.add(separator_7);
 
-		JMenuItem mntmPriorityTree = new JMenuItem("Priority Tree");
+		mntmPriorityTree = new JMenuItem("Priority Tree");
+		mntmPriorityTree.addActionListener(this);
 		mntmPriorityTree.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_T, InputEvent.CTRL_MASK));
 		mnView.add(mntmPriorityTree);
-
 		JSeparator separator_8 = new JSeparator();
 		mnView.add(separator_8);
 
@@ -303,17 +326,19 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		JSeparator separator_10 = new JSeparator();
 		mnView.add(separator_10);
 
-		JCheckBoxMenuItem chckbxmntmCooperativeMode = new JCheckBoxMenuItem("Cooperative mode");
+		chckbxmntmCooperativeMode = new JCheckBoxMenuItem("Cooperative mode");
 		mnView.add(chckbxmntmCooperativeMode);
 
 		JSeparator separator_9 = new JSeparator();
 		mnView.add(separator_9);
 
-		JMenuItem mntmFoldunfoldSubtree = new JMenuItem("Fold/Unfold SubTree");
+		mntmFoldunfoldSubtree = new JMenuItem("Fold/Unfold SubTree");
+		mntmFoldunfoldSubtree.addActionListener(this);
 		mntmFoldunfoldSubtree.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_H, InputEvent.CTRL_MASK));
 		mnView.add(mntmFoldunfoldSubtree);
 
-		JMenuItem mntmUnfoldAll = new JMenuItem("Unfold All");
+		mntmUnfoldAll = new JMenuItem("Unfold All");
+		mntmUnfoldAll.addActionListener(this);
 		mntmUnfoldAll.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_U, InputEvent.CTRL_MASK));
 		mnView.add(mntmUnfoldAll);
 
@@ -322,7 +347,8 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		mnInfo.setHorizontalAlignment(SwingConstants.LEFT);
 		menuBar.add(mnInfo);
 
-		JMenuItem mntmTaskModelStatistics = new JMenuItem("Task Model Statistics");
+		mntmTaskModelStatistics = new JMenuItem("Task Model Statistics");
+		mntmTaskModelStatistics.addActionListener(this);
 		mnInfo.add(mntmTaskModelStatistics);
 
 		JMenu mnInsert = new JMenu("Insert");
@@ -342,11 +368,13 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		JSeparator separator_11 = new JSeparator();
 		mnInsert.add(separator_11);
 
-		JMenuItem mntmSubtreeFromFile = new JMenuItem("SubTree From File");
+		mntmSubtreeFromFile = new JMenuItem("SubTree From File");
+		mntmSubtreeFromFile.addActionListener(this);
 		mntmSubtreeFromFile.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_INSERT, 0));
 		mnInsert.add(mntmSubtreeFromFile);
 
-		JMenuItem mntmNewLevel = new JMenuItem("New Level");
+		mntmNewLevel = new JMenuItem("New Level");
+		mntmNewLevel.addActionListener(this);
 		mntmNewLevel.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L, InputEvent.CTRL_MASK));
 		mnInsert.add(mntmNewLevel);
 
@@ -355,35 +383,40 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		mnTools.setHorizontalAlignment(SwingConstants.LEFT);
 		menuBar.add(mnTools);
 
-		JMenuItem mntmModelFilter = new JMenuItem("Model Filter");
+		mntmModelFilter = new JMenuItem("Model Filter");
+		mntmModelFilter.addActionListener(this);
 		mntmModelFilter.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F, InputEvent.CTRL_MASK | InputEvent.SHIFT_MASK));
 		mnTools.add(mntmModelFilter);
 
 		JSeparator separator_12 = new JSeparator();
 		mnTools.add(separator_12);
 
-		JMenuItem mntmInformalToFormal = new JMenuItem("Informal to formal description");
+		mntmInformalToFormal = new JMenuItem("Informal to formal description");
+		mntmInformalToFormal.addActionListener(this);
 		mntmInformalToFormal.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_D, InputEvent.CTRL_MASK));
 		mnTools.add(mntmInformalToFormal);
 
 		JSeparator separator_13 = new JSeparator();
 		mnTools.add(separator_13);
 
-		JMenuItem mntmCheckModelStructure = new JMenuItem("Check Model Structure");
+		mntmCheckModelStructure = new JMenuItem("Check Model Structure");
+		mntmCheckModelStructure.addActionListener(this);
 		mntmCheckModelStructure.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F7, 0));
 		mnTools.add(mntmCheckModelStructure);
 
 		JSeparator separator_14 = new JSeparator();
 		mnTools.add(separator_14);
 
-		JMenuItem mntmStartTaskModel = new JMenuItem("Start Task Model Simulator");
+		mntmStartTaskModel = new JMenuItem("Start Task Model Simulator");
+		mntmStartTaskModel.addActionListener(this);
 		mntmStartTaskModel.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F4, 0));
 		mnTools.add(mntmStartTaskModel);
 
 		JSeparator separator_15 = new JSeparator();
 		mnTools.add(separator_15);
 
-		JMenuItem mntmReachablelityAnalysis = new JMenuItem("Reachablelity Analysis");
+		mntmReachablelityAnalysis = new JMenuItem("Reachablelity Analysis");
+		mntmReachablelityAnalysis.addActionListener(this);
 		mntmReachablelityAnalysis.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, InputEvent.CTRL_MASK));
 		mnTools.add(mntmReachablelityAnalysis);
 
@@ -392,17 +425,21 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		mnHelp.setHorizontalAlignment(SwingConstants.LEFT);
 		menuBar.add(mnHelp);
 
-		JMenuItem mntmWelcome = new JMenuItem("Welcome");
-		mnHelp.add(mntmWelcome);
+		mntmWelcome = new JMenuItem("Welcome");
+		mntmWelcome.addActionListener(this);
 
+		mnHelp.add(mntmWelcome);
 		JSeparator separator_16 = new JSeparator();
 		mnHelp.add(separator_16);
 
-		JMenuItem mntmHelpContent = new JMenuItem("Help Content");
+		mntmHelpContent = new JMenuItem("Help Content");
+		mntmHelpContent.addActionListener(this);
 		mnHelp.add(mntmHelpContent);
 
-		JMenuItem mntmSearch = new JMenuItem("Search");
+		mntmSearch = new JMenuItem("Search");
+		mntmSearch.addActionListener(this);
 		mnHelp.add(mntmSearch);
+
 
 		JPanel panel_3 = new JPanel();
 		panel.add(panel_3, BorderLayout.WEST);
@@ -414,9 +451,9 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_4 = new JButton("");
 		btnNewButton_4.setToolTipText("New");
-		btnNewButton_4.setIcon(new ImageIcon("./res/images/new2.png"));
-		btnNewButton_4.setSize(35, 35);
-		btnNewButton_4.setPreferredSize(new Dimension(35,35));
+		btnNewButton_4.setIcon(new ImageIcon("./res/images/new.gif"));
+		btnNewButton_4.setSize(25, 25);
+		btnNewButton_4.setPreferredSize(new Dimension(25,25));
 		btnNewButton_4.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
@@ -427,8 +464,8 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_5 = new JButton("");
 		btnNewButton_5.setToolTipText("Open");
-		btnNewButton_5.setIcon(new ImageIcon("./res/images/ouvrir2.png"));
-		btnNewButton_5.setSize(35, 35);
+		btnNewButton_5.setIcon(new ImageIcon("./res/images/open.gif"));
+		btnNewButton_5.setSize(25, 25);
 		btnNewButton_5.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
@@ -436,16 +473,16 @@ public class CTTEFrame extends JFrame implements ActionListener{
 				int returnValue = jfc.showDialog(null,"Ouvrir");
 				contentPane.requestFocus();
 			}
-			});
-		btnNewButton_5.setPreferredSize(new Dimension(35,35));
+		});
+		btnNewButton_5.setPreferredSize(new Dimension(25,25));
 
 		panel_7.add(btnNewButton_5);
 
 		JButton btnNewButton_8 = new JButton("");
 		btnNewButton_8.setToolTipText("Save");
-		btnNewButton_8.setIcon(new ImageIcon("./res/images/save2.png"));
-		btnNewButton_8.setSize(35, 35);
-		btnNewButton_8.setPreferredSize(new Dimension(35,35));
+		btnNewButton_8.setIcon(new ImageIcon("./res/images/save.gif"));
+		btnNewButton_8.setSize(25, 25);
+		btnNewButton_8.setPreferredSize(new Dimension(25,25));
 		btnNewButton_8.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
@@ -457,15 +494,15 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_6 = new JButton("");
 		btnNewButton_6.setToolTipText("Print");
-		btnNewButton_6.setIcon(new ImageIcon("./res/images/print2.png"));
+		btnNewButton_6.setIcon(new ImageIcon("./res/images/print.gif"));
 		btnNewButton_6.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Ouverture du menu d'impression");
 				contentPane.requestFocus();
 			}});
-		btnNewButton_6.setSize(35, 35);
-		btnNewButton_6.setPreferredSize(new Dimension(35,35));
+		btnNewButton_6.setSize(25, 25);
+		btnNewButton_6.setPreferredSize(new Dimension(25,25));
 		panel_7.add(btnNewButton_6);
 
 		JSeparator separator_17 = new JSeparator();
@@ -477,80 +514,80 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_7 = new JButton("");
 		btnNewButton_7.setToolTipText("Cut SubTree");
-		btnNewButton_7.setIcon(new ImageIcon("./res/images/couper2.png"));
-		btnNewButton_7.setSize(35, 35);
+		btnNewButton_7.setIcon(new ImageIcon("./res/images/cutall.gif"));
+		btnNewButton_7.setSize(25, 25);
 		btnNewButton_7.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Cut SubTree");
 				contentPane.requestFocus();
 			}});
-		btnNewButton_7.setPreferredSize(new Dimension(35,35));
+		btnNewButton_7.setPreferredSize(new Dimension(25,25));
 		panel_8.add(btnNewButton_7);
 
 		JButton btnNewButton_9 = new JButton("");
 		btnNewButton_9.setToolTipText("Copy SubTree");
-		btnNewButton_9.setIcon(new ImageIcon("./res/images/copier2.png"));
+		btnNewButton_9.setIcon(new ImageIcon("./res/images/copy.gif"));
 		btnNewButton_9.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Copy");
 				contentPane.requestFocus();
 			}});
-		btnNewButton_9.setSize(35, 35);
-		btnNewButton_9.setPreferredSize(new Dimension(35,35));
+		btnNewButton_9.setSize(25, 25);
+		btnNewButton_9.setPreferredSize(new Dimension(25,25));
 		panel_8.add(btnNewButton_9);
 
 		JButton btnNewButton_10 = new JButton("");
 		btnNewButton_10.setToolTipText("Paste");
-		btnNewButton_10.setIcon(new ImageIcon("./res/images/coller2.png"));
-		btnNewButton_10.setSize(35, 35);
+		btnNewButton_10.setIcon(new ImageIcon("./res/images/paste.gif"));
+		btnNewButton_10.setSize(25, 25);
 		btnNewButton_10.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Paste");
 				contentPane.requestFocus();
 			}});
-		btnNewButton_10.setPreferredSize(new Dimension(35,35));
+		btnNewButton_10.setPreferredSize(new Dimension(25,25));
 		panel_8.add(btnNewButton_10);
 
 		JButton button = new JButton("");
 		button.setToolTipText("Delete");
 		button.setIcon(new ImageIcon("./res/images/delete.png"));
-		button.setSize(35, 35);
+		button.setSize(25, 25);
 		button.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Delete");
 				contentPane.requestFocus();
 			}});
-		button.setPreferredSize(new Dimension(35,35));
+		button.setPreferredSize(new Dimension(25,25));
 		panel_8.add(button);
 
 		JButton button_1 = new JButton("");
 		button_1.setToolTipText("Undo");
-		button_1.setIcon(new ImageIcon("./res/images/undo2.png"));
+		button_1.setIcon(new ImageIcon("./res/images/undo.gif"));
 		button_1.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Undo");
 				contentPane.requestFocus();
 			}});
-		button_1.setSize(35, 35);
-		button_1.setPreferredSize(new Dimension(35,35));
+		button_1.setSize(25, 25);
+		button_1.setPreferredSize(new Dimension(25,25));
 		panel_8.add(button_1);
 
 		JButton button_2 = new JButton("");
 		button_2.setToolTipText("Redo");
-		button_2.setIcon(new ImageIcon("./res/images/redo2.png"));
-		button_2.setSize(35, 35);
+		button_2.setIcon(new ImageIcon("./res/images/redo.gif"));
+		button_2.setSize(25, 25);
 		button_2.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Redo");
 				contentPane.requestFocus();
 			}});
-		button_2.setPreferredSize(new Dimension(35,35));
+		button_2.setPreferredSize(new Dimension(25,25));
 		panel_8.add(button_2);
 
 		JSeparator separator_18 = new JSeparator();
@@ -562,9 +599,9 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_11 = new JButton("");
 		btnNewButton_11.setToolTipText("Properties");
-		btnNewButton_11.setIcon(new ImageIcon("./res/images/properties2.png"));
-		btnNewButton_11.setSize(35, 35);
-		btnNewButton_11.setPreferredSize(new Dimension(35,35));
+		btnNewButton_11.setIcon(new ImageIcon("./res/images/properties.gif"));
+		btnNewButton_11.setSize(25, 25);
+		btnNewButton_11.setPreferredSize(new Dimension(25,25));
 		btnNewButton_11.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
@@ -590,7 +627,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		txtpnIdentifier.setFont(new Font("Dialog", Font.PLAIN, 11));
 		txtpnIdentifier.setEditable(false);
 		txtpnIdentifier.setBackground(SystemColor.control);
-		panel_11.add(txtpnIdentifier); 
+		panel_11.add(txtpnIdentifier);
 
 
 
@@ -650,7 +687,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton = new JButton("");
 		btnNewButton.setToolTipText("Add User Task to SubTree");
-		btnNewButton.setIcon(new ImageIcon("./res/images/usertask2.png"));
+		btnNewButton.setIcon(new ImageIcon("./res/images/userico.gif"));
 		btnNewButton.setSize(35,35);
 		btnNewButton.addMouseListener(new MouseAdapter(){
 			@Override
@@ -663,7 +700,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_2 = new JButton("");
 		btnNewButton_2.setToolTipText("Add Abstraction Task to SubTree");
-		btnNewButton_2.setIcon(new ImageIcon("./res/images/abstractiontask2.png"));
+		btnNewButton_2.setIcon(new ImageIcon("./res/images/abstractionico.gif"));
 		btnNewButton_2.setSize(35,35);
 		btnNewButton_2.addMouseListener(new MouseAdapter(){
 			@Override
@@ -676,7 +713,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_1 = new JButton("");
 		btnNewButton_1.setToolTipText("Add Application Task to SubTree");
-		btnNewButton_1.setIcon(new ImageIcon("./res/images/applicationtask2.png"));
+		btnNewButton_1.setIcon(new ImageIcon("./res/images/applicationico.gif"));
 		btnNewButton_1.setSize(35,35);
 		btnNewButton_1.addMouseListener(new MouseAdapter(){
 			@Override
@@ -689,7 +726,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_3 = new JButton("");
 		btnNewButton_3.setToolTipText("Add Interaction Task to SubTree");
-		btnNewButton_3.setIcon(new ImageIcon("./res/images/interactiontask2.png"));
+		btnNewButton_3.setIcon(new ImageIcon("./res/images/interactionico.gif"));
 		btnNewButton_3.setSize(35,35);
 		btnNewButton_3.addMouseListener(new MouseAdapter(){
 			@Override
@@ -833,7 +870,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		panel_6.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 0));
 
 		JButton button_11 = new JButton("");
-		button_11.setToolTipText("Set/Unset  Iterative Task + Explications");
+		button_11.setToolTipText("Set/Unset Iterative Task + Explications");
 		button_11.setIcon(new ImageIcon("./res/images/iterative.gif"));
 		button_11.setSize(35, 35);
 		button_11.addMouseListener(new MouseAdapter(){
@@ -934,7 +971,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JScrollPane scrollPane = new JScrollPane();
 		contentPane.add(scrollPane, BorderLayout.CENTER);
-
+		scrollPane.getViewport().setBackground(Color.white);
 
 	}
 
@@ -989,7 +1026,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		if(e.getSource() == rdbtnmntmAllLevels){
 			rdbtnmntmAllLevels.setSelected(true);
-			radioButtonMenuItem.setSelected(false); 
+			radioButtonMenuItem.setSelected(false);
 		}
 		else{
 			radioButtonMenuItem.setSelected(true);
@@ -998,75 +1035,155 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		if(e.getSource() == rdbtnmntmBelowchild){
 			rdbtnmntmBelowchild.setSelected(true);
-			rdbtnmntmToTheLeft.setSelected(false); 
-		}else{
+			rdbtnmntmToTheLeft.setSelected(false);
+		}    
+		else{
 			rdbtnmntmToTheLeft.setSelected(true);
 			rdbtnmntmBelowchild.setSelected(false);
 		}
 
-		
 		if(e.getSource() == mntmNewMenuItem_1){
-			JOptionPane.showMessageDialog(null, "Ouverture d'un nouveau document");				
-			contentPane.requestFocus();
-		}
-		
-		if(e.getSource() == mntmPrint){
-			JOptionPane.showMessageDialog(null, "Ouverture de la fenetre d'impression");				
-			contentPane.requestFocus();
-		}
-		
-		if(e.getSource() == mntmPrintInMultiple){
-			JOptionPane.showMessageDialog(null, "Ouverture de la fenetre d'impression multiple");				
-			contentPane.requestFocus();
-		}
-		
-		if(e.getSource() == mntmUndo){
-			JOptionPane.showMessageDialog(null, "Fonction de retour en arrière");				
-			contentPane.requestFocus();
-		}
-		
-		if(e.getSource() == mntmRedo){
-			JOptionPane.showMessageDialog(null, "Fonction de retour en avant");				
-			contentPane.requestFocus();
-		}
-		
-		if(e.getSource() == mntmCutSelection){
-			JOptionPane.showMessageDialog(null, "Fonction de 'couper' de l'élement sélectionné");				
-			contentPane.requestFocus();
-		}
-		
-		if(e.getSource() == mntmCutSubtree){
-			JOptionPane.showMessageDialog(null, "Fonction de 'couper' de l'élement sélectionné ainsi que son sous arbre");				
-			contentPane.requestFocus();
-		}
-		
-		if(e.getSource() == mntmCopySelection){
-			JOptionPane.showMessageDialog(null, "Fonction de copier de l'élement sélectionné");				
-			contentPane.requestFocus();
-		}
-		
-		if(e.getSource() == mntmCopySubtree){
-			JOptionPane.showMessageDialog(null, "Fonction de copier de l'élement sélectionné ainsi que son sous arbre");				
-			contentPane.requestFocus();
-		}
-		
-		if(e.getSource() == mntmPaste){
-			JOptionPane.showMessageDialog(null, "Fonction de coller de l'élement sélectionné");				
-			contentPane.requestFocus();
-		}
-		
-		if(e.getSource() == mntmDelete){
-			JOptionPane.showMessageDialog(null, "Fonction de suppression de l'élement sélectionné");				
-			contentPane.requestFocus();
-		}
-		
-		if(e.getSource() == mntmFind){
-			JOptionPane.showMessageDialog(null, "Fonction de recherche d'un élement de l'arbre");				
+			JOptionPane.showMessageDialog(null, "Ouverture d'un nouveau document");                                
 			contentPane.requestFocus();
 		}
 
-		
-		
+		if(e.getSource() == mntmPrint){
+			JOptionPane.showMessageDialog(null, "Ouverture de la fenetre d'impression");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() == mntmPrintInMultiple){
+			JOptionPane.showMessageDialog(null, "Ouverture de la fenetre d'impression multiple");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() == mntmUndo){
+			JOptionPane.showMessageDialog(null, "Fonction de retour en arrière");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() == mntmRedo){
+			JOptionPane.showMessageDialog(null, "Fonction de retour en avant");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() == mntmCutSelection){
+			JOptionPane.showMessageDialog(null, "Fonction de 'couper' de l'élement sélectionné");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() == mntmCutSubtree){
+			JOptionPane.showMessageDialog(null, "Fonction de 'couper' de l'élement sélectionné ainsi que son sous arbre");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() == mntmCopySelection){
+			JOptionPane.showMessageDialog (null, "Fonction de copier de l'élement sélectionné");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() == mntmCopySubtree){
+			JOptionPane.showMessageDialog(null, "Fonction de copier de l'élement sélectionné ainsi que son sous arbre");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() == mntmPaste){
+			JOptionPane.showMessageDialog(null, "Fonction de coller de l'élement sélectionné");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() == mntmDelete){
+			JOptionPane.showMessageDialog(null, "Fonction de suppression de l'élement sélectionné");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() == mntmFind){
+			JOptionPane.showMessageDialog(null, "Fonction de recherche d'un élement de l'arbre");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() ==mntmTaskProperties){
+			JOptionPane.showMessageDialog(null, "affiche les propriétés de la tache");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() ==mntmIconRepresentation){
+			JOptionPane.showMessageDialog(null, "affiche la représentation d'icon");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() ==mntmPriorityTree){
+			JOptionPane.showMessageDialog(null, "affiche la priorité de l'arbre");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() ==mntmFoldunfoldSubtree){
+			JOptionPane.showMessageDialog(null, "plie/deplie l'arbe courant");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() ==mntmUnfoldAll){
+			JOptionPane.showMessageDialog(null, "deplie tout l'arbre ");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() ==mntmTaskModelStatistics){
+			JOptionPane.showMessageDialog(null, "Affiche les statistiques");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() ==mntmSubtreeFromFile){
+			JOptionPane.showMessageDialog(null, "Insere un arbre enregistré dans l'arbre courant");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() ==mntmNewLevel){
+			JOptionPane.showMessageDialog(null, "nouveau niveau");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() ==mntmModelFilter){
+			JOptionPane.showMessageDialog(null, "Model filter");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() ==mntmCheckModelStructure){
+			JOptionPane.showMessageDialog(null, "Vérification de la structure du model");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() ==mntmStartTaskModel){
+			JOptionPane.showMessageDialog(null, "démarre le simulateur");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() ==mntmReachablelityAnalysis){
+			JOptionPane.showMessageDialog(null, "analyse d'accessibilité");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() ==mntmInformalToFormal){
+			JOptionPane.showMessageDialog(null, "Informal --> Formal");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() ==mntmWelcome){
+			JOptionPane.showMessageDialog(null, "Ouvre un tutoriel");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() ==mntmHelpContent){
+			JOptionPane.showMessageDialog(null, "Section aide");                                
+			contentPane.requestFocus();
+		}
+
+		if(e.getSource() ==mntmSearch){
+			JOptionPane.showMessageDialog(null, "Recherche dans l'aide");                                
+			contentPane.requestFocus();
+		}
+
+
+
 	}
 
 }
