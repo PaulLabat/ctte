@@ -562,7 +562,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_11 = new JButton("");
 		btnNewButton_11.setToolTipText("Properties");
-		btnNewButton_11.setIcon(new ImageIcon("./res/images/propertie2.png"));
+		btnNewButton_11.setIcon(new ImageIcon("./res/images/properties2.png"));
 		btnNewButton_11.setSize(35, 35);
 		btnNewButton_11.setPreferredSize(new Dimension(35,35));
 		btnNewButton_11.addMouseListener(new MouseAdapter(){
