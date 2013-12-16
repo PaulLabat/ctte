@@ -130,7 +130,35 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		this.setMinimumSize(new Dimension(650, 550));
 
 
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+
+		this.addWindowListener( new WindowAdapter()
+		{
+			public void windowClosing(WindowEvent e)
+			{
+				JFrame frame = (JFrame)e.getSource();
+
+				int result = JOptionPane.showConfirmDialog(
+						null,
+						"Are you sure you want to exit without saving ?",
+						"Exit Application",
+						JOptionPane.YES_NO_OPTION);
+
+				if (result == JOptionPane.YES_OPTION){
+					//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+					System.exit(0);
+				}else{
+					JFileChooser jfc = new JFileChooser();
+					int returnValue = jfc.showDialog(null,"Sauvegarder");
+					if(returnValue == JFileChooser.CANCEL_OPTION){
+						//System.out.println("test");
+					}else{
+						System.exit(0);
+					}
+				}
+			}
+		});
+
 		setBounds(100, 100, 650, 550);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
@@ -1020,15 +1048,31 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		}
 
 		if(e.getSource()==mntmQuit ){
-			JOptionPane.showMessageDialog(null, "Attention la fenetre va s'éteindre, voulez-vous sauvegarder");
-			System.exit(0);
+			int result = JOptionPane.showConfirmDialog(null,
+					"Are you sure you want to exit without saving ?",
+					"Exit Application",
+					JOptionPane.YES_NO_OPTION);
+
+			if (result == JOptionPane.YES_OPTION){
+				System.exit(0);
+			}else{
+				JFileChooser jfc = new JFileChooser();
+				int returnValue = jfc.showDialog(null,"Sauvegarde");
+				if(returnValue == JFileChooser.CANCEL_OPTION){
+					
+				}else{
+					System.exit(0);
+				}
+			}
 		}
+
+
 
 		if(e.getSource() == rdbtnmntmAllLevels){
 			rdbtnmntmAllLevels.setSelected(true);
 			radioButtonMenuItem.setSelected(false);
 		}
-		else{
+		if(e.getSource() == radioButtonMenuItem){
 			radioButtonMenuItem.setSelected(true);
 			rdbtnmntmAllLevels.setSelected(false);
 		}
@@ -1037,7 +1081,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			rdbtnmntmBelowchild.setSelected(true);
 			rdbtnmntmToTheLeft.setSelected(false);
 		}    
-		else{
+		if(e.getSource() == rdbtnmntmToTheLeft){
 			rdbtnmntmToTheLeft.setSelected(true);
 			rdbtnmntmBelowchild.setSelected(false);
 		}
