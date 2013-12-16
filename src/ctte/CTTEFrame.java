@@ -650,7 +650,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton = new JButton("");
 		btnNewButton.setToolTipText("Add User Task to SubTree");
-		btnNewButton.setIcon(new ImageIcon("./res/images/userico.gif"));
+		btnNewButton.setIcon(new ImageIcon("./res/images/usertask2.png"));
 		btnNewButton.setSize(35,35);
 		btnNewButton.addMouseListener(new MouseAdapter(){
 			@Override
@@ -663,7 +663,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_2 = new JButton("");
 		btnNewButton_2.setToolTipText("Add Abstraction Task to SubTree");
-		btnNewButton_2.setIcon(new ImageIcon("./res/images/abstractionico.gif"));
+		btnNewButton_2.setIcon(new ImageIcon("./res/images/abstractiontask2.png"));
 		btnNewButton_2.setSize(35,35);
 		btnNewButton_2.addMouseListener(new MouseAdapter(){
 			@Override
@@ -676,7 +676,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_1 = new JButton("");
 		btnNewButton_1.setToolTipText("Add Application Task to SubTree");
-		btnNewButton_1.setIcon(new ImageIcon("./res/images/applicationico.gif"));
+		btnNewButton_1.setIcon(new ImageIcon("./res/images/applicationtask2.png"));
 		btnNewButton_1.setSize(35,35);
 		btnNewButton_1.addMouseListener(new MouseAdapter(){
 			@Override
@@ -689,7 +689,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_3 = new JButton("");
 		btnNewButton_3.setToolTipText("Add Interaction Task to SubTree");
-		btnNewButton_3.setIcon(new ImageIcon("./res/images/interactionico.gif"));
+		btnNewButton_3.setIcon(new ImageIcon("./res/images/interactiontask2.png"));
 		btnNewButton_3.setSize(35,35);
 		btnNewButton_3.addMouseListener(new MouseAdapter(){
 			@Override
