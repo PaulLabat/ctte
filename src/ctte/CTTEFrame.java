@@ -414,7 +414,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_4 = new JButton("");
 		btnNewButton_4.setToolTipText("New");
-		btnNewButton_4.setIcon(new ImageIcon("./res/images/new2.jpg"));
+		btnNewButton_4.setIcon(new ImageIcon("./res/images/new2.png"));
 		btnNewButton_4.setSize(35, 35);
 		btnNewButton_4.setPreferredSize(new Dimension(35,35));
 		btnNewButton_4.addMouseListener(new MouseAdapter(){
@@ -427,7 +427,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_5 = new JButton("");
 		btnNewButton_5.setToolTipText("Open");
-		btnNewButton_5.setIcon(new ImageIcon("./res/images/ouvrir2.jpg"));
+		btnNewButton_5.setIcon(new ImageIcon("./res/images/ouvrir2.png"));
 		btnNewButton_5.setSize(35, 35);
 		btnNewButton_5.addMouseListener(new MouseAdapter(){
 			@Override
@@ -443,7 +443,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_8 = new JButton("");
 		btnNewButton_8.setToolTipText("Save");
-		btnNewButton_8.setIcon(new ImageIcon("./res/images/save2.jpg"));
+		btnNewButton_8.setIcon(new ImageIcon("./res/images/save2.png"));
 		btnNewButton_8.setSize(35, 35);
 		btnNewButton_8.setPreferredSize(new Dimension(35,35));
 		btnNewButton_8.addMouseListener(new MouseAdapter(){
@@ -457,7 +457,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_6 = new JButton("");
 		btnNewButton_6.setToolTipText("Print");
-		btnNewButton_6.setIcon(new ImageIcon("./res/images/print2.jpg"));
+		btnNewButton_6.setIcon(new ImageIcon("./res/images/print2.png"));
 		btnNewButton_6.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
@@ -477,7 +477,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_7 = new JButton("");
 		btnNewButton_7.setToolTipText("Cut SubTree");
-		btnNewButton_7.setIcon(new ImageIcon("./res/images/couper2.jpg"));
+		btnNewButton_7.setIcon(new ImageIcon("./res/images/couper2.png"));
 		btnNewButton_7.setSize(35, 35);
 		btnNewButton_7.addMouseListener(new MouseAdapter(){
 			@Override
@@ -490,7 +490,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_9 = new JButton("");
 		btnNewButton_9.setToolTipText("Copy SubTree");
-		btnNewButton_9.setIcon(new ImageIcon("./res/images/copier2.jpg"));
+		btnNewButton_9.setIcon(new ImageIcon("./res/images/copier2.png"));
 		btnNewButton_9.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
@@ -503,7 +503,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_10 = new JButton("");
 		btnNewButton_10.setToolTipText("Paste");
-		btnNewButton_10.setIcon(new ImageIcon("./res/images/coller2.jpg"));
+		btnNewButton_10.setIcon(new ImageIcon("./res/images/coller2.png"));
 		btnNewButton_10.setSize(35, 35);
 		btnNewButton_10.addMouseListener(new MouseAdapter(){
 			@Override
@@ -529,7 +529,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton button_1 = new JButton("");
 		button_1.setToolTipText("Undo");
-		button_1.setIcon(new ImageIcon("./res/images/undo2.jpg"));
+		button_1.setIcon(new ImageIcon("./res/images/undo2.png"));
 		button_1.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
@@ -542,7 +542,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton button_2 = new JButton("");
 		button_2.setToolTipText("Redo");
-		button_2.setIcon(new ImageIcon("./res/images/redo2.jpg"));
+		button_2.setIcon(new ImageIcon("./res/images/redo2.png"));
 		button_2.setSize(35, 35);
 		button_2.addMouseListener(new MouseAdapter(){
 			@Override
@@ -562,7 +562,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_11 = new JButton("");
 		btnNewButton_11.setToolTipText("Properties");
-		btnNewButton_11.setIcon(new ImageIcon("./res/images/propertie2.jpg"));
+		btnNewButton_11.setIcon(new ImageIcon("./res/images/propertie2.png"));
 		btnNewButton_11.setSize(35, 35);
 		btnNewButton_11.setPreferredSize(new Dimension(35,35));
 		btnNewButton_11.addMouseListener(new MouseAdapter(){
