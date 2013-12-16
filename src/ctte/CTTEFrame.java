@@ -999,7 +999,11 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		if(e.getSource() == rdbtnmntmBelowchild){
 			rdbtnmntmBelowchild.setSelected(true);
 			rdbtnmntmToTheLeft.setSelected(false); 
+		}else{
+			rdbtnmntmToTheLeft.setSelected(true);
+			rdbtnmntmBelowchild.setSelected(false);
 		}
+
 		
 		if(e.getSource() == mntmNewMenuItem_1){
 			JOptionPane.showMessageDialog(null, "Ouverture d'un nouveau document");				
@@ -1062,11 +1066,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		}
 
 		
-		else{
-			rdbtnmntmToTheLeft.setSelected(true);
-			rdbtnmntmBelowchild.setSelected(false);
-		}
-
+		
 	}
 
 }
