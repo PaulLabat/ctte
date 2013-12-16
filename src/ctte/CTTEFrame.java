@@ -1036,6 +1036,9 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		if(e.getSource() == rdbtnmntmBelowchild){
 			rdbtnmntmBelowchild.setSelected(true);
 			rdbtnmntmToTheLeft.setSelected(false); 
+		}else{
+			rdbtnmntmToTheLeft.setSelected(true);
+			rdbtnmntmBelowchild.setSelected(false);
 		}
 		
 		if(e.getSource() == mntmNewMenuItem_1){
@@ -1178,10 +1181,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			contentPane.requestFocus();
 		}
 		
-		else{
-			rdbtnmntmToTheLeft.setSelected(true);
-			rdbtnmntmBelowchild.setSelected(false);
-		}
+		
 
 	}
 
