@@ -567,6 +567,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		panel_8.add(btnNewButton_9);
 
 		JButton btnNewButton_10 = new JButton("");
+		btnNewButton_10.setEnabled(false);
 		btnNewButton_10.setToolTipText("Paste");
 		btnNewButton_10.setIcon(new ImageIcon("./res/images/coller2.png"));
 		btnNewButton_10.setSize(35, 35);
@@ -593,6 +594,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		panel_8.add(button);
 
 		JButton button_1 = new JButton("");
+		button_1.setEnabled(false);
 		button_1.setToolTipText("Undo");
 		button_1.setIcon(new ImageIcon("./res/images/undo2.png"));
 		button_1.addMouseListener(new MouseAdapter(){
@@ -606,6 +608,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		panel_8.add(button_1);
 
 		JButton button_2 = new JButton("");
+		button_2.setEnabled(false);
 		button_2.setToolTipText("Redo");
 		button_2.setIcon(new ImageIcon("./res/images/redo2.png"));
 		button_2.setSize(35, 35);
@@ -779,6 +782,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		panel_5.setLayout(new GridLayout(4, 2, 0, 0));
 
 		JButton button_3 = new JButton("");
+		button_3.setEnabled(false);
 		button_3.setToolTipText("Choice + Explications");
 		button_3.setIcon(new ImageIcon("./res/images/choice.gif"));
 		button_3.setSize(35, 35);
@@ -792,6 +796,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		panel_5.add(button_3);
 
 		JButton button_4 = new JButton("");
+		button_4.setEnabled(false);
 		button_4.setToolTipText("OrderIndependence + Explications");
 		button_4.setIcon(new ImageIcon("./res/images/order.gif"));
 		button_4.setSize(35, 35);
@@ -805,6 +810,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		panel_5.add(button_4);
 
 		JButton button_5 = new JButton("");
+		button_5.setEnabled(false);
 		button_5.setToolTipText("InterLeaving + Explications");
 		button_5.setIcon(new ImageIcon("./res/images/interleave.gif"));
 		button_5.setSize(35, 35);
@@ -818,6 +824,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		panel_5.add(button_5);
 
 		JButton button_6 = new JButton("");
+		button_6.setEnabled(false);
 		button_6.setToolTipText("Synchronization + Explications");
 		button_6.setIcon(new ImageIcon("./res/images/sincro.gif"));
 		button_6.setSize(35, 35);
@@ -831,6 +838,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		panel_5.add(button_6);
 
 		JButton button_7 = new JButton("");
+		button_7.setEnabled(false);
 		button_7.setToolTipText("Disabling + Explications");
 		button_7.setIcon(new ImageIcon("./res/images/disabling.gif"));
 		button_7.setSize(35, 35);
@@ -844,6 +852,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		panel_5.add(button_7);
 
 		JButton button_8 = new JButton("");
+		button_8.setEnabled(false);
 		button_8.setToolTipText("SuspendResume + Explications");
 		button_8.setIcon(new ImageIcon("./res/images/suspend.gif"));
 		button_8.setSize(35, 35);
@@ -857,6 +866,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		panel_5.add(button_8);
 
 		JButton button_9 = new JButton("");
+		button_9.setEnabled(false);
 		button_9.setToolTipText("SequentialEnabling + Explications");
 		button_9.setIcon(new ImageIcon("./res/images/enabling.gif"));
 		button_9.setSize(35, 35);
@@ -870,6 +880,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		panel_5.add(button_9);
 
 		JButton button_10 = new JButton("");
+		button_10.setEnabled(false);
 		button_10.setToolTipText("SequentialEnablingInfo + Explications");
 		button_10.setIcon(new ImageIcon("./res/images/enablinginfo.gif"));
 		button_10.setSize(35, 35);
@@ -898,6 +909,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		panel_6.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 0));
 
 		JButton button_11 = new JButton("");
+		button_11.setEnabled(false);
 		button_11.setToolTipText("Set/Unset Iterative Task + Explications");
 		button_11.setIcon(new ImageIcon("./res/images/iterative.gif"));
 		button_11.setSize(35, 35);
@@ -911,6 +923,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		panel_6.add(button_11);
 
 		JButton button_12 = new JButton("");
+		button_12.setEnabled(false);
 		button_12.setToolTipText("Set/Unset Optional Task + Explications");
 		button_12.setIcon(new ImageIcon("./res/images/optional.gif"));
 		button_12.setSize(35, 35);
@@ -924,6 +937,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		panel_6.add(button_12);
 
 		JButton button_13 = new JButton("");
+		button_13.setEnabled(false);
 		button_13.setToolTipText("Set/Unset Connection Task + Explications");
 		button_13.setIcon(new ImageIcon("./res/images/arrow.gif"));
 		button_13.setSize(35, 35);
