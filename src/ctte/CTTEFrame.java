@@ -97,6 +97,14 @@ public class CTTEFrame extends JFrame implements ActionListener{
 	private JRadioButtonMenuItem radioButtonMenuItem;
 	private JRadioButtonMenuItem rdbtnmntmBelowchild;
 	private JRadioButtonMenuItem rdbtnmntmToTheLeft;
+	
+	
+	private JButton btnNewButton_7;
+	private JButton btnNewButton_10;
+	private JButton btnNewButton_9;
+	
+	private JButton button_1;
+	private JButton button_2;
 	/**
 	 * Launch the application.
 	 */
@@ -540,7 +548,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		panel_3.add(panel_8);
 		panel_8.setLayout(new GridLayout(0, 6, 0, 0));
 
-		JButton btnNewButton_7 = new JButton("");
+		btnNewButton_7 = new JButton("");
 		btnNewButton_7.setToolTipText("Cut SubTree");
 		btnNewButton_7.setIcon(new ImageIcon("./res/images/couper2.png"));
 		btnNewButton_7.setSize(35, 35);
@@ -548,12 +556,14 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Cut SubTree");
+				btnNewButton_10.setEnabled(true);
+				button_1.setEnabled(true);
 				contentPane.requestFocus();
 			}});
 		btnNewButton_7.setPreferredSize(new Dimension(35,35));
 		panel_8.add(btnNewButton_7);
 
-		JButton btnNewButton_9 = new JButton("");
+		btnNewButton_9 = new JButton("");
 		btnNewButton_9.setToolTipText("Copy SubTree");
 		btnNewButton_9.setIcon(new ImageIcon("./res/images/copier2.png"));
 		btnNewButton_9.addMouseListener(new MouseAdapter(){
@@ -561,12 +571,14 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Copy");
 				contentPane.requestFocus();
+				button_1.setEnabled(true);
+				btnNewButton_10.setEnabled(true);
 			}});
 		btnNewButton_9.setSize(35, 35);
 		btnNewButton_9.setPreferredSize(new Dimension(25,25));
 		panel_8.add(btnNewButton_9);
 
-		JButton btnNewButton_10 = new JButton("");
+		btnNewButton_10 = new JButton("");
 		btnNewButton_10.setEnabled(false);
 		btnNewButton_10.setToolTipText("Paste");
 		btnNewButton_10.setIcon(new ImageIcon("./res/images/coller2.png"));
@@ -589,11 +601,12 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Delete");
 				contentPane.requestFocus();
+				button_1.setEnabled(true);
 			}});
 		button.setPreferredSize(new Dimension(35,35));
 		panel_8.add(button);
 
-		JButton button_1 = new JButton("");
+		button_1 = new JButton("");
 		button_1.setEnabled(false);
 		button_1.setToolTipText("Undo");
 		button_1.setIcon(new ImageIcon("./res/images/undo2.png"));
@@ -602,12 +615,13 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Undo");
 				contentPane.requestFocus();
+				button_2.setEnabled(true);
 			}});
 		button_1.setSize(35, 35);
 		button_1.setPreferredSize(new Dimension(35,35));
 		panel_8.add(button_1);
 
-		JButton button_2 = new JButton("");
+		button_2 = new JButton("");
 		button_2.setEnabled(false);
 		button_2.setToolTipText("Redo");
 		button_2.setIcon(new ImageIcon("./res/images/redo2.png"));
@@ -1118,6 +1132,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		if(e.getSource() == mntmUndo){
 			JOptionPane.showMessageDialog(null, "Fonction de retour en arrière");                                
 			contentPane.requestFocus();
+			button_2.setEnabled(true);
 		}
 
 		if(e.getSource() == mntmRedo){
@@ -1128,21 +1143,30 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		if(e.getSource() == mntmCutSelection){
 			JOptionPane.showMessageDialog(null, "Fonction de 'couper' de l'élement sélectionné");                                
 			contentPane.requestFocus();
+			btnNewButton_10.setEnabled(true);
+			button_1.setEnabled(true);
+			
 		}
 
 		if(e.getSource() == mntmCutSubtree){
 			JOptionPane.showMessageDialog(null, "Fonction de 'couper' de l'élement sélectionné ainsi que son sous arbre");                                
 			contentPane.requestFocus();
+			btnNewButton_10.setEnabled(true);
+			button_1.setEnabled(true);
 		}
 
 		if(e.getSource() == mntmCopySelection){
 			JOptionPane.showMessageDialog (null, "Fonction de copier de l'élement sélectionné");                                
 			contentPane.requestFocus();
+			btnNewButton_10.setEnabled(true);
+			button_1.setEnabled(true);
 		}
 
 		if(e.getSource() == mntmCopySubtree){
 			JOptionPane.showMessageDialog(null, "Fonction de copier de l'élement sélectionné ainsi que son sous arbre");                                
 			contentPane.requestFocus();
+			btnNewButton_10.setEnabled(true);
+			button_1.setEnabled(true);
 		}
 
 		if(e.getSource() == mntmPaste){
@@ -1153,6 +1177,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		if(e.getSource() == mntmDelete){
 			JOptionPane.showMessageDialog(null, "Fonction de suppression de l'élement sélectionné");                                
 			contentPane.requestFocus();
+			button_1.setEnabled(true);
 		}
 
 		if(e.getSource() == mntmFind){
