@@ -48,6 +48,9 @@ import java.awt.Color;
 
 public class CTTEFrame extends JFrame implements ActionListener{
 
+	private int count = 0;
+	private int count2 = 0;
+	
 	private JPanel contentPane;
 	private JTextField txtZoom;
 	private JTextField txtRecherche;
@@ -588,6 +591,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Paste");
 				contentPane.requestFocus();
 				button_1.setEnabled(true);
+				count++;
 			}});
 		btnNewButton_10.setPreferredSize(new Dimension(35,35));
 		panel_8.add(btnNewButton_10);
@@ -602,6 +606,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Delete");
 				contentPane.requestFocus();
 				button_1.setEnabled(true);
+				count++;
 			}});
 		button.setPreferredSize(new Dimension(35,35));
 		panel_8.add(button);
@@ -616,6 +621,11 @@ public class CTTEFrame extends JFrame implements ActionListener{
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Undo");
 				contentPane.requestFocus();
 				button_2.setEnabled(true);
+				count--;
+				count2++;
+				if(count == 0){
+					button_1.setEnabled(false);
+				}
 			}});
 		button_1.setSize(35, 35);
 		button_1.setPreferredSize(new Dimension(35,35));
@@ -631,6 +641,12 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Redo");
 				contentPane.requestFocus();
+				count2--;
+				count++;
+				button_1.setEnabled(true);
+				if(count2 == 0){
+					button_2.setEnabled(false);
+				}
 			}});
 		button_2.setPreferredSize(new Dimension(35,35));
 		panel_8.add(button_2);
@@ -1133,11 +1149,22 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			JOptionPane.showMessageDialog(null, "Fonction de retour en arrière");                                
 			contentPane.requestFocus();
 			button_2.setEnabled(true);
+			count--;
+			count2++;
+			if(count == 0){
+				button_1.setEnabled(false);
+			}
 		}
 
 		if(e.getSource() == mntmRedo){
 			JOptionPane.showMessageDialog(null, "Fonction de retour en avant");                                
 			contentPane.requestFocus();
+			count2--;
+			button_2.setEnabled(true);
+			count++;
+			if(count2 == 0){
+				button_2.setEnabled(false);
+			}
 		}
 
 		if(e.getSource() == mntmCutSelection){
@@ -1169,12 +1196,14 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			JOptionPane.showMessageDialog(null, "Fonction de coller de l'élement sélectionné");                                
 			contentPane.requestFocus();
 			button_1.setEnabled(true);
+			count++;
 		}
 
 		if(e.getSource() == mntmDelete){
 			JOptionPane.showMessageDialog(null, "Fonction de suppression de l'élement sélectionné");                                
 			contentPane.requestFocus();
 			button_1.setEnabled(true);
+			count++;
 		}
 
 		if(e.getSource() == mntmFind){
@@ -1265,5 +1294,6 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 
 	}
+	
 
 }
