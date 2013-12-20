@@ -558,7 +558,6 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Cut SubTree");
 				btnNewButton_10.setEnabled(true);
-				button_1.setEnabled(true);
 				contentPane.requestFocus();
 			}});
 		btnNewButton_7.setPreferredSize(new Dimension(35,35));
@@ -572,7 +571,6 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Copy");
 				contentPane.requestFocus();
-				button_1.setEnabled(true);
 				btnNewButton_10.setEnabled(true);
 			}});
 		btnNewButton_9.setSize(35, 35);
@@ -589,6 +587,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Paste");
 				contentPane.requestFocus();
+				button_1.setEnabled(true);
 			}});
 		btnNewButton_10.setPreferredSize(new Dimension(35,35));
 		panel_8.add(btnNewButton_10);
@@ -1145,7 +1144,6 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			JOptionPane.showMessageDialog(null, "Fonction de 'couper' de l'élement sélectionné");                                
 			contentPane.requestFocus();
 			btnNewButton_10.setEnabled(true);
-			button_1.setEnabled(true);
 			
 		}
 
@@ -1153,26 +1151,24 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			JOptionPane.showMessageDialog(null, "Fonction de 'couper' de l'élement sélectionné ainsi que son sous arbre");                                
 			contentPane.requestFocus();
 			btnNewButton_10.setEnabled(true);
-			button_1.setEnabled(true);
 		}
 
 		if(e.getSource() == mntmCopySelection){
 			JOptionPane.showMessageDialog (null, "Fonction de copier de l'élement sélectionné");                                
 			contentPane.requestFocus();
 			btnNewButton_10.setEnabled(true);
-			button_1.setEnabled(true);
 		}
 
 		if(e.getSource() == mntmCopySubtree){
 			JOptionPane.showMessageDialog(null, "Fonction de copier de l'élement sélectionné ainsi que son sous arbre");                                
 			contentPane.requestFocus();
 			btnNewButton_10.setEnabled(true);
-			button_1.setEnabled(true);
 		}
 
 		if(e.getSource() == mntmPaste){
 			JOptionPane.showMessageDialog(null, "Fonction de coller de l'élement sélectionné");                                
 			contentPane.requestFocus();
+			button_1.setEnabled(true);
 		}
 
 		if(e.getSource() == mntmDelete){
