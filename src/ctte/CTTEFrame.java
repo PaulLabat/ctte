@@ -509,6 +509,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 				int returnValue = jfc.showDialog(null,"Ouvrir");
 				contentPane.requestFocus();
 			}
+
 		});
 		btnNewButton_5.setPreferredSize(new Dimension(35,35));
 
