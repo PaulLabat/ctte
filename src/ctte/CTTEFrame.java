@@ -130,7 +130,35 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		this.setMinimumSize(new Dimension(650, 550));
 
 
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+
+		this.addWindowListener( new WindowAdapter()
+		{
+			public void windowClosing(WindowEvent e)
+			{
+				JFrame frame = (JFrame)e.getSource();
+
+				int result = JOptionPane.showConfirmDialog(
+						null,
+						"Are you sure you want to exit without saving ?",
+						"Exit Application",
+						JOptionPane.YES_NO_OPTION);
+
+				if (result == JOptionPane.YES_OPTION){
+					//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+					System.exit(0);
+				}else{
+					JFileChooser jfc = new JFileChooser();
+					int returnValue = jfc.showDialog(null,"Sauvegarder");
+					if(returnValue == JFileChooser.CANCEL_OPTION){
+						//System.out.println("test");
+					}else{
+						System.exit(0);
+					}
+				}
+			}
+		});
+
 		setBounds(100, 100, 650, 550);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
@@ -451,9 +479,9 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_4 = new JButton("");
 		btnNewButton_4.setToolTipText("New");
-		btnNewButton_4.setIcon(new ImageIcon("./res/images/new.gif"));
-		btnNewButton_4.setSize(25, 25);
-		btnNewButton_4.setPreferredSize(new Dimension(25,25));
+		btnNewButton_4.setIcon(new ImageIcon("./res/images/new2.png"));
+		btnNewButton_4.setSize(35, 35);
+		btnNewButton_4.setPreferredSize(new Dimension(35,35));
 		btnNewButton_4.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
@@ -464,8 +492,8 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_5 = new JButton("");
 		btnNewButton_5.setToolTipText("Open");
-		btnNewButton_5.setIcon(new ImageIcon("./res/images/open.gif"));
-		btnNewButton_5.setSize(25, 25);
+		btnNewButton_5.setIcon(new ImageIcon("./res/images/ouvrir2.png"));
+		btnNewButton_5.setSize(35, 35);
 		btnNewButton_5.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
@@ -475,15 +503,15 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			}
 
 		});
-		btnNewButton_5.setPreferredSize(new Dimension(25,25));
+		btnNewButton_5.setPreferredSize(new Dimension(35,35));
 
 		panel_7.add(btnNewButton_5);
 
 		JButton btnNewButton_8 = new JButton("");
 		btnNewButton_8.setToolTipText("Save");
-		btnNewButton_8.setIcon(new ImageIcon("./res/images/save.gif"));
-		btnNewButton_8.setSize(25, 25);
-		btnNewButton_8.setPreferredSize(new Dimension(25,25));
+		btnNewButton_8.setIcon(new ImageIcon("./res/images/save2.png"));
+		btnNewButton_8.setSize(35, 35);
+		btnNewButton_8.setPreferredSize(new Dimension(35,35));
 		btnNewButton_8.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
@@ -495,15 +523,15 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_6 = new JButton("");
 		btnNewButton_6.setToolTipText("Print");
-		btnNewButton_6.setIcon(new ImageIcon("./res/images/print.gif"));
+		btnNewButton_6.setIcon(new ImageIcon("./res/images/print2.png"));
 		btnNewButton_6.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Ouverture du menu d'impression");
 				contentPane.requestFocus();
 			}});
-		btnNewButton_6.setSize(25, 25);
-		btnNewButton_6.setPreferredSize(new Dimension(25,25));
+		btnNewButton_6.setSize(35, 35);
+		btnNewButton_6.setPreferredSize(new Dimension(35,35));
 		panel_7.add(btnNewButton_6);
 
 		JSeparator separator_17 = new JSeparator();
@@ -515,80 +543,80 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_7 = new JButton("");
 		btnNewButton_7.setToolTipText("Cut SubTree");
-		btnNewButton_7.setIcon(new ImageIcon("./res/images/cutall.gif"));
-		btnNewButton_7.setSize(25, 25);
+		btnNewButton_7.setIcon(new ImageIcon("./res/images/couper2.png"));
+		btnNewButton_7.setSize(35, 35);
 		btnNewButton_7.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Cut SubTree");
 				contentPane.requestFocus();
 			}});
-		btnNewButton_7.setPreferredSize(new Dimension(25,25));
+		btnNewButton_7.setPreferredSize(new Dimension(35,35));
 		panel_8.add(btnNewButton_7);
 
 		JButton btnNewButton_9 = new JButton("");
 		btnNewButton_9.setToolTipText("Copy SubTree");
-		btnNewButton_9.setIcon(new ImageIcon("./res/images/copy.gif"));
+		btnNewButton_9.setIcon(new ImageIcon("./res/images/copier2.png"));
 		btnNewButton_9.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Copy");
 				contentPane.requestFocus();
 			}});
-		btnNewButton_9.setSize(25, 25);
+		btnNewButton_9.setSize(35, 35);
 		btnNewButton_9.setPreferredSize(new Dimension(25,25));
 		panel_8.add(btnNewButton_9);
 
 		JButton btnNewButton_10 = new JButton("");
 		btnNewButton_10.setToolTipText("Paste");
-		btnNewButton_10.setIcon(new ImageIcon("./res/images/paste.gif"));
-		btnNewButton_10.setSize(25, 25);
+		btnNewButton_10.setIcon(new ImageIcon("./res/images/coller2.png"));
+		btnNewButton_10.setSize(35, 35);
 		btnNewButton_10.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Paste");
 				contentPane.requestFocus();
 			}});
-		btnNewButton_10.setPreferredSize(new Dimension(25,25));
+		btnNewButton_10.setPreferredSize(new Dimension(35,35));
 		panel_8.add(btnNewButton_10);
 
 		JButton button = new JButton("");
 		button.setToolTipText("Delete");
 		button.setIcon(new ImageIcon("./res/images/delete.png"));
-		button.setSize(25, 25);
+		button.setSize(35, 35);
 		button.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Delete");
 				contentPane.requestFocus();
 			}});
-		button.setPreferredSize(new Dimension(25,25));
+		button.setPreferredSize(new Dimension(35,35));
 		panel_8.add(button);
 
 		JButton button_1 = new JButton("");
 		button_1.setToolTipText("Undo");
-		button_1.setIcon(new ImageIcon("./res/images/undo.gif"));
+		button_1.setIcon(new ImageIcon("./res/images/undo2.png"));
 		button_1.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Undo");
 				contentPane.requestFocus();
 			}});
-		button_1.setSize(25, 25);
-		button_1.setPreferredSize(new Dimension(25,25));
+		button_1.setSize(35, 35);
+		button_1.setPreferredSize(new Dimension(35,35));
 		panel_8.add(button_1);
 
 		JButton button_2 = new JButton("");
 		button_2.setToolTipText("Redo");
-		button_2.setIcon(new ImageIcon("./res/images/redo.gif"));
-		button_2.setSize(25, 25);
+		button_2.setIcon(new ImageIcon("./res/images/redo2.png"));
+		button_2.setSize(35, 35);
 		button_2.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
 				JOptionPane.showMessageDialog(null, "Fonctionnalité Redo");
 				contentPane.requestFocus();
 			}});
-		button_2.setPreferredSize(new Dimension(25,25));
+		button_2.setPreferredSize(new Dimension(35,35));
 		panel_8.add(button_2);
 
 		JSeparator separator_18 = new JSeparator();
@@ -600,9 +628,9 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_11 = new JButton("");
 		btnNewButton_11.setToolTipText("Properties");
-		btnNewButton_11.setIcon(new ImageIcon("./res/images/properties.gif"));
-		btnNewButton_11.setSize(25, 25);
-		btnNewButton_11.setPreferredSize(new Dimension(25,25));
+		btnNewButton_11.setIcon(new ImageIcon("./res/images/properties2.png"));
+		btnNewButton_11.setSize(35, 35);
+		btnNewButton_11.setPreferredSize(new Dimension(35,35));
 		btnNewButton_11.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent e){
@@ -688,7 +716,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton = new JButton("");
 		btnNewButton.setToolTipText("Add User Task to SubTree");
-		btnNewButton.setIcon(new ImageIcon("./res/images/userico.gif"));
+		btnNewButton.setIcon(new ImageIcon("./res/images/usertask2.png"));
 		btnNewButton.setSize(35,35);
 		btnNewButton.addMouseListener(new MouseAdapter(){
 			@Override
@@ -701,7 +729,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_2 = new JButton("");
 		btnNewButton_2.setToolTipText("Add Abstraction Task to SubTree");
-		btnNewButton_2.setIcon(new ImageIcon("./res/images/abstractionico.gif"));
+		btnNewButton_2.setIcon(new ImageIcon("./res/images/abstractiontask2.png"));
 		btnNewButton_2.setSize(35,35);
 		btnNewButton_2.addMouseListener(new MouseAdapter(){
 			@Override
@@ -714,7 +742,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_1 = new JButton("");
 		btnNewButton_1.setToolTipText("Add Application Task to SubTree");
-		btnNewButton_1.setIcon(new ImageIcon("./res/images/applicationico.gif"));
+		btnNewButton_1.setIcon(new ImageIcon("./res/images/applicationtask2.png"));
 		btnNewButton_1.setSize(35,35);
 		btnNewButton_1.addMouseListener(new MouseAdapter(){
 			@Override
@@ -727,7 +755,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 		JButton btnNewButton_3 = new JButton("");
 		btnNewButton_3.setToolTipText("Add Interaction Task to SubTree");
-		btnNewButton_3.setIcon(new ImageIcon("./res/images/interactionico.gif"));
+		btnNewButton_3.setIcon(new ImageIcon("./res/images/interactiontask2.png"));
 		btnNewButton_3.setSize(35,35);
 		btnNewButton_3.addMouseListener(new MouseAdapter(){
 			@Override
@@ -1021,15 +1049,31 @@ public class CTTEFrame extends JFrame implements ActionListener{
 		}
 
 		if(e.getSource()==mntmQuit ){
-			JOptionPane.showMessageDialog(null, "Attention la fenetre va s'éteindre");
-			System.exit(0);
+			int result = JOptionPane.showConfirmDialog(null,
+					"Are you sure you want to exit without saving ?",
+					"Exit Application",
+					JOptionPane.YES_NO_OPTION);
+
+			if (result == JOptionPane.YES_OPTION){
+				System.exit(0);
+			}else{
+				JFileChooser jfc = new JFileChooser();
+				int returnValue = jfc.showDialog(null,"Sauvegarde");
+				if(returnValue == JFileChooser.CANCEL_OPTION){
+					
+				}else{
+					System.exit(0);
+				}
+			}
 		}
+
+
 
 		if(e.getSource() == rdbtnmntmAllLevels){
 			rdbtnmntmAllLevels.setSelected(true);
 			radioButtonMenuItem.setSelected(false);
 		}
-		else{
+		if(e.getSource() == radioButtonMenuItem){
 			radioButtonMenuItem.setSelected(true);
 			rdbtnmntmAllLevels.setSelected(false);
 		}
@@ -1038,7 +1082,7 @@ public class CTTEFrame extends JFrame implements ActionListener{
 			rdbtnmntmBelowchild.setSelected(true);
 			rdbtnmntmToTheLeft.setSelected(false);
 		}    
-		else{
+		if(e.getSource() == rdbtnmntmToTheLeft){
 			rdbtnmntmToTheLeft.setSelected(true);
 			rdbtnmntmBelowchild.setSelected(false);
 		}
