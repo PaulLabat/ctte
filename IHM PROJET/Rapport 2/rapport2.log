@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.12)  21 DEC 2013 00:01
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.12)  21 DEC 2013 00:35
 entering extended mode
 **rapport2.tex
 ("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 2\rapport2.tex"
@@ -527,20 +527,100 @@ File: scenario-alice.png Graphic file (type png)
 Package pdftex.def Info: scenario-alice.png used on input line 84.
 (pdftex.def)             Requested size: 366.563pt x 159.79416pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+
+ []
+
 [4 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 2/scenario-alice.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+
+ []
+
+<scenario-eve.png, id=25, 1020.81375pt x 460.72125pt>
+File: scenario-eve.png Graphic file (type png)
+ <use scenario-eve.png>
+Package pdftex.def Info: scenario-eve.png used on input line 120.
+(pdftex.def)             Requested size: 408.31827pt x 184.28523pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+
+ []
+
+[5 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 2/scenario-eve.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+<arbre-des-taches.jpg, id=29, 1254.6875pt x 782.925pt>
+File: arbre-des-taches.jpg Graphic file (type jpg)
+ <use arbre-des-taches.jpg>
+Package pdftex.def Info: arbre-des-taches.jpg used on input line 153.
+(pdftex.def)             Requested size: 501.86612pt x 313.16446pt.
+
+Overfull \hbox (18.16925pt too wide) in paragraph at lines 153--154
+ [] 
+ []
+
+[6 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 2/arbre-des-taches.jpg>]
 ("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 2\rapport2.aux") ) 
 Here is how much of TeX's memory you used:
- 4111 strings out of 493921
- 54957 string characters out of 3147272
+ 4124 strings out of 493921
+ 55202 string characters out of 3147272
  121010 words of memory out of 3000000
- 7365 multiletter control sequences out of 15000+200000
+ 7375 multiletter control sequences out of 15000+200000
  14724 words of font info for 36 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,6n,32p,794b,258s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,6n,32p,597b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fon
 ts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
 600\ecti1200.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\R
@@ -549,9 +629,9 @@ odolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk>
 n\ec\dpi600\ecbx1728.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:
 \Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1440.pk> <C:\Users\Rodolphe\AppData\Loca
 l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk>
-Output written on rapport2.pdf (4 pages, 168190 bytes).
+Output written on rapport2.pdf (6 pages, 311348 bytes).
 PDF statistics:
- 281 PDF objects out of 1000 (max. 8388607)
+ 310 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
