@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.12)  20 DEC 2013 20:38
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.12)  20 DEC 2013 23:36
 entering extended mode
 **rapport2.tex
-("C:\Users\Rodolphe\git\ctte\IHM PROJET\Rapport 2\rapport2.tex"
+("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 2\rapport2.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, arabic, armenian, assamese, basque, bengali
 , bokmal, bulgarian, catalan, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, galic
@@ -365,7 +365,7 @@ File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
 Package: listings 2013/08/26 1.5b (Carsten Heinz)
 
-("C:\Users\Rodolphe\git\ctte\IHM PROJET\Rapport 2\rapport2.aux")
+("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 2\rapport2.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
@@ -435,7 +435,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 22.
- ("C:\Users\Rodolphe\git\ctte\IHM PROJET\Rapport 2\rapport2.toc"
+ ("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 2\rapport2.toc"
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -471,40 +471,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
+[2] <scenario-bob.png, id=16, 1132.23pt x 424.58624pt>
+File: scenario-bob.png Graphic file (type png)
+ <use scenario-bob.png>
+Package pdftex.def Info: scenario-bob.png used on input line 50.
+(pdftex.def)             Requested size: 452.88397pt x 169.83148pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
-
- []
-
-[3] ("C:\Users\Rodolphe\git\ctte\IHM PROJET\Rapport 2\rapport2.aux") ) 
+[3 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 2/scenario-bob.png>]
+("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 2\rapport2.aux") ) 
 Here is how much of TeX's memory you used:
- 4098 strings out of 493921
- 54669 string characters out of 3147272
- 122010 words of memory out of 3000000
- 7356 multiletter control sequences out of 15000+200000
- 14049 words of font info for 35 fonts, out of 3000000 for 9000
+ 4106 strings out of 493921
+ 54848 string characters out of 3147272
+ 121010 words of memory out of 3000000
+ 7361 multiletter control sequences out of 15000+200000
+ 14724 words of font info for 36 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,6n,32p,794b,229s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\ecbx1440.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Rod
-olphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecrm1440.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1440.pk> <C:\U
-sers\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk>
-Output written on rapport2.pdf (3 pages, 85140 bytes).
+ 27i,6n,32p,794b,258s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
+600\ecti1200.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\R
+odolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecbx1728.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:
+\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1440.pk> <C:\Users\Rodolphe\AppData\Loca
+l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk>
+Output written on rapport2.pdf (3 pages, 128136 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
+ 263 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
