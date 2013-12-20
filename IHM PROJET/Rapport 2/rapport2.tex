@@ -52,7 +52,25 @@ Après quelques minutes de travail, son téléphone sonne, et on lui demande de 
 	\end{center}
 \end{figure}
 
+Tout d'abord, à l'ouverture, une boîte de dialogue va s'ouvrir pour signaler que c'est la première ouverture, et va demander si l'utilisateur veut un tutoriel. En cliquant sur non, la boîte de dialogue va simplement se fermer (1).\\ 
 
+
+Ensuite, en cliquant sur le bouton d'ajout d'un nœud, le système va vérifier si l'action est possible. Si ça l'est, le nœud est ajouté, sinon un message d'erreur est fourni (2).\\ 
+
+
+A la modification d'un nœud, lors de la validation, le système va s'assurer que la modification est possible, l'effectuer puis fournir une boîte de dialogue comme confirmation, sinon un message d'erreur apparaitra (3).\\  
+
+
+L'étape suivante reprend le principe de l'étape 2 (4) puis de l'étape 3 (5), de même, le nœud suivant est créé suivant le principe de l'étape 2 (6).\\ 
+
+
+Lors de la suppression, l'utilisateur va sélectionner le nœud voulu, un marqueur va le lui indiquer, puis il va cliquer sur \emph{Delete}. Le nœud va ainsi être supprimé de l'affichage et du système, ou un message d'erreur sera renvoyé le cas contraire (7).\\ 
+
+
+L'utilisateur va ensuite cliquer sur \emph{File}, qui va ouvrir le menu, puis cliquer sur \emph{Save as}, et rentrer son nom de fichier voulu, puis faire \emph{OK}. Si le fichier existe déjà, une boîte de dialogue demandera confirmation de sauvegarde, sinon le fichier est sauvegardé (9).\\ 
+
+
+A la demande de fermeture, le logiciel ouvrira une boîte de dialogue pour demander si l'utilisateur (Bob) souhaite enregistrer son travail avant de fermer complétement le logiciel. En cliquant sur \emph{Oui} (quitter sans sauvegarder), le logiciel se fermera simplement (10). \\ \newpage
 \subsection{Scénario 2 - Alice, une utilisatrice experte}
 
 
@@ -60,6 +78,13 @@ Alice arrive au travail à 8h15, légèrement en retard, elle décide donc de re
 
 
 Ses collègues de travail l'appel pour un café, elle décide de fermer le logiciel le temps de son absence, pour cela elle effectue la commande \emph{CTRL + q}. Le logiciel lui signal qu'elle va quitter, et lui demande si elle désire sauvegarder son travail. Elle clique sur non, puis s'absente.\\
+
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[scale = 0.4]{scenario-alice.png}
+	\caption{Le scénario d'Alice}
+	\end{center}
+\end{figure}
 
 \subsection{Scénario 3 - Eve, une utilisatrice familière avec le logiciel}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.12)  20 DEC 2013 23:36
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.12)  21 DEC 2013 00:01
 entering extended mode
 **rapport2.tex
 ("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 2\rapport2.tex"
@@ -471,18 +471,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
-[2] <scenario-bob.png, id=16, 1132.23pt x 424.58624pt>
+[2] <scenario-bob.png, id=16, 1122.1925pt x 418.56375pt>
 File: scenario-bob.png Graphic file (type png)
  <use scenario-bob.png>
 Package pdftex.def Info: scenario-bob.png used on input line 50.
-(pdftex.def)             Requested size: 452.88397pt x 169.83148pt.
+(pdftex.def)             Requested size: 448.86905pt x 167.42252pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
@@ -491,13 +501,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--73
+
+ []
+
 [3 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 2/scenario-bob.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+<scenario-alice.png, id=21, 916.42375pt x 399.4925pt>
+File: scenario-alice.png Graphic file (type png)
+ <use scenario-alice.png>
+Package pdftex.def Info: scenario-alice.png used on input line 84.
+(pdftex.def)             Requested size: 366.563pt x 159.79416pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+
+ []
+
+[4 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 2/scenario-alice.png>]
 ("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 2\rapport2.aux") ) 
 Here is how much of TeX's memory you used:
- 4106 strings out of 493921
- 54848 string characters out of 3147272
+ 4111 strings out of 493921
+ 54957 string characters out of 3147272
  121010 words of memory out of 3000000
- 7361 multiletter control sequences out of 15000+200000
+ 7365 multiletter control sequences out of 15000+200000
  14724 words of font info for 36 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,6n,32p,794b,258s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -509,9 +549,9 @@ odolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk>
 n\ec\dpi600\ecbx1728.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:
 \Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1440.pk> <C:\Users\Rodolphe\AppData\Loca
 l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk>
-Output written on rapport2.pdf (3 pages, 128136 bytes).
+Output written on rapport2.pdf (4 pages, 168190 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
+ 281 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
