@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
-\usepackage[top=2cm, bottom=2cm, left=1.2cm, right=2cm]{geometry}
+\usepackage[top=1.5cm, bottom=1.2cm, left=1.2cm, right=2cm]{geometry}
 \usepackage{verbatim}
 \usepackage{graphicx}
 \usepackage{listings}
@@ -29,8 +29,30 @@ Voici le 3ème et dernier rapport du projet d'IHM. Il a pour objectif de présen
 \section{Organisation de la fenêtre}
 
 Tout d'abord, la hiérarchie des objets de l'interface est la suivante :
-ici faire le dessin de la hiérarchie pour la fenêtre.
 
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[scale = 0.5]{arbre_jframe.jpg}
+	\caption{Notre hiérarchie des objets pour la fenêtre}
+	\end{center}
+\end{figure}
+
+La totalité du dessin était trop gros pour être laissé sur une image, voici les éléments \emph{NORTH} et \emph{WEST} non présent précédemment. Les accolades signales un sous menu dans un JMenu, pour éviter de surcharger le dessin en faisant de nouvelles cases, ce qui reviendrait à un dessin beaucoup trop large.
+\newpage
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[scale = 0.35]{arbre_jframe_nord.jpg}
+	\caption{Notre hiérarchie des objets pour la fenêtre, pour la zone nord non présente précédemment}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[scale = 0.35]{arbre_jframe_ouest.jpg}
+	\caption{Notre hiérarchie des objets pour la fenêtre,  pour la zone ouest non présente précédemment}
+	\end{center}
+\end{figure}
+\newpage
 Ensuite, l'organisation des éléments dans la fenêtre est la suivante :
 
 \begin{figure}[h]
