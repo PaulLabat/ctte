@@ -19,6 +19,6 @@
 \contentsline {subsection}{\numberline {6.2}Qualit\IeC {\'e} des messages d'erreur}{9}
 \contentsline {subsection}{\numberline {6.3}Correction des erreurs}{9}
 \contentsline {section}{\numberline {7}Homog\IeC {\'e}n\IeC {\'e}it\IeC {\'e} et coh\IeC {\'e}rence}{9}
-\contentsline {section}{\numberline {8}Signifiance des codes et d\IeC {\'e}nomination}{9}
+\contentsline {section}{\numberline {8}Signifiance des codes et d\IeC {\'e}nomination}{10}
 \contentsline {section}{\numberline {9}Compatibilit\IeC {\'e}}{10}
-\contentsline {section}{\numberline {10}Conclusion}{10}
+\contentsline {section}{\numberline {10}Conclusion}{11}
