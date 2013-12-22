@@ -7,6 +7,7 @@
 \usepackage{verbatim}
 \usepackage{graphicx}
 \usepackage{listings}
+\usepackage[dvipsnames]{xcolor}
 \lstset{
 %upquote=true,
 columns=flexible,
@@ -23,13 +24,13 @@ basicstyle=\ttfamily,}
 \tableofcontents
 \newpage
 
-\section{Introduction}
+\textcolor{Violet}{\section{Introduction}}
 L'objectif de ce rapport est de présenter le logiciel ConcurTaskTree Environnement (CTTE), en étudiant et analysant son ergonomie. Il s'agit d'un outil pour la création et la modification, via une interface graphique, d'un arbre de tâches, qui n'est pas dans sa version actuelle fait pour des novices. Notre groupe a donc pour objectif d'étudier le logiciel, de proposer une solution alternative, et enfin de la réaliser. Tout au long de ce premier rapport, nous allons fournir une analyse critique de CTTE, de mettre en évidence ses forces et ses faiblesses en nous appuyant sur les critères ergonomiques de Scapin et Bastien.  
 
-\section{Guidage}
+\textcolor{Violet}{\section{Guidage}}
 Cette première partie regroupe 4 sous-critères, l'incitation, le groupement / distinction entre items, le feedback immédiat et la lisibilité. Le guidage représente l'ensemble des moyens qui sont mis en œuvre pour informer, conseiller et diriger au mieux l'utilisateur lors de ses interactions avec l'ordinateur. 
 
-\subsection{Incitation}
+\textcolor{NavyBlue}{\subsection{Incitation}}
 Cette première sous partie recouvre les moyens mis en place afin d'expliciter à un utilisateur les actions qu'il peut effectuer. Cela permet à l'utilisateur de savoir dans quel contexte il se trouve.\\
 
 Dans le cadre de CTTE, le logiciel nous indique bien quel bouton nous avons sélectionné grâce à un verrouillage sur l'image de celui-ci. 
@@ -45,7 +46,7 @@ Dans le cadre de CTTE, le logiciel nous indique bien quel bouton nous avons sél
 
 Cependant, nous remarquons que les actions n'étant pas réalisables ne voient pas leur bouton grisé, bloqué, ce qui n'aide pas l'utilisateur à repérer les actions autorisées dans le contexte dans lequel l'utilisateur se situe.
 \newpage
-\subsection{Groupement / Distinction entre items}
+\textcolor{NavyBlue}{\subsection{Groupement / Distinction entre items}}
 Ce critère concerne l'organisation des différentes fonctionnalités les unes par rapport aux autres, de leur regroupement entre elles ou non.\\
 
 
@@ -79,7 +80,7 @@ Par contre, nous pouvons noter un léger souci quant au déplacement de certains
 
 Néanmoins, dans son ensemble, le logiciel possède une architecture des différentes fonctionnalités qui nous parait cohérente.  
 
-\subsection{Feedback immédiat}
+\textcolor{NavyBlue}{\subsection{Feedback immédiat}}
 Cette partie permet de montrer à l'utilisateur que les actions qu'il a effectuées ont bien été prises en compte par le système.\\
 
 
@@ -88,7 +89,7 @@ Notre première remarque se porte sur la sauvegarde du document. En effet, au mo
 
 Cependant, pour la création d'arbres par exemple on remarque bien que la demande a été prise en compte, puisque celui-ci se construit à chaque clic. De plus, en passant simplement sa souris sur un bouton, l'utilisateur peut observer une modification de la couleur du fond, lui indiquant bien quel bouton il survole avec sa souris, en plus d'avoir un message donnant le nom de celui-ci.
 \newpage
-\subsection{Lisibilité}
+\textcolor{NavyBlue}{\subsection{Lisibilité}}
 Le dernier point est la lisibilité. Cela correspond à l'idée que les informations données à l’utilisateur soient facilement compréhensibles et cohérentes pour lui, et qu'elles soient facilement visibles.
 
 
@@ -108,10 +109,10 @@ La police de caractère des différents nœuds et feuilles de l'arbre n'est éga
 	\end{center}
 \end{figure}
 \newpage
-\section{Charge de travail}
+\textcolor{Violet}{\section{Charge de travail}}
 Ce critère évalue la facilité de l'utilisateur à atteindre ses objectifs, de la manière la plus rapide et la plus facile possible. Celui-ci est divisé en 2 sous-critères : la brièveté et la densité informationnelle.
 
-\subsection{Brièveté}
+\textcolor{NavyBlue}{\subsection{Brièveté}}
 Dans un logiciel, les éléments de l'interface ne doivent pas donner un nombre trop important d'informations diverses à un utilisateur, pour éviter celui-ci à tout mémoriser.\\
 
 
@@ -120,7 +121,7 @@ Pour le logiciel CTTE, on remarque qu'une fois le logiciel prit en main, la cré
 
 De plus, la plupart des éléments de l'interface en eux-mêmes ne demandent pas nécessairement un effort conséquent de mémorisation, notamment par le fait qu'ils ne contiennent pas un nombre énorme d'informations.
 
-\subsection{Densité informationnelle}
+\textcolor{NavyBlue}{\subsection{Densité informationnelle}}
 La limitation de la charge de travail passe également par la pertinence des contenues livrée à l'utilisateur. Il faut limiter au mieux le nombre d'informations présentées en même temps.\\
 
 
@@ -129,15 +130,15 @@ Comme expliqué précédemment, CTTE est bien trop chargé. Par exemple, les opt
 
 Ce genre d'option peut en règle générale être simplement laissé dans les différents menus déroulants aux endroits adéquats.
 
-\section{Contrôle explicite}
+\textcolor{Violet}{\section{Contrôle explicite}}
 Le contrôle explicite exprime la prise en compte par le système des actions des utilisateurs et le contrôle de ceux-ci sur le traitement de leur section. Deux sous-critères participent à cela : action explicite et contrôle utilisateur.
-\subsection{Actions explicites}
+\textcolor{NavyBlue}{\subsection{Actions explicites}}
 Ce critère concerne la relation entre le fonctionnement de l'application et les actions des utilisateurs. L'ordinateur doit exécuter seulement les actions demandées par l'utilisateur.\\
 
 
 Lors de l'utilisation du logiciel, nous avons pu remarquer qu'aucune action n'était effectuée sans demande de l'utilisateur, par elle-même. L'utilisateur possède bien le contrôle du système. Néanmoins, on remarque la perte de contrôle d'un noeud / d'une feuille lors d'un \emph{drag and drop} si on déplace la souris trop rapidement.
 
-\subsection{Contrôle utilisateur}
+\textcolor{NavyBlue}{\subsection{Contrôle utilisateur}}
 L'utilisateur doit toujours avoir la main, et pouvoir contrôler le déroulement des traitements informatiques en cours. \\
 
 
@@ -152,10 +153,10 @@ Tout d'abord, le logiciel permet d'effectuer une action arrière aussi longtemps
 
 Pour ce qui est de la possibilité de l'annulation d'un traitement en cours, nous n'avons pas réussi à trouver la possibilité de le faire, car nous n'avons pas vu d'action prenant un temps suffisamment considérable pour avoir la possibilité de l'annuler.
 
-\section{Adaptabilité}
+\textcolor{Violet}{\section{Adaptabilité}}
 Ce critère concerne la capacité d'un système à réagir selon le contexte, et également selon les préférences et besoins de l'utilisateur. Deux sous-critères sont à démarquer : flexibilité et prise en compte de l'expérience utilisateur. 
 
-\subsection{Flexibilité}
+\textcolor{NavyBlue}{\subsection{Flexibilité}}
 Pour cette section, nous avons cherché à vérifier si l'utilisateur pouvait personnaliser l'interface afin de prendre en compte ses habitudes de travail. \\
 
 
@@ -167,7 +168,7 @@ Certaines barres d'outils sont déplaçables, mais comme exprimées précédemme
 	\end{center}
 \end{figure}
 \newpage
-\subsection{Prise en compte de l'expérience utilisateur}
+\textcolor{NavyBlue}{\subsection{Prise en compte de l'expérience utilisateur}}
 Nous allons maintenant analyser les différents moyens misent en oeuvre afin de prendre en compte le niveau d'expérience de l'utilisateur.\\
 
 
@@ -182,16 +183,16 @@ En premier lieu, le logiciel ne fournit que très peu d'aide pour un utilisateur
 En revanche, on notera la présence de raccourcis clavier, qui sont un plus pour les utilisateurs confirmés, même si comme expliqué précédemment le raccourci \emph{CNTRL + Z} est affecté à deux actions distinctes.
 %affichage du double cntrl + z
 
-\section{Gestion des erreurs}
+\textcolor{Violet}{\section{Gestion des erreurs}}
 La gestion des erreurs concerne tous les moyens qui permettent d'éviter ou bien de réduire les erreurs, mais également de les corriger si celles-ci surviennent.
 
-\subsection{Protection contre les erreurs}
+\textcolor{NavyBlue}{\subsection{Protection contre les erreurs}}
 Nous allons dans un premier temps chercher les moyens mis en œuvre pour détecter et prévenir les erreurs faites par l'utilisateur. \\
 
 
 Nous remarquons d'abord qu'il n'est pas possible de sélectionner deux boutons en même temps, ce qui en est une bonne chose. Cependant, les boutons qui ne devraient pas pouvoir être utilisés ne sont pas grisés. Un autre point est également à noter : lorsqu'un utilisateur modifie le champ type dans \emph{current task}, il peut rentrer n'importe quelle valeur, alors qu'il semblerait qu'une valeur spécifique soit attendue (visible en cherchant en particulier les propriétés du noeud / de la feuille). On ne sait pas si la modification est ou non prise en compte par le système, si celui-ci à traiter l'erreur, ce qui est déroutant pour l'utilisateur.
 \newpage
-\subsection{Qualité des messages d'erreur}
+\textcolor{NavyBlue}{\subsection{Qualité des messages d'erreur}}
 L'importance d'un message d'erreur est d'être pertinent et de faciliter la lecture de l'information donnée à l'utilisateur quant à la nature de l'erreur commise.\\
 
 
@@ -204,34 +205,34 @@ Pour cela, lors de l'apparition d'une fenêtre signalant une erreur (notamment l
 	\end{center}
 \end{figure}
 
-\subsection{Correction des erreurs}
+\textcolor{NavyBlue}{\subsection{Correction des erreurs}}
 Enfin, nous allons analyser les moyens mis à la disposition de l'utilisateur pour lui permettre de corriger ses erreurs.\\
 
 
 Dans un premier lieu, nous avons vu que des erreurs n'étaient pas signalées. Il est difficile dans ce cas d'avoir une correction de celles-ci. Dans l'autre cas, il n'y a pas de correction automatique, mais la clarté du message permet à l'utilisateur de corriger un problème de manière assez simple, manuellement.
-\section{Homogénéité et cohérence}
+\textcolor{Violet}{\section{Homogénéité et cohérence}}
 Ce critère vérifie si les choix qui ont été faits auraient été respectés.\\
 
 
 On remarque d'abord que les opérations sur les nœuds / feuilles fonctionnent de la même façon, ce qui respecte le principe d'homogénéité. Il en est de même avec la création des tâches, qui fonctionnent toutes selon le même principe.
-
-\section{Signifiance des codes et dénomination}
+\newpage
+\textcolor{Violet}{\section{Signifiance des codes et dénomination}}
 Cette section a pour but d'évaluer si les informations fournies par l'interface sont suffisamment explicites.
 
 Pour CTTE, on remarque que les boutons ont un message associé, qui avec l'image, permet de déterminer pour la plupart d'entre eux leur utilisation, celle-ci étant connue par ``habitude'' : sauvegarder, imprimer, nouveau fichier... De plus, les différents onglets renferment les options telles qu'elles le sont dans la plupart des applications. Ainsi on retrouve dans \emph{File} : nouveau, sauvegarder, imprimer. Dans \emph{Edit} : copier, coller, retour arrière. Cependant, un novice ne comprendra pas nécessairement l'ensemble des termes, ce qui est ennuyeux, par exemple pour \emph{Fold / Unfold SubTree}.
 
-\section{Compatibilité}
+\textcolor{Violet}{\section{Compatibilité}}
 Nous allons maintenant analyser la réponse de CTTE par rapport à l'environnement de l'utilisateur, et si celui-ci s'adapte.
 
 
 Pour l'utilisation sous Windows, on ne remarque rien de dérangeant, que le système d'exploitation soit XP, Vista, Seven ou Eight. Pour Debian, et Ubuntu avec Gnome, aucun détail ne semble ressortir, par contre, pour Mac OS, on remarque un souci quant à l'affichage, qui ne respecte pas l'homogénéité des applications. En effet, la barre de menu est normalement associée à la barre des tâches du système, comme vous pouvez le voir ci-dessous.
 
-\begin{figure}
+\begin{figure}[h]
    \includegraphics[scale = 0.5]{SoucisIHM.jpg}
 	\caption{CTTE sous MAC, on remarque un souci au niveau de l'affichage de la barre des menus}
 \end{figure}
 
-\section{Conclusion}
+\textcolor{Violet}{\section{Conclusion}}
 Globalement, on peut dire que l'interface est fonctionnelle, mais n'est pas particulièrement facile à prendre en main à moins de faire 
 des tests poussés pour en connaître toutes les fonctionnalités. Nous allons donc tâcher de perfectionner cette interface. 
 Nous nous concentrerons uniquement sur son amélioration. C'est pourquoi le noyau fonctionnel ne sera pas (ré)implémenté.

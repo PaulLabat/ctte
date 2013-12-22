@@ -7,6 +7,7 @@
 \usepackage{verbatim}
 \usepackage{graphicx}
 \usepackage{listings}
+\usepackage[dvipsnames]{xcolor}
 \lstset{
 %upquote=true,
 columns=flexible,
@@ -23,11 +24,11 @@ basicstyle=\ttfamily,}
 \tableofcontents
 \newpage
 
-\section{Introduction}
+\textcolor{Violet}{\section{Introduction}}
 Dans ce second rapport, nous décrirons l'activité que devra permettre notre prototype, au travers de scénarios d'usages, modèle de tâches.
 
-\section{Scénarios d'usages}
-\subsection{Scénario 1 - Bob, un utilisateur novice}
+\textcolor{Violet}{\section{Scénarios d'usages}}
+\textcolor{NavyBlue}{\subsection{Scénario 1 - Bob, un utilisateur novice}}
 
 
 Bob est un utilisateur novice et il décide d'utiliser CTTE pour la première fois. Au lancement du logiciel, une fenêtre pop-up s'affiche lui demandant s’il désire suivre un tutoriel pas à pas pour apprendre à manier le logiciel. Cependant, il n'a pas le temps nécessaire, donc il décide de la fermer pour immédiatement tenter de réaliser ce qu'il souhaite. Il va donc tenter de comprendre rapidement l'utilisation des différentes fonctionnalités du logiciel, en passant sa souris au travers des menus et sur les boutons pour obtenir des informations.\\ 
@@ -71,7 +72,7 @@ L'utilisateur va ensuite cliquer sur \emph{File}, qui va ouvrir le menu, puis cl
 
 
 A la demande de fermeture, le logiciel ouvrira une boîte de dialogue pour demander si l'utilisateur (Bob) souhaite enregistrer son travail avant de fermer complètement le logiciel. En cliquant sur \emph{Oui} (quitter sans sauvegarder), le logiciel se fermera simplement (10). \\ \newpage
-\subsection{Scénario 2 - Alice, une utilisatrice experte}
+\textcolor{NavyBlue}{\subsection{Scénario 2 - Alice, une utilisatrice experte}}
 
 
 Alice arrive au travail à 8 h 15, légèrement en retard, elle décide donc de reprendre immédiatement ce qu'elle a commencé hier. Elle lance CTTE, et une fois lancé, fait la commande \emph{CTRL + o} afin d'ouvrir son document. Elle rajoute des tâches et les modifies à sa convenance, en effectuant des sauvegardes rapides par \emph{CTRL + s}. Elle décide également de faire une sauvegarde en temps que \emph{JPG}, pour cela elle clique sur \emph{File}, puis \emph{Save as}, puis \emph{Save as JPG} \\
@@ -104,7 +105,7 @@ Alice souhaite ensuite enregistrer le fichier en \emph{JPG}. Pour cela, elle cli
 Au moment où elle fait \emph{CTRL + q}, le logiciel va ouvrir la boîte de dialogue de fermeture, demande si elle veut quitter sans sauvegarder. En cliquant sur \emph{oui}, le logiciel se ferme sans sauvegarder (6).\newpage
 
 
-\subsection{Scénario 3 - Ève, une utilisatrice familière avec le logiciel}
+\textcolor{NavyBlue}{\subsection{Scénario 3 - Ève, une utilisatrice familière avec le logiciel}}
 
 
 Ève décide de modifier un document existant. Pour cela, elle clique sur le bouton \emph{open} afin de pouvoir charger son document. Une fois le document chargé, elle le modifie à sa guise, en cliquant sur le bouton propriété. Elle décide de le sauvegarder en cliquant sur l'icône correspondante.\\
@@ -146,7 +147,7 @@ Elle effectue des modifications comme précédemment, l'affichage se met à jour
 
 Enfin, elle ferme le logiciel en cliquant sur la croix rouge, qui ouvre la boîte de dialogue lui demandant si elle souhaite quitter sans sauvegarder. En faisant \emph{oui}, le logiciel se ferme (9).
 
-\section{Modèle des tâches}
+\textcolor{Violet}{\section{Modèle des tâches}}
 
 \begin{figure}[h]
 \begin{center}
