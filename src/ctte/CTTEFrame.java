@@ -15,6 +15,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 import java.awt.FlowLayout;
 
@@ -42,6 +44,7 @@ import java.awt.SystemColor;
 import java.io.IOException;
 
 import javax.swing.JTextField;
+
 import java.awt.Color;
 
 
@@ -154,9 +157,14 @@ public class CTTEFrame extends JFrame implements ActionListener{
 
 	/**
 	 * Create the frame.
+	 * @throws UnsupportedLookAndFeelException 
+	 * @throws IllegalAccessException 
+	 * @throws InstantiationException 
+	 * @throws ClassNotFoundException 
 	 */
-	public CTTEFrame() {
-
+	public CTTEFrame() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+		
+		UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 
 		this.setTitle("IHM");
 		//change l'icon de l'appli

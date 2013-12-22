@@ -5,4 +5,14 @@
 \contentsline {subsection}{\numberline {3.1}Nos choix}{4}
 \contentsline {subsection}{\numberline {3.2}Raccourcis clavier}{5}
 \contentsline {section}{\numberline {4}Les crit\IeC {\`e}res de Scapin et Bastien et notre interface}{6}
-\contentsline {section}{\numberline {5}Fonctionnalit\IeC {\'e}s non disponibles}{6}
+\contentsline {subsection}{\numberline {4.1}Incitation}{6}
+\contentsline {subsection}{\numberline {4.2}Groupement / Distinction entre items}{6}
+\contentsline {subsection}{\numberline {4.3}Feedback imm\IeC {\'e}diat}{6}
+\contentsline {subsection}{\numberline {4.4}Lisibilit\IeC {\'e}}{7}
+\contentsline {subsection}{\numberline {4.5}Densit\IeC {\'e} informationnelle}{7}
+\contentsline {subsection}{\numberline {4.6}Actions explicites - Contr\IeC {\^o}le utilisateur}{7}
+\contentsline {subsection}{\numberline {4.7}Prise en compte de l'exp\IeC {\'e}rience utilisateur}{7}
+\contentsline {subsection}{\numberline {4.8}Protection contre les erreurs}{7}
+\contentsline {subsection}{\numberline {4.9}Signifiance des codes et d\IeC {\'e}nomination}{7}
+\contentsline {subsection}{\numberline {4.10}Compatibilit\IeC {\'e}}{7}
+\contentsline {section}{\numberline {5}Fonctionnalit\IeC {\'e}s non disponibles}{8}

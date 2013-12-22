@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.12)  21 DEC 2013 20:29
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.12)  22 DEC 2013 02:08
 entering extended mode
 **rapport3.tex
 ("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 3\rapport3.tex"
@@ -365,22 +365,41 @@ File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
 Package: listings 2013/08/26 1.5b (Carsten Heinz)
 
+("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def"
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
 ("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 3\rapport3.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Info: Redefining \degres on input line 21.
-LaTeX Info: Redefining \dots on input line 21.
-LaTeX Info: Redefining \up on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Info: Redefining \degres on input line 22.
+LaTeX Info: Redefining \dots on input line 22.
+LaTeX Info: Redefining \up on input line 22.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -432,9 +451,9 @@ LaTeX Info: Redefining \up on input line 21.
 )
 \c@lstlisting=\count108
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 22.
+(Font)              <14.4> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 22.
+(Font)              <7> on input line 23.
  ("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 3\rapport3.toc"
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 5.
@@ -449,69 +468,74 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] <arbre_jframe.jpg, id=11, 823.075pt x 501.875pt>
 File: arbre_jframe.jpg Graphic file (type jpg)
  <use arbre_jframe.jpg>
-Package pdftex.def Info: arbre_jframe.jpg used on input line 35.
+Package pdftex.def Info: arbre_jframe.jpg used on input line 36.
 (pdftex.def)             Requested size: 411.53648pt x 250.93687pt.
  [2 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 3/arbre_jframe.jpg>] <arbre_jframe_nord.jpg, id=17, 1565.85pt x
  843.15pt>
 File: arbre_jframe_nord.jpg Graphic file (type jpg)
  <use arbre_jframe_nord.jpg>
-Package pdftex.def Info: arbre_jframe_nord.jpg used on input line 44.
+Package pdftex.def Info: arbre_jframe_nord.jpg used on input line 45.
 (pdftex.def)             Requested size: 548.05571pt x 295.10692pt.
 
-Overfull \hbox (41.59656pt too wide) in paragraph at lines 44--45
+Overfull \hbox (41.59656pt too wide) in paragraph at lines 45--46
  [] 
  []
 
 <arbre_jframe_ouest.jpg, id=18, 622.325pt x 461.725pt>
 File: arbre_jframe_ouest.jpg Graphic file (type jpg)
  <use arbre_jframe_ouest.jpg>
-Package pdftex.def Info: arbre_jframe_ouest.jpg used on input line 51.
+Package pdftex.def Info: arbre_jframe_ouest.jpg used on input line 52.
 (pdftex.def)             Requested size: 217.817pt x 161.60617pt.
  [3 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 3/arbre_jframe_nord.jpg> <C:/Users/Rodolphe/workspace/ctte/IHM 
 PROJET/Rapport 3/arbre_jframe_ouest.jpg>] <interface.png, id=22, 489.32813pt x 417.05812pt>
 File: interface.png Graphic file (type png)
  <use interface.png>
-Package pdftex.def Info: interface.png used on input line 60.
+Package pdftex.def Info: interface.png used on input line 61.
 (pdftex.def)             Requested size: 342.52734pt x 291.93869pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
 [4 <C:/Users/Rodolphe/workspace/ctte/IHM PROJET/Rapport 3/interface.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
 
-Overfull \hbox (30.19043pt too wide) in paragraph at lines 101--130
+Overfull \hbox (30.19043pt too wide) in paragraph at lines 102--131
 [][] 
  []
 
-[5] [6] ("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 3\rapport3.aux") ) 
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+
+ []
+
+[7] [8] ("C:\Users\Rodolphe\workspace\ctte\IHM PROJET\Rapport 3\rapport3.aux") ) 
 Here is how much of TeX's memory you used:
- 4124 strings out of 493921
- 55212 string characters out of 3147272
- 128015 words of memory out of 3000000
- 7375 multiletter control sequences out of 15000+200000
+ 4660 strings out of 493921
+ 61623 string characters out of 3147272
+ 142153 words of memory out of 3000000
+ 7902 multiletter control sequences out of 15000+200000
  14724 words of font info for 36 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,6n,32p,1454b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,7n,35p,1454b,270s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Rodolphe\AppData\Local\MiKTeX
 \2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
 n\ec\dpi600\ecti1200.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:
@@ -520,9 +544,9 @@ l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Rodolphe\
 \jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440
 .pk> <C:\Users\Rodolphe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1440.pk> <C:\Users\Rodolphe\AppD
 ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk>
-Output written on rapport3.pdf (6 pages, 340162 bytes).
+Output written on rapport3.pdf (8 pages, 361048 bytes).
 PDF statistics:
- 329 PDF objects out of 1000 (max. 8388607)
+ 376 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
