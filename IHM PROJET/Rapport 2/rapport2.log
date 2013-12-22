@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.10.10)  22 DEC 2013 13:44
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.10.10)  22 DEC 2013 18:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -522,12 +522,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
-[2] <scenario-bob.png, id=17, 1122.1925pt x 418.56375pt>
+[2] <scenario-bob.png, id=17, 1132.23pt x 430.60875pt>
 File: scenario-bob.png Graphic file (type png)
-
-<use scenario-bob.png>
+ <use scenario-bob.png>
 Package pdftex.def Info: scenario-bob.png used on input line 50.
-(pdftex.def)             Requested size: 448.86905pt x 167.42252pt.
+(pdftex.def)             Requested size: 452.88397pt x 172.24043pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
@@ -668,11 +667,11 @@ Overfull \hbox (18.16925pt too wide) in paragraph at lines 153--154
 Here is how much of TeX's memory you used:
  4486 strings out of 495059
  61346 string characters out of 3182029
- 128796 words of memory out of 3000000
+ 127796 words of memory out of 3000000
  7603 multiletter control sequences out of 15000+200000
  14724 words of font info for 36 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,6n,32p,598b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,6n,32p,589b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/paul/.texmf-var/fonts/pk
 /ljfour/jknappen/ec/eccc1200.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jkna
 ppen/ec/ecti1200.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx
@@ -682,7 +681,7 @@ ppen/ec/ecti1200.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx
 onts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/paul/.texmf-var/fonts/pk/ljfo
 ur/jknappen/ec/eccc1440.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/
 ec/ecrm2074.600pk>
-Output written on rapport2.pdf (6 pages, 295415 bytes).
+Output written on rapport2.pdf (6 pages, 292241 bytes).
 PDF statistics:
  312 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
