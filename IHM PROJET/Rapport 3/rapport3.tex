@@ -33,36 +33,36 @@ Tout d'abord, la hiérarchie des objets de l'interface est la suivante :
 
 \begin{figure}[h]
 \begin{center}
-   \includegraphics[scale = 0.5]{arbre_jframe.jpg}
-	\caption{Notre hiérarchie des objets pour la fenêtre}
+   \includegraphics[scale = 0.65]{arbre_jframe.jpg}
+	\caption{Hiérarchie des objets de notre interface}
 	\end{center}
 \end{figure}
 
-La totalité du dessin était trop gros pour être laissé sur une image, voici les éléments \emph{NORTH} et \emph{WEST} non présent précédemment. Les accolades signales un sous menu dans un JMenu, pour éviter de surcharger le dessin en faisant de nouvelles cases, ce qui reviendrait à un dessin beaucoup trop large.
+La totalité du dessin étant trop gros pour être laissé sur une seule image, voici les éléments \emph{NORTH} et \emph{WEST} non présent sur le schéma ci-dessus. Les accolades signales un sous menu dans un JMenu, pour éviter de surcharger le dessin en faisant de nouvelles cases, ce qui reviendrait à un dessin beaucoup trop large.
 \newpage
-\begin{figure}[h]
+\begin{figure}[!h]
 \begin{center}
-   \includegraphics[scale = 0.35]{arbre_jframe_nord.jpg}
-	\caption{Notre hiérarchie des objets pour la fenêtre, pour la zone nord non présente précédemment}
+   \includegraphics[scale = 0.43]{arbre_jframe_nord.jpg}
+	\caption{Hiérarchie des objets de la zone nord de la fenêtre}
 	\end{center}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[!h]
 \begin{center}
-   \includegraphics[scale = 0.35]{arbre_jframe_ouest.jpg}
-	\caption{Notre hiérarchie des objets pour la fenêtre,  pour la zone ouest non présente précédemment}
+   \includegraphics[scale = 0.7]{arbre_jframe_ouest.jpg}
+	\caption{Hiérarchie des objets de la zone ouest de la fenêtre}
 	\end{center}
 \end{figure}
 \newpage
 Ensuite, l'organisation des éléments dans la fenêtre est la suivante :
 
-\begin{figure}[h]
+\begin{figure}[!h]
 \begin{center}
-   \includegraphics[scale = 0.7]{interface.png}
+   \includegraphics[scale = 0.9]{interface.png}
 	\caption{Notre interface}
 	\end{center}
 \end{figure}
-
+\newpage
 \begin{itemize}
 \item [*]La zone jaune représente les différents menu avec la grande majorité des options spécifiques, tel que la sauvegarde en jpg, l'accès à l'aide, etc... 
 \item [*]La zone violette regroupe les différents outils de manipulation rapide de fichier. Ils sont triés par sous groupe en fonction de leur utilisation. 
@@ -72,6 +72,7 @@ Ensuite, l'organisation des éléments dans la fenêtre est la suivante :
 \item [*]Enfin, la zone verte permet à l'utilisateur d'utiliser la recherche d'un nœud dans l'arbre, et la fonctionnalité zoom.
 \end{itemize}
 
+\newpage
 \textcolor{Violet}{\section{spécifications techniques}}
 
 \textcolor{NavyBlue}{\subsection{Nos choix}}
@@ -94,7 +95,6 @@ Afin de moins surcharger les menus, nous avons décider de regrouper les différ
 
 Nous avons ré implémenté la totalité des options, ainsi que les raccourcis, en ajoutant les raccourcis MacOS avec la touche \emph{Command} (comme spécifié plus tard). Une demande de confirmation pour quitter le logiciel est demandé, afin de s'assurer que l'utilisateur ne quittera pas par erreur sans enregistrer son travail. De même, nous avons placé une taille de fenêtre minimal (inséré la valeur créée ici).
 
-Si il manque des choses selon vous, à completer....
 \textcolor{NavyBlue}{\subsection{Raccourcis clavier}}
 
 Un large choix de raccourcis clavier ont été ajoutés sur le logiciels, fonctionnant sous Windows, Linux ou Mac OS X (Testé sur la version 10.6.8)
@@ -139,6 +139,7 @@ Afin de mieux aider l'utilisateur, nous avons grisé des boutons pour l'utilisat
 
 Nous avons décider de conserver une logique quand au regroupement des boutons pour notre interface, en fonction de leur utilité. Les opérations générales sont entre elle dans un bandeau en haut du document, les opérations sur les arbres sont également regroupées sur la gauches dans un autre bandeau. Nous avons également fait attention à bien séparer les groupements de boutons, pour plus de lisibilité. Des options, comme les différentes possibilités de sauvegarde, sont regroupées dans des sous menu de la barre des menus.
 
+\newpage
 \textcolor{NavyBlue}{\subsection{Feedback immédiat}}
 
 Pour aider l'utilisateur, une fonctionnalité sélectionnée apparait grâce à un marqueur sur le bouton qui est utilisé. De même, lorsque l'utilisateur passe en survolant un bouton avec sa souris, celui-ci devient légèrement plus foncé, pour lui indiquer où il se trouve. De plus, grâce au bouton sauvegarder qui se grise si le document n'a pas subit de modification, l'utilisateur sait exactement où il en est de son travail à n'importe quel moment. Enfin, notre zone d'édition simplifié pour un nœud se met à jour à chaque création de nouveau nœud ou édition de celui-ci, permettant à l'utilisateur d'avoir une vue sur ces modifications (par exemple, si il change le nom dans le champ correspondant et appuie sur entré, le nom de la tâche se met à jour).
